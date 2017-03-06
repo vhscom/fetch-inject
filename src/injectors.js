@@ -1,0 +1,2 @@
+export const script = (function(i,s,o,g,r,a,m){a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.appendChild(s.createTextNode(g));a.onload=r;m.parentNode.insertBefore(a,m)}) // eslint-disable-line
+export const style = (function(i,s,o,g,r,a,m){a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.type='text/css';a.appendChild(s.createTextNode(g));m.parentNode.insertBefore(a,m)}) // eslint-disable-line
