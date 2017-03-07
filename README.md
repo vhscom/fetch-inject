@@ -157,6 +157,7 @@ fetchInject([
 ## Known Limitations
 
 - Requires you have at least one of `script` or `style` in the `head` of your `document` already, depending on which you're injecting.
+- If the resource uses a relative path (e.g. `url(default-skin.png)`) the relative resource may fail to load.
 - Does not perform any caching.
 - Does not support [Isomorphic rendering](http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/).
 
@@ -168,7 +169,7 @@ All browsers with native support the [Fetch API](http://devdocs.io/dom/fetch_api
 
 1. Clone the repo with `git clone https://github.com/vhs/fetch-inject.git`.
 1. Install dependencies with `npm i` (`brew install node` first on macOS).
-1. Modify files in `src` directory and run `npm test` to lint the package.
+1. Modify files in `src` directory and run `npm run lint` to lint the package.
 1. Create a distributable package using `npm run build`.
 
 **Note:** Build variants possible for various module types via the `format` setting in `rollup.config.js`. I intend to switch to ES6 modules as soon as reasonable [browser support](http://caniuse.com/#search=module) is realized.
