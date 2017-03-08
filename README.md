@@ -1,10 +1,18 @@
-# fetchInject
+# Fetch Inject
 
-Implements _Fetch Injection_ to dynamically inline assets into the DOM using the [Fetch API](http://devdocs.io/dom/fetch_api), with support for promise chains.
+[![npm](https://img.shields.io/badge/code_style-standard-brightgreen.svg "Standard - JavaScript Style Guide")](https://www.npmjs.com/package/fetch-inject)
+[![npm](https://img.shields.io/npm/dm/fetch-inject.svg "NPM Downloads per Month")](https://www.npmjs.com/package/fetch-inject)
+[![npm](https://img.shields.io/npm/v/fetch-inject.svg "NPM Version")](https://www.npmjs.com/package/fetch-inject)
+
+Dynamically inline assets into the DOM using the Fetch API, with support for promise chains.
 
 ## Purpose
 
-Use to inject remote assets into the DOM, then do something with them. Currently supports inlining of `script` _and_ `style` elements.
+Use to inject remote assets, then do something with them. Currently supports inlining of `script` and `style` elements.
+
+## Background
+
+Read about [why I created this](https://hackcabin.com/post/introducing-fetch-injection/) on **_Hack Cabin_**.
 
 ## Usage
 
@@ -172,9 +180,16 @@ All browsers with native support the [Fetch API](http://devdocs.io/dom/fetch_api
 
 **Note:** Build variants possible for various module types via the `format` setting in `rollup.config.js`. I intend to switch to ES6 modules as soon as reasonable [browser support](http://caniuse.com/#search=module) is realized.
 
+## Contributing
+
+Please use Issues sparingly. I favor action over words. Send in a Pull Request if you feel strongly something needs to be changed. Otherwise, please create a fork and mind the licensing terms.
+
 ## Related Libraries
 
 - [`window.fetch` polyfill](https://github.com/github/fetch)
 - [loadCSS](https://github.com/filamentgroup/loadCSS/)
 
+## License
+
+MIT License<br>
 Copyright (c) 2017 VHS
