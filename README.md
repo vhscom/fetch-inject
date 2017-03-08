@@ -120,28 +120,26 @@ Call multiple times, forming a promise chain:
 
 ```js
 fetchInject([
-  'https://cdn.jsdelivr.net/jquery/3.1.1/jquery.slim.min.js'
+  'https://cdn.jsdelivr.net/jquery/3.1.1/jquery.slim.min.js',
+  'https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js',
+  'https://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'
 ]).then(() => {
   fetchInject([
-    'https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js'
-  ]).then(() => {
-    fetchInject([
-      'https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js'
-    ])
-  })
+    'https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js'
+  ])
 })
 ```
 
 ### Loading and Handling Composite Libraries
 
 **Problem:**
-You want to use library made up of a number of different resources, and then instantiate it upon completion.
+You want to use library composed of several resources and initialize it as soon as possible.
 
 **Solution:**
 This is precisely why `fetchInject` was created:
 
 ```js
-const container = document.querySelectorAll('.pswp')[0]
+const container = document.querySelector('.pswp')
 const items = JSON.parse({{ .Params.gallery.main | jsonify }})
 fetchInject([
   '/css/photoswipe.css',
