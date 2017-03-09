@@ -175,8 +175,7 @@ All browsers with native support the [Fetch API](http://devdocs.io/dom/fetch_api
 
 1. Clone the repo with `git clone https://github.com/vhs/fetch-inject.git`.
 1. Install dependencies with `npm i` (`brew install node` first on macOS).
-1. Modify files in `src` directory and run `npm run lint` to lint the package.
-1. Create a distributable package using `npm run build`.
+1. Execute `npm run` for a listing of available commands.
 
 **Note:** Build variants possible for various module types via the `format` setting in `rollup.config.js`. I intend to switch to ES6 modules as soon as reasonable [browser support](http://caniuse.com/#search=module) is realized.
 

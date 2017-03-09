@@ -1,4 +1,3 @@
-import path from 'path'
 import uglify from 'rollup-plugin-uglify'
 import license from 'rollup-plugin-license'
 
@@ -9,9 +8,7 @@ export default {
   plugins: [
     uglify(),
     license({
-      banner: {
-        file: path.join(__dirname, 'LICENSE')
-      }
+      banner: `Copyright (c) <%= moment().format('YYYY') %> VHS\n@licence MIT`
     })
   ],
   dest: 'dist/fetch-inject.js'
