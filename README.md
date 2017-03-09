@@ -14,7 +14,11 @@ Use to inject remote assets, then do something with them. Currently supports inl
 
 ## Background
 
-Read about [why I created this](https://hackcabin.com/post/introducing-fetch-injection/) on **_Hack Cabin_**.
+Read about [why I created this](https://hackcabin.com/post/managing-asynchronous-dependencies-javascript/) on **Hack Cabin**.
+
+## Installation
+
+Install the library from NPM with `npm i fetch-inject` or Bower with `bower install fetch-inject`.
 
 ## Usage
 
