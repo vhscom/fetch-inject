@@ -1,5 +1,7 @@
 # Fetch Inject
 
+[![Join the chat at https://gitter.im/fetch-inject/Lobby](https://badges.gitter.im/fetch-inject/Lobby.svg)](https://gitter.im/fetch-inject/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![npm](https://img.shields.io/badge/code_style-standard-brightgreen.svg "Standard - JavaScript Style Guide")](https://www.npmjs.com/package/fetch-inject)
 [![npm](https://img.shields.io/npm/dm/fetch-inject.svg "NPM Downloads per Month")](https://www.npmjs.com/package/fetch-inject)
 [![npm](https://img.shields.io/npm/v/fetch-inject.svg "NPM Version")](https://www.npmjs.com/package/fetch-inject)
