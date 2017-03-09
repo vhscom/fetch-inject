@@ -11,5 +11,6 @@ export default {
       banner: `Copyright (c) <%= moment().format('YYYY') %> VHS\n@licence MIT`
     })
   ],
+  sourceMap: false,
   dest: 'dist/fetch-inject.js'
 }
