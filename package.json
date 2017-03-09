@@ -1,16 +1,17 @@
 {
   "name": "fetch-inject",
-  "version": "1.0.1",
+  "version": "0.0.0-development",
   "description": "Inline assets into the DOM using Fetch Injection.",
   "main": "lib/fetch-inject.js",
   "scripts": {
     "build": "rollup -c",
     "test": "npm run lint",
-    "lint": "standard"
+    "lint": "standard",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vhs/fetch-inject.git"
+    "url": "https://github.com/vhs/fetch-inject.git"
   },
   "keywords": [
     "dom",
@@ -27,7 +28,8 @@
     "rollup-plugin-license": "^0.3.0",
     "rollup-plugin-uglify": "^1.0.1",
     "standard": "^9.0.0",
-    "uglify-js-harmony": "^2.7.5"
+    "uglify-js-harmony": "^2.7.5",
+    "semantic-release": "^6.3.2"
   },
   "standard": {
     "ignore": [

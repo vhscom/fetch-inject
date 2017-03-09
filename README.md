@@ -1,10 +1,11 @@
 # Fetch Inject
 
-[![Join the chat at https://gitter.im/fetch-inject/Lobby](https://badges.gitter.im/fetch-inject/Lobby.svg)](https://gitter.im/fetch-inject/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-[![npm](https://img.shields.io/badge/code_style-standard-brightgreen.svg "Standard - JavaScript Style Guide")](https://www.npmjs.com/package/fetch-inject)
-[![npm](https://img.shields.io/npm/dm/fetch-inject.svg "NPM Downloads per Month")](https://www.npmjs.com/package/fetch-inject)
-[![npm](https://img.shields.io/npm/v/fetch-inject.svg "NPM Version")](https://www.npmjs.com/package/fetch-inject)
+[![Join the chat at https://gitter.im/fetch-inject/Lobby](https://badges.gitter.im/fetch-inject/Lobby.svg)](https://gitter.im/fetch-inject/Lobby)
+[![Build Status](https://travis-ci.org/vhs/fetch-inject.svg?branch=master)](https://travis-ci.org/vhs/fetch-inject)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://www.npmjs.com/package/fetch-inject)
+[![NPM Downloads per Month](https://img.shields.io/npm/dm/fetch-inject.svg)](https://www.npmjs.com/package/fetch-inject)
+[![NPM Version](https://img.shields.io/npm/v/fetch-inject.svg)](https://www.npmjs.com/package/fetch-inject)
 
 Dynamically inline assets into the DOM using the Fetch API, with support for promise chains.
 
@@ -192,5 +193,4 @@ Please use Issues sparingly. I favor action over words. Send in a Pull Request i
 
 ## License
 
-MIT License<br>
-Copyright (c) 2017 VHS
+MIT License 2017 © VHS and [contributors](https://github.com/vhs/fetch-inject/graphs/contributors)

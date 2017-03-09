@@ -1,0 +1,25 @@
+{
+  "name": "fetch-inject",
+  "description": "Inline assets into the DOM using Fetch Injection.",
+  "main": "dist/fetch-inject.js",
+  "authors": [
+    "VHS"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "dom",
+    "fetch",
+    "inject",
+    "promise",
+    "script",
+    "css"
+  ],
+  "homepage": "https://github.com/vhs/fetch-inject",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
