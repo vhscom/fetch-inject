@@ -10,14 +10,14 @@ const config = {
     license({
       banner: `Copyright (c) <%= moment().format('YYYY') %> VHS\n@licence MIT`
     })
-  ]
+  ],
 }
 
 if (process.env.BUILD_TARGET === 'minified') {
   config.plugins.unshift(uglify({}, minify))
   config.dest = 'dist/fetch-inject.min.js'
+  config.sourceMap = true
 } else {
-  config.sourceMap = 'inline'
   config.dest = 'dist/fetch-inject.js'
 }
 
