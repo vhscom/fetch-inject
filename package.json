@@ -28,7 +28,6 @@
   "devDependencies": {
     "rimraf": "^2.6.1",
     "rollup": "^0.41.4",
-    "rollup-plugin-conditional": "^1.1.1",
     "rollup-plugin-license": "^0.3.0",
     "rollup-plugin-uglify": "^1.0.1",
     "semantic-release": "^6.3.2",
