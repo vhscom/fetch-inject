@@ -10,7 +10,7 @@ const config = {
     license({
       banner: `Copyright (c) <%= moment().format('YYYY') %> VHS\n@licence MIT`
     })
-  ],
+  ]
 }
 
 if (process.env.BUILD_TARGET === 'minified') {
