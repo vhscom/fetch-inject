@@ -32,7 +32,8 @@
     "rollup-plugin-uglify": "^1.0.1",
     "semantic-release": "^6.3.2",
     "standard": "^9.0.0",
-    "uglify-js-harmony": "^2.7.5"
+    "uglify-js-harmony": "^2.7.5",
+    "semantic-release": "^6.3.2"
   },
   "standard": {
     "ignore": [
