@@ -5,11 +5,11 @@
 [![NPM Downloads per Month](https://img.shields.io/npm/dm/fetch-inject.svg)](https://www.npmjs.com/package/fetch-inject)
 [![NPM Version](https://img.shields.io/npm/v/fetch-inject.svg)](https://www.npmjs.com/package/fetch-inject)
 
-Dynamically inline assets into the DOM with support for asynchronous dependency management in under 400 bytes gzipped.
+Dynamically inline assets into the DOM with support for asynchronous dependency management.
 
 ## Purpose
 
-Improve your website performance and UX by fetching external assets and inlining them into the DOM programmatically. Get a Promise in return.
+Improve website performance and UX by fetching external assets and inlining them into the DOM programmatically. Get a Promise in return.
 
 ## Background
 
