@@ -15,13 +15,13 @@ Improve website performance and UX by fetching external assets and inlining them
 
 Read about [why I created this](https://hackcabin.com/post/managing-asynchronous-dependencies-javascript/) on **Hack Cabin**.
 
-## Quick Start
+## Installing
 
 Fetch Inject is available for testing purposes [via jsDelivr](http://www.jsdelivr.com/projects/fetch-inject), and for production via NPM and Bower.
 
 ### For Testing
 
-To try out Fetch Inject add the following to your document `head` and see the [Use Cases](#use-cases) to get a feel for what it can do:
+Add the following to your document `head` and see the [Use Cases](#use-cases) to get a feel for what it can do:
 
 ```html
 <script src="https://cdn.jsdelivr.net/fetch-inject/latest/fetch-inject.min.js"></script>
@@ -29,9 +29,7 @@ To try out Fetch Inject add the following to your document `head` and see the [U
 
 ### For Production
 
-If you read the [background](#background) you'll understand why it's a bad idea to rely on remote resource requests when rendering your page.
-
-To install Fetch Inject for production, grab the library from NPM with `npm i fetch-inject` or Bower with `bower install fetch-inject` and inline the script below page `meta` and `async` scripts in your document `head`:
+Grab the library from NPM with `npm i fetch-inject` or Bower with `bower install fetch-inject`. Recommended placement shown here:
 
 ```html
 <head>
