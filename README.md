@@ -5,19 +5,43 @@
 [![NPM Downloads per Month](https://img.shields.io/npm/dm/fetch-inject.svg)](https://www.npmjs.com/package/fetch-inject)
 [![NPM Version](https://img.shields.io/npm/v/fetch-inject.svg)](https://www.npmjs.com/package/fetch-inject)
 
-Dynamically inline assets into the DOM using the Fetch API, with support for promise chains.
+Dynamically inline assets into the DOM with support for asynchronous dependency management in under 400 bytes gzipped.
 
 ## Purpose
 
-Use to inject remote assets, then do something with them. Currently supports inlining of `script` and `style` elements.
+Improve your website performance and UX by fetching external assets and inlining them into the DOM programmatically. Get a Promise in return.
 
 ## Background
 
 Read about [why I created this](https://hackcabin.com/post/managing-asynchronous-dependencies-javascript/) on **Hack Cabin**.
 
-## Installation
+## Quick Start
 
-Install the library from NPM with `npm i fetch-inject` or Bower with `bower install fetch-inject`.
+Fetch Inject is available for testing purposes [via jsDelivr](http://www.jsdelivr.com/projects/fetch-inject), and for production via NPM and Bower.
+
+### For Testing
+
+To try out Fetch Inject add the following to your document `head` and see the [Use Cases](#use-cases) to get a feel for what it can do:
+
+```html
+<script src="https://cdn.jsdelivr.net/fetch-inject/latest/fetch-inject.min.js"></script>
+```
+
+### For Production
+
+If you read the [background](#background) you'll understand why it's a bad idea to rely on remote resource requests when rendering your page.
+
+To install Fetch Inject for production, grab the library from NPM with `npm i fetch-inject` or Bower with `bower install fetch-inject` and inline the script below page `meta` and `async` scripts in your document `head`:
+
+```html
+<head>
+  <meta charset="utf-8">
+  <script async defer "/js/async/script.js"></script>
+  <script>
+    // contents of fetch-inject.min.js
+  </script>
+</head>
+```
 
 ## Usage
 
@@ -52,9 +76,10 @@ Inline your critical path CSS and load [non-critical styles](https://gist.github
 
 ```html
 <style>
-  *{box-sizing:border-box;text-rendering:geometricPrecision}
+  *{box-sizing:border-box;text-rendering:geometricPrecision} /* ... */
 </style>
 <script>
+  // contents of fetch-inject.min.js
   fetchInject([
     '/css/non-critical.css',
     'https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css'
@@ -71,7 +96,11 @@ Remote assets can lead to [jank](http://jankfree.org/) or, worse yet, [SPOF](htt
 Asynchronously load remote scripts [without blocking](https://www.stevesouders.com/blog/2009/04/27/loading-scripts-without-blocking/):
 
 ```html
-<script>fetchInject(['https://use.typekit.net/spoful8r.js'])</script>
+fetchInject([
+  'bower_components/jquery/dist/jquery.js',
+  'bower_components/what-input/dist/what-input.js',
+  'bower_components/foundation-sites/dist/js/foundation.js'
+])
 ```
 
 ### Loading Scripts Lazily
@@ -165,21 +194,20 @@ fetchInject([
 })
 ```
 
-## Known Limitations
+## Limitations
 
-- Requires you have at least one of `script` or `style` in the `head` of your `document` already, depending on which you're injecting.
-- If the resource uses a relative path (e.g. `url(default-skin.png)`) the relative resource may fail to load.
-- Does not perform any caching.
-- Does not support [Isomorphic rendering](http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/).
+- Currently supports only `script` and `style` elements.
+- Currently requires you have at least one of `script` or `style` in the `head` of your `document` already, depending on which you're injecting.
+- Assets with relative paths (e.g. `url(default-skin.png)`) may need to be updated.
 
 ## Supported Browsers
 
-All browsers with native support the [Fetch API](http://devdocs.io/dom/fetch_api) and ES2015.
+All browsers with support for [Fetch](http://caniuse.com/#feat=fetch) and [Promises](http://caniuse.com/#feat=promises).
 
 ## Development
 
-1. Clone the repo with `git clone https://github.com/vhs/fetch-inject.git`.
-1. Install dependencies with `npm i` (`brew install node` first on macOS).
+1. Clone the repo with `git clone https://github.com/vhs/fetch-inject`.
+1. Install dev dependencies with `npm i` (`brew install node` first on macOS).
 1. Execute `npm run` for a listing of available commands.
 
 **Note:** Build variants possible for various module types via the `format` setting in `rollup.config.js`. I intend to switch to ES6 modules as soon as reasonable [browser support](http://caniuse.com/#search=module) is realized.
@@ -195,4 +223,4 @@ Please use Issues sparingly. I favor action over words. Send in a Pull Request i
 
 ## License
 
-MIT License 2017 © VHS and [contributors](https://github.com/vhs/fetch-inject/graphs/contributors)
+MIT License 2017 © VHS
