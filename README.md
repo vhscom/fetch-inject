@@ -195,8 +195,7 @@ fetchInject([
 ## Limitations
 
 - Currently supports only `script` and `style` elements.
-- Currently requires you have at least one of `script` or `style` in the `head` of your `document` already, depending on which you're injecting.
-- Assets with relative paths (e.g. `url(default-skin.png)`) may need to be updated.
+- Relative paths (e.g. `url(default-skin.png)`) may need to be adjusted.
 
 ## Supported Browsers
 
