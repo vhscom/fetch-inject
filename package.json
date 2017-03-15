@@ -40,9 +40,6 @@
       "/dist"
     ]
   },
-  "release": {
-    "debug": true
-  },
   "bugs": {
     "url": "https://github.com/vhs/fetch-inject/issues"
   },
