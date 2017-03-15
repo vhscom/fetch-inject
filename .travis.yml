@@ -10,9 +10,10 @@ node_js:
   - '4'
 before_script:
   - npm prune
+  - npm run clean
+  - mkdir dist
 script:
   - npm test
-  - npm run clean
   - npm run build
 after_success:
   - npm run semantic-release
