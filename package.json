@@ -1,6 +1,6 @@
 {
   "name": "fetch-inject",
-  "version": "0.0.0-development",
+  "version": "1.3.0",
   "description": "Inline assets into the DOM using Fetch Injection.",
   "main": "lib/fetch-inject.js",
   "scripts": {
