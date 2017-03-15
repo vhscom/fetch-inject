@@ -5,7 +5,6 @@ import { minify } from 'uglify-js-harmony'
 const config = {
   entry: 'src/fetch-inject.js',
   format: 'iife',
-  moduleName: 'fetchInject',
   plugins: [
     license({
       banner: `Copyright (c) <%= moment().format('YYYY') %> VHS\nBuild: <%= moment().format() %>\n@licence MIT`

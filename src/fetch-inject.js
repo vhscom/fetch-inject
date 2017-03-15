@@ -3,7 +3,7 @@ import {
   style as injectStyle
 } from './injectors'
 
-export default function (urls) {
+(function (urls) {
   const resources = []
   const deferreds = []
   const thenables = []
@@ -31,4 +31,4 @@ export default function (urls) {
     })
     return Promise.all(thenables)
   })
-}
+})
