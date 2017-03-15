@@ -11,6 +11,10 @@ Dynamically inline assets into the DOM with support for asynchronous dependency 
 
 Improve website performance and UX by fetching external assets and inlining them into the DOM programmatically. Get a Promise in return.
 
+- 398 bytes gzipped
+- Zero runtime dependencies
+- ES6 Module included
+
 ## Background
 
 Read about [why I created this](https://hackcabin.com/post/managing-asynchronous-dependencies-javascript/) on **Hack Cabin**.
@@ -36,10 +40,16 @@ Grab the library from NPM with `npm i fetch-inject` or Bower with `bower install
   <meta charset="utf-8">
   <script async defer "/js/async/script.js"></script>
   <script>
-    // contents of fetch-inject.min.js
+    (function () {
+      if (!window.fetch) return
+      // contents of fetch-inject.min.js
+      // YOUR CODE HERE
+    })()
   </script>
 </head>
 ```
+
+To fallback for older browsers `document.write` is your friend.
 
 ## Usage
 
@@ -196,10 +206,11 @@ fetchInject([
 
 - Currently supports only `script` and `style` elements.
 - Relative paths (e.g. `url(default-skin.png)`) may need to be adjusted.
+- Does not support isomorphic rendering.
 
 ## Supported Browsers
 
-All browsers with support for [Fetch](http://caniuse.com/#feat=fetch) and [Promises](http://caniuse.com/#feat=promises).
+All browsers with support for [Fetch](http://caniuse.com/#feat=fetch).
 
 ## Development
 
@@ -207,7 +218,7 @@ All browsers with support for [Fetch](http://caniuse.com/#feat=fetch) and [Promi
 1. Install dev dependencies with `npm i` (`brew install node` first on macOS).
 1. Execute `npm run` for a listing of available commands.
 
-**Note:** Build variants possible for various module types via the `format` setting in `rollup.config.js`. I intend to switch to ES6 modules as soon as reasonable [browser support](http://caniuse.com/#search=module) is realized.
+Build variants are possible for various module types via the `format` setting in `rollup.config.js`.
 
 ## Contributing
 
