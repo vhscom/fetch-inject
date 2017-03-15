@@ -16,9 +16,9 @@ const config = {
 if (process.env.BUILD_TARGET === 'minified') {
   config.plugins.unshift(uglify({}, minify))
   config.dest = 'dist/fetch-inject.min.js'
-  config.sourceMap = true
 } else {
   config.dest = 'dist/fetch-inject.js'
+  config.sourceMap = true
 }
 
 export default config
