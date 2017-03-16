@@ -49,7 +49,7 @@ Grab the library from NPM with `npm i fetch-inject` or Bower with `bower install
 </head>
 ```
 
-To fallback for older browsers `document.write` is your friend.
+To fallback for older browsers `document.write` and `noscript` are your friends.
 
 ## Usage
 
