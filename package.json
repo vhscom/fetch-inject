@@ -1,6 +1,6 @@
 {
   "name": "fetch-inject",
-  "description": "Inline assets into the DOM using Fetch Injection.",
+  "description": "Dynamically inline assets into the DOM using Fetch Injection.",
   "module": "dist/fetch-inject.es.js",
   "scripts": {
     "build": "npm run clean && npm run lint && npm run build-iife && npm run build-es",

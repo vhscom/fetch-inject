@@ -5,7 +5,7 @@
 [![NPM Downloads per Month](https://img.shields.io/npm/dm/fetch-inject.svg)](https://www.npmjs.com/package/fetch-inject)
 [![NPM Version](https://img.shields.io/npm/v/fetch-inject.svg)](https://www.npmjs.com/package/fetch-inject)
 
-Dynamically inline assets into the DOM using the Fetch API.
+Dynamically inline assets into the DOM using Fetch Injection.
 
 ## Purpose
 
@@ -202,7 +202,7 @@ fetchInject([
 
 ## Supported Browsers
 
-All browsers with support for [Fetch](http://caniuse.com/#feat=fetch).
+All browsers with support for [Fetch](http://caniuse.com/#feat=fetch) and [Promises](http://caniuse.com/#search=promises).
 
 <blockquote>
   Fetch will become available in Safari in the Safari 10.1 release that ships with macOS Sierra 10.12.4 and Safari on iOS 10.3.
@@ -224,6 +224,7 @@ Please use [Issues](https://github.com/vhs/fetch-inject/issues) to submit bugs a
 ## See Also
 
 - [fetch](https://github.com/github/fetch) - Polyfill for `window.fetch`
+- [promise-polyfill](https://github.com/taylorhakes/promise-polyfill) - Polyfill for Promises
 - [es-module-loader](https://github.com/ModuleLoader/es-module-loader) - Polyfill for the ES Module Loader
 - [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch) - A library for using `fetch` in Node
 
