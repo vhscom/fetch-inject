@@ -41,7 +41,7 @@ Grab the library from NPM with `npm i fetch-inject` or Bower with `bower install
   <script async defer "/js/async/script.js"></script>
   <script>
     (function () {
-      if (!window.fetch) return
+      if (!window.fetch || !window.Promise) return
       // contents of fetch-inject.min.js
       // YOUR CODE HERE
     })()
