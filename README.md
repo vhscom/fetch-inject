@@ -5,11 +5,11 @@
 [![NPM Downloads per Month](https://img.shields.io/npm/dm/fetch-inject.svg)](https://www.npmjs.com/package/fetch-inject)
 [![NPM Version](https://img.shields.io/npm/v/fetch-inject.svg)](https://www.npmjs.com/package/fetch-inject)
 
-A JavaScript library for dynamically inlining assets into the DOM using Fetch Injection.
+Dynamically inline assets into the DOM using the Fetch API.
 
 ## Purpose
 
-Improve website performance and UX by fetching external assets and inlining them into the DOM. Get a Promise in return.
+Improve website performance and UX by fetching external assets and inlining them into the DOM programmatically. Get a Promise in return.
 
 - 398 bytes gzipped
 - Zero runtime dependencies
@@ -17,7 +17,7 @@ Improve website performance and UX by fetching external assets and inlining them
 
 ## Background
 
-Read about [why I created this](https://hackcabin.com/post/managing-asynchronous-dependencies-javascript/) on **Hack Cabin**.
+Learn about _Fetch Injection_ and [why I created this library](https://hackcabin.com/post/managing-asynchronous-dependencies-javascript/) on **Hack Cabin**.
 
 ## Installing
 
