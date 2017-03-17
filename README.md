@@ -5,11 +5,11 @@
 [![NPM Downloads per Month](https://img.shields.io/npm/dm/fetch-inject.svg)](https://www.npmjs.com/package/fetch-inject)
 [![NPM Version](https://img.shields.io/npm/v/fetch-inject.svg)](https://www.npmjs.com/package/fetch-inject)
 
-Dynamically inline assets into the DOM with support for asynchronous dependency management.
+A JavaScript library for dynamically inlining assets into the DOM using Fetch Injection.
 
 ## Purpose
 
-Improve website performance and UX by fetching external assets and inlining them into the DOM programmatically. Get a Promise in return.
+Improve website performance and UX by fetching external assets and inlining them into the DOM. Get a Promise in return.
 
 - 398 bytes gzipped
 - Zero runtime dependencies
@@ -77,22 +77,16 @@ fetchInject([
 ### Loading CSS Asynchronously
 
 **Problem:**
-[PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) dings you for loading unnecessary styles on initial render.
+[PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) dings you for loading blocking CSS and unnecessary styles on initial render.
 
 **Solution:**
 Inline your critical path CSS and load [non-critical styles](https://gist.github.com/scottjehl/87176715419617ae6994) asynchronously:
 
-```html
-<style>
-  *{box-sizing:border-box;text-rendering:geometricPrecision} /* ... */
-</style>
-<script>
-  // contents of fetch-inject.min.js
-  fetchInject([
-    '/css/non-critical.css',
-    'https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css'
-  ])
-</script>
+```js
+fetchInject([
+  '/css/non-critical.css',
+  'https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css'
+])
 ```
 
 ### Preventing Script Blocking
@@ -106,8 +100,7 @@ Asynchronously load remote scripts [without blocking](https://www.stevesouders.c
 ```html
 fetchInject([
   'bower_components/jquery/dist/jquery.js',
-  'bower_components/what-input/dist/what-input.js',
-  'bower_components/foundation-sites/dist/js/foundation.js'
+  'bower_components/what-input/dist/what-input.js'
 ])
 ```
 
@@ -206,11 +199,15 @@ fetchInject([
 
 - Currently supports only `script` and `style` elements.
 - Relative paths (e.g. `url(default-skin.png)`) may need to be adjusted.
-- Does not support isomorphic rendering.
 
-## Supported Browsers
+## Supported Runtimes
 
-All browsers with support for [Fetch](http://caniuse.com/#feat=fetch).
+All ES runtimes with [support for Fetch](http://caniuse.com/#feat=fetch) and [Promises](http://caniuse.com/#search=promises).
+
+<blockquote>
+  Fetch will become available in Safari in the Safari 10.1 release that ships with macOS Sierra 10.12.4 and Safari on iOS 10.3.
+  <cite>Jon Davis</cite>,  Web Technologies Evangelist
+</blockquote>
 
 ## Development
 
@@ -218,16 +215,18 @@ All browsers with support for [Fetch](http://caniuse.com/#feat=fetch).
 1. Install dev dependencies with `npm i` (`brew install node` first on macOS).
 1. Execute `npm run` for a listing of available commands.
 
-Build variants are possible for various module types via the `format` setting in `rollup.config.js`.
+CJS builds for Node possible via the `format` setting in `rollup.config.js`. I have intentionally omitted the `main` property in the package manifest in favor of `module` based on the draft [Node.js Enhancement Proposal for ES6 Modules](https://github.com/nodejs/node-eps/blob/4217dca299d89c8c18ac44c878b5fe9581974ef3/002-es6-modules.md#51-determining-if-source-is-an-es-module).
 
 ## Contributing
 
-Please use Issues sparingly. I favor action over words. Send in a Pull Request if you feel strongly something needs to be changed. Otherwise, please create a fork and mind the licensing terms.
+Please use Issues sparingly. Send in a Pull Request if you feel strongly something needs to be changed. Otherwise, please create a fork and mind the licensing terms. Thank you.
 
-## Related Libraries
+## See Also
 
-- [`window.fetch` polyfill](https://github.com/github/fetch)
+- [GitHub's WHATWG Fetch polyfill](https://github.com/github/fetch)
+- [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch)
 - [loadCSS](https://github.com/filamentgroup/loadCSS/)
+
 
 ## License
 
