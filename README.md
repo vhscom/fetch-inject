@@ -41,7 +41,7 @@ Grab the library from NPM with `npm i fetch-inject` or Bower with `bower install
   <script async defer "/js/async/script.js"></script>
   <script>
     (function () {
-      if !(window.fetch && window.Promise) return
+      if !(window.fetch) return
       // contents of fetch-inject.min.js
       // YOUR CODE HERE
     })()
@@ -200,9 +200,9 @@ fetchInject([
 - Currently supports only `script` and `style` elements.
 - Relative paths (e.g. `url(default-skin.png)`) may need to be adjusted.
 
-## Supported Runtimes
+## Supported Browsers
 
-All browsers with support for [Fetch](http://caniuse.com/#feat=fetch) and [Promises](http://caniuse.com/#search=promises).
+All browsers with support for [Fetch](http://caniuse.com/#feat=fetch).
 
 <blockquote>
   Fetch will become available in Safari in the Safari 10.1 release that ships with macOS Sierra 10.12.4 and Safari on iOS 10.3.
