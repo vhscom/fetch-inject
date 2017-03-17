@@ -223,7 +223,8 @@ Please use [Issues](https://github.com/vhs/fetch-inject/issues) to submit bugs a
 
 ## See Also
 
-- [fetch](https://github.com/github/fetch) - A `window.fetch` polyfill by GitHub
+- [fetch](https://github.com/github/fetch) - Polyfill for `window.fetch`
+- [es-module-loader](https://github.com/ModuleLoader/es-module-loader) - Polyfill for the ES Module Loader
 - [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch) - A library for using `fetch` in Node
 
 ## License
