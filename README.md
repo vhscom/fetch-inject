@@ -202,7 +202,7 @@ fetchInject([
 
 ## Supported Runtimes
 
-All ES runtimes with [support for Fetch](http://caniuse.com/#feat=fetch) and [Promises](http://caniuse.com/#search=promises).
+All browsers with support for [Fetch](http://caniuse.com/#feat=fetch) and [Promises](http://caniuse.com/#search=promises).
 
 <blockquote>
   Fetch will become available in Safari in the Safari 10.1 release that ships with macOS Sierra 10.12.4 and Safari on iOS 10.3.
@@ -215,18 +215,16 @@ All ES runtimes with [support for Fetch](http://caniuse.com/#feat=fetch) and [Pr
 1. Install dev dependencies with `npm i` (`brew install node` first on macOS).
 1. Execute `npm run` for a listing of available commands.
 
-CJS builds for Node possible via the `format` setting in `rollup.config.js`. I have intentionally omitted the `main` property in the package manifest in favor of `module` based on the draft [Node.js Enhancement Proposal for ES6 Modules](https://github.com/nodejs/node-eps/blob/4217dca299d89c8c18ac44c878b5fe9581974ef3/002-es6-modules.md#51-determining-if-source-is-an-es-module).
+For different module types adjust the `format` setting in `rollup.config.js`.
 
 ## Contributing
 
-Please use Issues sparingly. Send in a Pull Request if you feel strongly something needs to be changed. Otherwise, please create a fork and mind the licensing terms. Thank you.
+Please use [Issues](https://github.com/vhs/fetch-inject/issues) to submit bugs and enhancement requests only. Pull Requests accepted and appreciated. For Node support prior to the acceptance of the [ES6 Modules proposal](https://github.com/nodejs/node-eps/blob/master/002-es6-modules.md), please create fork and mind the licensing terms. Thank you.
 
 ## See Also
 
-- [GitHub's WHATWG Fetch polyfill](https://github.com/github/fetch)
-- [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch)
-- [loadCSS](https://github.com/filamentgroup/loadCSS/)
-
+- [fetch](https://github.com/github/fetch) - A `window.fetch` polyfill by GitHub
+- [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch) - A library for using `fetch` in Node
 
 ## License
 
