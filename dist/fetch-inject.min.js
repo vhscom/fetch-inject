@@ -1,6 +1,7 @@
 /**
+ * Fetch Inject
  * Copyright (c) 2017 VHS
- * Build: 2017-03-16T02:47:34+08:00
+ * Build: 2017-03-20T22:51:15+08:00
  * @licence MIT
  */
 

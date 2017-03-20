@@ -33,18 +33,18 @@ Add the following to your document `head` and see the [Use Cases](#use-cases) to
 
 ### For Production
 
-Grab the library from NPM with `npm i fetch-inject` or Bower with `bower install fetch-inject`. Recommended placement shown here:
+Grab the library from NPM with `npm i fetch-inject` or Bower with `bower install fetch-inject`. Suggested placement shown here:
 
 ```html
 <head>
   <meta charset="utf-8">
-  <script async defer "/js/async/script.js"></script>
+  <script async defer "/js/vendor/script.js"></script>
   <script>
-    (function () {
+    (function (window, document, undefined) {
       if !(window.fetch) return
       // contents of fetch-inject.min.js
       // YOUR CODE HERE
-    })()
+    })(window, document)
   </script>
 </head>
 ```
@@ -99,8 +99,8 @@ Asynchronously load remote scripts [without blocking](https://www.stevesouders.c
 
 ```html
 fetchInject([
-  'bower_components/jquery/dist/jquery.js',
-  'bower_components/what-input/dist/what-input.js'
+  '/bower_components/jquery/dist/jquery.js',
+  '/bower_components/what-input/dist/what-input.js'
 ])
 ```
 
@@ -148,8 +148,8 @@ Specify multiple URLs of different types when calling:
 
 ```js
 fetchInject([
-  'https://cdn.jsdelivr.net/normalize/5.0.0/normalize.css',
-  '//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js',
+  'https://cdn.jsdelivr.net/drop/1.4.2/js/drop.min.js',
+  'https://cdn.jsdelivr.net/drop/1.4.2/css/drop-theme-arrows-bounce.min.css'
 ])
 ```
 
@@ -165,7 +165,6 @@ Call multiple times, forming a promise chain:
 fetchInject([
   'https://cdn.jsdelivr.net/jquery/3.1.1/jquery.slim.min.js',
   'https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js',
-  'https://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'
 ]).then(() => {
   fetchInject([
     'https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js'
@@ -179,7 +178,7 @@ fetchInject([
 You want to use library composed of several resources and initialize it as soon as possible.
 
 **Solution:**
-This is precisely why `fetchInject` was created:
+This is precisely the kind of activity `fetchInject` works best at:
 
 ```js
 const container = document.querySelector('.pswp')
@@ -195,10 +194,36 @@ fetchInject([
 })
 ```
 
-## Limitations
+### Managing Asynchronous Dependencies
 
-- Currently supports only `script` and `style` elements.
-- Relative paths (e.g. `url(default-skin.png)`) may need to be adjusted.
+**Problem:**
+You want to load some dependencies which requires some dependencies, which requires a dependency.
+
+**Solution:**
+You could scatter some `link`s into your document head, blocking initial page render and bloat your application bundle. Or...
+
+```js
+const tether = ['/js/tether.min.js']
+const drop = [
+  '/js/drop.min.js',
+  '/css/drop-theme-arrows-bounce.min.css'
+]
+const tooltip = [
+  '/js/tooltip.min.js',
+  '/css/tooltip-theme-arrows.css'
+]
+fetchInject(tether)
+  .then(() => fetchInject(drop))
+  .then(() => fetchInject(tooltip))
+  .then(() => {
+    new Tooltip({
+      target: document.querySelector('h1'),
+      content: "You moused over the first <b>H1</b>!",
+      classes: 'tooltip-theme-arrows',
+      position: 'bottom center'
+    })
+  })
+```
 
 ## Supported Browsers
 
@@ -215,11 +240,9 @@ All browsers with support for [Fetch](http://caniuse.com/#feat=fetch) and [Promi
 1. Install dev dependencies with `npm i` (`brew install node` first on macOS).
 1. Execute `npm run` for a listing of available commands.
 
-For different module types adjust the `format` setting in `rollup.config.js`.
-
 ## Contributing
 
-Please use [Issues](https://github.com/vhs/fetch-inject/issues) to submit bugs and enhancement requests only. Pull Requests accepted and appreciated. For Node support prior to the acceptance of the [ES6 Modules proposal](https://github.com/nodejs/node-eps/blob/master/002-es6-modules.md), please create fork and mind the licensing terms. Thank you.
+Please use [Issues](https://github.com/vhs/fetch-inject/issues) for bugs and enhancement requests only. If you need support, you know [where to go](http://stackoverflow.com/). Thanks!
 
 ## See Also
 
