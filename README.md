@@ -24,7 +24,7 @@ https://codepen.io/vhs/pen/MpVeOE?editors=0012
 
 ## Installing
 
-Grab the library from NPM with `npm i fetch-inject` or Bower with `bower install fetch-inject`. Also available via CDN [using jsDelivr](http://www.jsdelivr.com/projects/fetch-inject).
+Get it on NPM with `npm i fetch-inject` or Bower with `bower install fetch-inject`. Also available via CDN [using jsDelivr](http://www.jsdelivr.com/projects/fetch-inject).
 
 ## Usage
 
