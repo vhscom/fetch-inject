@@ -31,24 +31,6 @@ Grab the library from NPM with `npm i fetch-inject` or Bower with `bower install
 1. Call `fetchInject` with an array of URLs.
 1. Optionally, handle the returned `Promise`.
 
-Suggested placement shown here:
-
-```html
-<head>
-  <meta charset="utf-8">
-  <script async defer "/js/vendor/script.js"></script>
-  <script>
-    (function () {
-      if (!window.fetch) return
-      // contents of fetch-inject.min.js
-      // YOUR CODE HERE
-    })()
-  </script>
-</head>
-```
-
-To fallback for older browsers `document.write` and `noscript` are your friends.
-
 ## Use Cases
 
 ### Loading Utility Scripts
