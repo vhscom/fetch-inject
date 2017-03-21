@@ -1,7 +1,7 @@
 {
   "name": "fetch-inject",
   "description": "Dynamically inline assets into the DOM using Fetch Injection.",
-  "main": "dist/fetch-inject.min.js",
+  "main": "dist/fetch-inject.umd.min.js",
   "authors": [
     "VHS"
   ],
