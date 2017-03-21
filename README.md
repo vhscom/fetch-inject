@@ -24,9 +24,7 @@ https://codepen.io/vhs/pen/MpVeOE?editors=0012
 
 ## Installing
 
-Fetch Inject is available for testing purposes [via jsDelivr](http://www.jsdelivr.com/projects/fetch-inject), and for production via NPM and Bower.
-
-Grab the library from NPM with `npm i fetch-inject` or Bower with `bower install fetch-inject`.
+Grab the library from NPM with `npm i fetch-inject` or Bower with `bower install fetch-inject`. Also available via CDN [using jsDelivr](http://www.jsdelivr.com/projects/fetch-inject).
 
 ## Usage
 
