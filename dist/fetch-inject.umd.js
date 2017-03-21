@@ -1,12 +1,15 @@
 /**
  * Fetch Inject
  * Copyright (c) 2017 VHS
- * Build: 2017-03-22T01:20:30+08:00
+ * Build: 2017-03-22T01:20:33+08:00
  * @licence MIT
  */
 
-var fetchInject = (function () {
-'use strict';
+(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+	typeof define === 'function' && define.amd ? define(factory) :
+	(global.fetchInject = factory());
+}(this, (function () { 'use strict';
 
 const script = (function(i,s,o,g,r,a,m){a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.appendChild(s.createTextNode(g));a.onload=r;m?m.parentNode.insertBefore(a,m):s.head.appendChild(a);}); // eslint-disable-line
 const style = (function(i,s,o,g,r,a,m){a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.type='text/css';a.appendChild(s.createTextNode(g));m?m.parentNode.insertBefore(a,m):s.head.appendChild(a);}); // eslint-disable-line
@@ -43,4 +46,4 @@ var fetchInject = function (urls) {
 
 return fetchInject;
 
-}());
+})));

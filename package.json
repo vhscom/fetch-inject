@@ -2,10 +2,12 @@
   "name": "fetch-inject",
   "description": "Dynamically inline assets into the DOM using Fetch Injection.",
   "module": "dist/fetch-inject.es.js",
+  "main": "dist/fetch-inject.umd.js",
   "scripts": {
-    "build": "npm run clean && npm run lint && npm run build-iife && npm run build-es",
+    "build": "npm run clean && npm run test && npm run build-iife && npm run build-es && npm run build-umd",
     "build-iife": "rollup -c && MINIFIER=on rollup -c",
     "build-es": "FORMAT=es rollup -c && FORMAT=es MINIFIER=on rollup -c",
+    "build-umd": "FORMAT=umd rollup -c && FORMAT=umd MINIFIER=on rollup -c",
     "clean": "rimraf ./dist/*",
     "test": "npm run lint",
     "lint": "standard",
