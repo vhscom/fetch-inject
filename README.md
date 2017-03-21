@@ -40,11 +40,11 @@ Grab the library from NPM with `npm i fetch-inject` or Bower with `bower install
   <meta charset="utf-8">
   <script async defer "/js/vendor/script.js"></script>
   <script>
-    (function (window, document, undefined) {
-      if !(window.fetch) return
+    (function () {
+      if (!window.fetch) return
       // contents of fetch-inject.min.js
       // YOUR CODE HERE
-    })(window, document)
+    })()
   </script>
 </head>
 ```
