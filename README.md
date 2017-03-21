@@ -11,29 +11,29 @@ Dynamically inline assets into the DOM using Fetch Injection.
 
 Improve website performance and UX by fetching external assets and inlining them into the DOM programmatically. Get a Promise in return.
 
-- 398 bytes gzipped
+- Wraps the [Fetch API](http://devdocs.io/dom/fetch_api)
 - Zero runtime dependencies
-- ES6 Module included
+- 398 bytes gzipped
 
 ## Background
 
 Learn about _Fetch Injection_ and [why I created this library](https://hackcabin.com/post/managing-asynchronous-dependencies-javascript/) on **Hack Cabin**.
 
+Don't like to read? Here's a playground:<br>
+https://codepen.io/vhs/pen/MpVeOE?editors=0012
+
 ## Installing
 
 Fetch Inject is available for testing purposes [via jsDelivr](http://www.jsdelivr.com/projects/fetch-inject), and for production via NPM and Bower.
 
-### For Testing
+Grab the library from NPM with `npm i fetch-inject` or Bower with `bower install fetch-inject`.
 
-Add the following to your document `head` and see the [Use Cases](#use-cases) to get a feel for what it can do:
+## Usage
 
-```html
-<script src="https://cdn.jsdelivr.net/fetch-inject/latest/fetch-inject.min.js"></script>
-```
+1. Call `fetchInject` with an array of URLs.
+1. Optionally, handle the returned `Promise`.
 
-### For Production
-
-Grab the library from NPM with `npm i fetch-inject` or Bower with `bower install fetch-inject`. Suggested placement shown here:
+Suggested placement shown here:
 
 ```html
 <head>
@@ -50,11 +50,6 @@ Grab the library from NPM with `npm i fetch-inject` or Bower with `bower install
 ```
 
 To fallback for older browsers `document.write` and `noscript` are your friends.
-
-## Usage
-
-1. Call `fetchInject` with an array of URLs.
-1. Optionally, handle the returned `Promise`.
 
 ## Use Cases
 
@@ -134,7 +129,7 @@ You could create a `script` element and use the [`async`](http://devdocs.io/html
 fetchInject([
   'https://cdn.jsdelivr.net/momentjs/2.17.1/moment.min.js'
 ]).then(() => {
-  console.log(`Finish in less than ${moment().endOf('year').fromNow()}`)
+  console.log(`Finish in less than ${moment().endOf('year').fromNow(true)}`)
 })
 ```
 
