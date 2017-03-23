@@ -11,8 +11,8 @@ Dynamically inline assets into the DOM using Fetch Injection.
 
 Improve website performance and UX by fetching external assets and inlining them into the DOM programmatically. Get a Promise in return.
 
-- Wraps the [Fetch API](http://devdocs.io/dom/fetch_api)
-- Zero runtime dependencies
+- Wraps [Fetch API](http://devdocs.io/dom/fetch_api)
+- No hard dependencies
 - 398 bytes gzipped
 
 ## Background
