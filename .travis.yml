@@ -10,10 +10,15 @@ before_script:
   - npm prune
 script:
   - npm run lint
-  - npm run semantic-release:pre
   - npm run build
 after_success:
+  - npm run clean
+before_deploy:
+  - npm run semantic-release:pre
+  - npm run build
+deploy:
   - npm publish
+after_deploy:
   - npm run semantic-release:post
 branches:
   except:
