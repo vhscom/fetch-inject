@@ -32,6 +32,7 @@
   "devDependencies": {
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.0.0",
+    "ghooks": "^2.0.0",
     "rimraf": "^2.6.1",
     "rollup": "^0.41.4",
     "rollup-plugin-license": "^0.3.0",
@@ -50,6 +51,9 @@
   },
   "homepage": "https://github.com/vhs/fetch-inject#readme",
   "config": {
+    "ghooks": {
+      "pre-commit": "npm run lint"
+    },
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
