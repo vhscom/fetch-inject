@@ -1,5 +1,6 @@
 {
   "name": "fetch-inject",
+  "version": "0.0.0-development",
   "description": "Dynamically inline assets into the DOM using Fetch Injection.",
   "module": "dist/fetch-inject.es.js",
   "main": "dist/fetch-inject.umd.js",
