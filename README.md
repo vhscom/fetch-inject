@@ -25,7 +25,7 @@ Fetch Injection is a website performance optimization technique for loading reso
 
 ## Pfft. I use a bundler. It does everything.
 
-And **how big** are your bundles currently? Does your bundler _really_ support Tree Shaking? [Or have you been mislead](https://medium.com/@vhs/sean-thanks-for-your-continued-work-on-webpack-465572df6208)? Bruh, do you even [Isomorphic](https://vhs.codeberg.pagetalks/isomorphic-rendering-react/)?
+And **how big** are your bundles currently? Does your bundler [_really_](https://medium.com/@vhs/sean-thanks-for-your-continued-work-on-webpack-465572df6208) support Tree Shaking? Bruh, do you even [Isomorphic](https://vhs.codeberg.pagetalks/isomorphic-rendering-react/)?
 
 _Whatever. I'll just use `async` scripts._
 
