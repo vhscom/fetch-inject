@@ -1,9 +1,7 @@
 # Fetch Inject
 
 [![Build Status](https://travis-ci.org/vhs/fetch-inject.svg?branch=master)](https://travis-ci.org/vhs/fetch-inject)
-[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](http://standardjs.com/)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![Join the chat at https://gitter.im/fetch-inject/Lobby](https://badges.gitter.im/fetch-inject/Lobby.svg)](https://gitter.im/fetch-inject/Lobby)
+[![Gzipped Release Size](http://img.badgesize.io/https://cdn.jsdelivr.net/fetch-inject/latest/fetch-inject.min.js?compression=gzip)](https://cdn.jsdelivr.net/fetch-inject/latest/fetch-inject.min.js)
 [![NPM Downloads per Month](https://img.shields.io/npm/dm/fetch-inject.svg)](https://www.npmjs.com/package/fetch-inject)
 [![NPM Version](https://img.shields.io/npm/v/fetch-inject.svg)](https://www.npmjs.com/package/fetch-inject)
 
