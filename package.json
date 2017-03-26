@@ -16,8 +16,7 @@
     "commit": "git-cz",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard",
-    "semantic-release:pre": "semantic-release pre",
-    "semantic-release:post": "semantic-release post"
+    "semantic-release": "semantic-release pre && npm run build && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",

@@ -13,10 +13,7 @@ script:
   - npm run build
 after_success:
   - npm run clean
-  - npm run semantic-release:pre
-  - npm run build
-  - npm publish
-  - npm run semantic-release:post
+  - npm run semantic-release
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
