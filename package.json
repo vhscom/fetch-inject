@@ -2,18 +2,24 @@
   "name": "fetch-inject",
   "version": "0.0.0-development",
   "description": "Dynamically inline assets into the DOM using Fetch Injection.",
-  "module": "dist/fetch-inject.es.js",
+  "module": "dist/fetch-inject.esm.js",
   "main": "dist/fetch-inject.umd.js",
   "scripts": {
-    "build": "npm run clean && npm run test && npm run build-iife && npm run build-es && npm run build-umd",
-    "build-iife": "rollup -c && MINIFIER=on rollup -c",
-    "build-es": "FORMAT=es rollup -c && FORMAT=es MINIFIER=on rollup -c",
-    "build-umd": "FORMAT=umd rollup -c && FORMAT=umd MINIFIER=on rollup -c",
-    "clean": "rimraf ./dist/*",
+    "build": "npm-run-all --parallel build:*",
+    "build:iife": "MINIFIER=off FORMAT=iife rollup -c",
+    "build:iife.min": "MINIFIER=on FORMAT=iife rollup -c",
+    "build:es": "MINIFIER=off FORMAT=es rollup -c",
+    "build:es.min": "MINIFIER=on FORMAT=es rollup -c",
+    "build:umd": "MINIFIER=off FORMAT=umd rollup -c",
+    "build:umd.min": "MINIFIER=on FORMAT=umd rollup -c",
+    "clean": "rimraf dist",
     "commit": "git-cz",
-    "test": "npm run lint",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre   && npm publish && semantic-release post"
+  },
+  "release": {
+    "debug": true
   },
   "repository": {
     "type": "git",
@@ -27,12 +33,13 @@
     "script",
     "css"
   ],
-  "author": "VHS",
+  "author": "VHS <josh@vhs.codeberg.page> (https://vhs.codeberg.page)",
   "license": "MIT",
   "devDependencies": {
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.0.0",
     "ghooks": "^2.0.0",
+    "npm-run-all": "^4.0.2",
     "rimraf": "^2.6.1",
     "rollup": "^0.41.4",
     "rollup-plugin-license": "^0.3.0",

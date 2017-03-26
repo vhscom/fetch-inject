@@ -2,8 +2,8 @@ import uglify from 'rollup-plugin-uglify'
 import license from 'rollup-plugin-license'
 import { minify } from 'uglify-js-harmony'
 
-const minifier = process.env.MINIFIER || 'off'
-const format = process.env.FORMAT || 'iife'
+const minifier = process.env.MINIFIER
+const format = process.env.FORMAT
 
 const config = {
   entry: 'src/fetch-inject.js',
@@ -11,7 +11,7 @@ const config = {
   moduleName: 'fetchInject',
   plugins: [
     license({
-      banner: `Fetch Inject\nCopyright (c) <%= moment().format('YYYY') %> VHS\nBuild: <%= moment().format() %>\n@licence MIT`
+      banner: `<%= pkg.name %> (build: <%= pkg.version %>)\nCopyright (c) <%= moment().format('YYYY') %> VHS\n@licence MIT`
     })
   ]
 }
