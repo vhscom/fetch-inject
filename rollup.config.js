@@ -11,7 +11,7 @@ const config = {
   moduleName: 'fetchInject',
   plugins: [
     license({
-      banner: `<%= pkg.name %> (build: <%= pkg.version %>)\nCopyright (c) <%= moment().format('YYYY') %> VHS\n@licence MIT`
+      banner: `Fetch Inject v<%= pkg.version %>\nCopyright (c) <%= moment().format('YYYY') %> VHS\n@licence MIT`
     })
   ]
 }
