@@ -10,9 +10,11 @@ before_script:
   - npm prune
 script:
   - npm run lint
+  - npm run semantic-release:pre
   - npm run build
 after_success:
-  - npm run semantic-release
+  - npm publish
+  - npm run semantic-release:post
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
