@@ -1,22 +1,45 @@
-# Fetch Inject
+<h1 align="center">Fetch Inject</h1>
 
-[![Build Status](https://travis-ci.org/vhs/fetch-inject.svg?branch=master)](https://travis-ci.org/vhs/fetch-inject)
-[![Gzipped Release Size](http://img.badgesize.io/https://cdn.jsdelivr.net/fetch-inject/latest/fetch-inject.min.js?compression=gzip)](https://cdn.jsdelivr.net/fetch-inject/latest/fetch-inject.min.js)
-[![NPM Downloads per Month](https://img.shields.io/npm/dm/fetch-inject.svg)](https://www.npmjs.com/package/fetch-inject)
-[![NPM Version](https://img.shields.io/npm/v/fetch-inject.svg)](https://www.npmjs.com/package/fetch-inject)
+<p align="center">
+  <strong>A library used to dynamically inline assets into the DOM using Fetch Injection.</strong>
+</p>
 
-Dynamically inline assets into the DOM using Fetch Injection.
+<p align="center">
+  <a href="https://travis-ci.org/vhs/fetch-inject">
+    <img src="https://travis-ci.org/vhs/fetch-inject.svg?branch=master" alt="Build Status">
+  </a>
+  <a href="https://cdn.jsdelivr.net/fetch-inject/latest/fetch-inject.min.js">
+    <img src="http://img.badgesize.io/https://cdn.jsdelivr.net/fetch-inject/latest/fetch-inject.min.js?compression=gzip" alt="Compressed Release Size">
+  </a>
+  <a href="https://www.npmjs.com/package/fetch-inject">
+    <img src="https://img.shields.io/npm/dm/fetch-inject.svg" alt="NPM downloads per month">
+  </a>
+  <a href="https://www.npmjs.com/package/fetch-inject">
+    <img src="https://img.shields.io/npm/v/fetch-inject.svg" alt="Latest NPM version">
+  </a>
+</p>
+
+## Wut? Fetch Injection?
+
+Fetch Injection is a website performance optimization technique for loading resources into the DOM asynchronously. Use it to inject CSS or JavaScript to your page (even across the network), on-demand.
+
+## Pfft. I use a bundler. It does everything.
+
+And **how big** are your bundles currently? Does your bundler _really_ support Tree Shaking? [Or have you been mislead](https://medium.com/@vhs/sean-thanks-for-your-continued-work-on-webpack-465572df6208)? Bruh, do you even [Isomorphic](https://vhs.codeberg.pagetalks/isomorphic-rendering-react/)?
+
+_Whatever. I'll just use `async` scripts._
+
+Oh, really? And how will you [manage asynchronous JavaScript dependencies](https://hackcabin.com/post/managing-async-dependencies-javascript/)? How many loaders and plug-in dependencies will you need to add a single library requiring a combination of JavaScript, CSS and Font Icons? Dude, are you even building a website anymore?
+
+_Fine. Tell me more..._
 
 ## Purpose
 
-Improve website performance and UX by fetching external assets and inlining them into the DOM programmatically. Get a Promise in return.
-
-- Wraps [Fetch API](http://devdocs.io/dom/fetch_api)
-- No hard dependencies
+Improve website performance and UX by fetching resources and inlining them into the DOM programmatically. Get a Promise in return.
 
 ## Background
 
-Learn about _Fetch Injection_ and [why I created this library](https://hackcabin.com/post/managing-asynchronous-dependencies-javascript/) on **Hack Cabin**.
+Learn about _Fetch Injection_ and [why I created this library](https://hackcabin.com/post/managing-async-dependencies-javascript/) on **Hack Cabin**.
 
 Don't like to read? Here's a playground:<br>
 https://codepen.io/vhs/pen/MpVeOE?editors=0012
