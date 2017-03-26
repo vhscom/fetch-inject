@@ -21,7 +21,7 @@
 
 ## Wut? Fetch Injection?
 
-Fetch Injection is a website performance optimization technique for loading resources into the DOM asynchronously. Use it to inject CSS or JavaScript to your page (even across the network), on-demand.
+Fetch Injection is a website performance optimization technique for loading resources into the DOM asynchronously. Use it to inject CSS or JavaScript into your page (even across the network), on-demand.
 
 ## Pfft. I use a bundler. It does everything.
 
