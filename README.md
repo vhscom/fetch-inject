@@ -29,7 +29,7 @@ And **how big** are your bundles currently? Does your bundler [_really_](https:/
 
 _Whatever. I'll just use `async` scripts._
 
-Oh, really? And how will you [manage asynchronous JavaScript dependencies](https://hackcabin.com/post/managing-async-dependencies-javascript/)? How many loaders and plug-in dependencies will you need to add a single library requiring a combination of JavaScript, CSS and Font Icons? Dude, are you even building a website anymore?
+Oh, really? And how will you [manage asynchronous JavaScript dependencies](https://hackcabin.com/post/managing-async-dependencies-javascript/)? How many loaders and plug-in dependencies will you need to add a single library requiring a combination of JavaScript, CSS and Font Icons? Dude, [are you even building a website anymore](https://medium.com/@vhs/webpack-is-your-achilles-heel-d3cd80821a4f)?
 
 _Fine. Tell me more..._
 
