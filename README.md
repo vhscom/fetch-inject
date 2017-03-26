@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/vhs/fetch-inject.svg?branch=master)](https://travis-ci.org/vhs/fetch-inject)
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![NPM Downloads per Month](https://img.shields.io/npm/dm/fetch-inject.svg)](https://www.npmjs.com/package/fetch-inject)
 [![NPM Version](https://img.shields.io/npm/v/fetch-inject.svg)](https://www.npmjs.com/package/fetch-inject)
 
@@ -212,12 +213,12 @@ All browsers with support for [Fetch](http://caniuse.com/#feat=fetch) and [Promi
 ## Development
 
 1. Clone the repo with `git clone https://github.com/vhs/fetch-inject`.
-1. Install dev dependencies with `npm i` (`brew install node` first on macOS).
+1. Install dev dependencies with `npm i`.
 1. Execute `npm run` for a listing of available commands.
 
 ## Contributing
 
-Please use [Issues](https://github.com/vhs/fetch-inject/issues) for bugs and enhancement requests only. If you need support, you know [where to go](http://stackoverflow.com/). Thanks!
+Please use [Issues](https://github.com/vhs/fetch-inject/issues) for bugs and enhancement requests only. Use `npm run commit` to create Commitizen-friendly](http://commitizen.github.io/cz-cli/) commit messages. If you need support, you know [where to go](http://stackoverflow.com/questions/tagged/fetch-api). Thanks!
 
 ## See Also
 
