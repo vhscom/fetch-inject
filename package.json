@@ -19,9 +19,6 @@
     "semantic-release:pre": "semantic-release pre",
     "semantic-release:post": "semantic-release post"
   },
-  "release": {
-    "debug": true
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/vhs/fetch-inject.git"
