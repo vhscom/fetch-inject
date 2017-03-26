@@ -14,7 +14,6 @@ Improve website performance and UX by fetching external assets and inlining them
 
 - Wraps [Fetch API](http://devdocs.io/dom/fetch_api)
 - No hard dependencies
-- 398 bytes gzipped
 
 ## Background
 
