@@ -137,7 +137,7 @@ fetchInject([
 ### Ordering Dependent Scripts
 
 **Problem:**
-You have several scripts that depend on one another and you want to load them all asynchronously without causing race conditions.
+You have several scripts that depend on one another and you want to load them all asynchronously, without causing a race condition.
 
 **Solution:**
 Call multiple times, forming a promise chain:
@@ -178,7 +178,7 @@ fetchInject([
 ### Managing Asynchronous Dependencies
 
 **Problem:**
-You want to load some dependencies which requires some dependencies, which requires a dependency.
+You want to load some dependencies which require some dependencies, which require a dependency.
 
 **Solution:**
 You could scatter some `link`s into your document head, blocking initial page render and bloat your application bundle. Or...
