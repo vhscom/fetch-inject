@@ -29,7 +29,7 @@ And **how big** are your bundles currently? Does your bundler properly support T
 
 _Whatever. I'll just use `async` scripts._
 
-Oh, really? And how will you [manage asynchronous dependencies](https://hackcabin.com/post/managing-async-dependencies-javascript/) with ES6?
+Oh, really? And how will you [start managing asynchronous dependencies](https://hackcabin.com/post/managing-async-dependencies-javascript/) with ES6?
 
 _Fine. Tell me more..._
 
