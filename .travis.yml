@@ -8,6 +8,7 @@ node_js:
   - node
 before_script:
   - npm prune
+  - npm run clean
 script:
   - npm run lint
   - npm run build
