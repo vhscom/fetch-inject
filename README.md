@@ -25,11 +25,11 @@ Fetch Injection is a website performance optimization technique for loading reso
 
 ## Pfft. I use a bundler. It does everything.
 
-And **how big** are your bundles currently? Does your bundler properly support Tree Shaking? How many loaders and plug-ins [do you really need](https://medium.com/@vhs/webpack-is-your-achilles-heel-d3cd80821a4f) to add functionality to your app? How long does that take? Are you even building a website anymore?
+And **how big** are your bundles currently? Does your bundler properly support Tree Shaking? How many [loaders and plug-ins](https://medium.com/@vhs/webpack-is-your-achilles-heel-d3cd80821a4f) do you _really_ need to add functionality to your web app? How long does that take? Are you even building a website anymore?
 
 _Whatever. I'll just use `async` scripts._
 
-Oh, really? And how will you [start managing asynchronous dependencies](https://hackcabin.com/post/managing-async-dependencies-javascript/) with ES6?
+Oh, really? And how will you [manage asynchronous dependencies](https://hackcabin.com/post/managing-async-dependencies-javascript/) with ES6?
 
 _Fine. Tell me more..._
 
