@@ -19,29 +19,15 @@
   </a>
 </p>
 
-## Wut? Fetch Injection?
+## Fetch Injection?
 
 Fetch Injection is a website performance optimization technique for loading resources into the DOM asynchronously. Use it to inject CSS or JavaScript into your page (even across the network), on-demand.
-
-## Pfft. I use a bundler. It does everything.
-
-And **how big** are your bundles currently? Does your bundler properly support Tree Shaking? How many [loaders and plug-ins](https://medium.com/@vhs/webpack-is-your-achilles-heel-d3cd80821a4f) do you _really_ need to add functionality to your web app? How long does that take? Are you even building a website anymore?
-
-_Whatever. I'll just use `async` scripts._
-
-Oh, really? And how will you [manage asynchronous dependencies](https://hackcabin.com/post/managing-async-dependencies-javascript/) with ES6?
-
-_Fine. Tell me more..._
-
-## Purpose
-
-Improve website performance and UX by fetching resources and inlining them into the DOM programmatically. Get a Promise in return.
 
 ## Background
 
 Learn about _Fetch Injection_ and [why I created this library](https://hackcabin.com/post/managing-async-dependencies-javascript/) on **Hack Cabin**.
 
-Don't like to read? Here's a playground:<br>
+Don't have time to read? Here's a playground:<br>
 https://codepen.io/vhs/pen/MpVeOE?editors=0012
 
 ## Installing
