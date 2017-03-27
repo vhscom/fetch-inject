@@ -19,13 +19,11 @@
   </a>
 </p>
 
-## Fetch Injection?
-
-Fetch Injection is a website performance optimization technique for loading resources into the DOM asynchronously. Use it to inject CSS or JavaScript into your page (even across the network), on-demand.
-
 ## Background
 
-Learn about _Fetch Injection_ and [why I created this library](https://hackcabin.com/post/managing-async-dependencies-javascript/) on **Hack Cabin**.
+Fetch Injection is a website performance optimization technique for loading resources into the DOM asynchronously using the [Fetch API](http://devdocs.io/dom/fetch_api). Use it to inject CSS or JavaScript into your page (even across the network), on-demand.
+
+Understand [why I created this library](https://hackcabin.com/post/managing-async-dependencies-javascript/) in the intro article on **Hack Cabin**.
 
 Don't have time to read? Here's a playground:<br>
 https://codepen.io/vhs/pen/MpVeOE?editors=0012
