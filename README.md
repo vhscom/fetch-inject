@@ -23,14 +23,16 @@
 
 Fetch Injection is a website performance optimization technique for loading resources into the DOM asynchronously using the [Fetch API](http://devdocs.io/dom/fetch_api). Use it to inject CSS or JavaScript into your page (even across the network), on-demand.
 
-Understand [why I created this library](https://hackcabin.com/post/managing-async-dependencies-javascript/) in the intro article on **Hack Cabin**.
+Understand why this library exists by reading the [intro article](https://hackcabin.com/post/managing-async-dependencies-javascript/) on **Hack Cabin**.
 
 Don't have time to read? Here's a playground:<br>
 https://codepen.io/vhs/pen/MpVeOE?editors=0012
 
 ## Installing
 
-Get it on NPM with `npm i fetch-inject` or Bower with `bower install fetch-inject`. Also available via CDN [using jsDelivr](http://www.jsdelivr.com/projects/fetch-inject).
+Get it on NPM with `npm i fetch-inject` or Bower with `bower install fetch-inject`.
+
+Also available via CDN [using jsDelivr](http://www.jsdelivr.com/projects/fetch-inject).
 
 ## Usage
 
