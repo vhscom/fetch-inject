@@ -2,8 +2,18 @@
   "name": "fetch-inject",
   "version": "0.0.0-development",
   "description": "Dynamically inline assets into the DOM using Fetch Injection.",
+  "author": "VHS <josh@vhs.codeberg.page> (https://vhs.codeberg.page)",
   "module": "dist/fetch-inject.esm.js",
   "main": "dist/fetch-inject.umd.js",
+  "keywords": [
+    "dom",
+    "fetch",
+    "inject",
+    "promise",
+    "script",
+    "css"
+  ],
+  "repository": "vhs/fetch-inject",
   "scripts": {
     "build": "npm-run-all --parallel build:*",
     "build:iife": "MINIFIER=off FORMAT=iife rollup -c",
@@ -18,20 +28,6 @@
     "lint": "standard",
     "semantic-release": "semantic-release pre && npm run build && npm publish && semantic-release post"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vhs/fetch-inject.git"
-  },
-  "keywords": [
-    "dom",
-    "fetch",
-    "inject",
-    "promise",
-    "script",
-    "css"
-  ],
-  "author": "VHS <josh@vhs.codeberg.page> (https://vhs.codeberg.page)",
-  "license": "MIT",
   "devDependencies": {
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.0.0",
@@ -50,10 +46,6 @@
       "/dist"
     ]
   },
-  "bugs": {
-    "url": "https://github.com/vhs/fetch-inject/issues"
-  },
-  "homepage": "https://github.com/vhs/fetch-inject#readme",
   "config": {
     "ghooks": {
       "pre-commit": "npm run lint"
@@ -61,5 +53,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "license": "ISC"
 }
