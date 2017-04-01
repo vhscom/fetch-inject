@@ -154,7 +154,7 @@ fetchInject([
 ], fetchInject([
   'https://cdn.jsdelivr.net/jquery/3.1.1/jquery.slim.min.js',
   'https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js'
-])
+]))
 ```
 
 ### Loading and Handling Composite Libraries
