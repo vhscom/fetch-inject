@@ -2,9 +2,12 @@ import {
   head as injectHead
 } from './injectors'
 
-export default function (urls) {
+const fetchInject = function (urls, promise) {
+  if (!(urls && Array.isArray(urls))) return Promise.reject(new Error('`urls` must be an array'))
+  if (promise && !(promise instanceof Promise)) return Promise.reject(new Error('`promise` must be a promise'))
+
   const resources = []
-  const deferreds = []
+  const deferreds = promise ? [].concat(promise) : []
   const thenables = []
 
   urls.forEach(url => deferreds.push(
@@ -28,3 +31,5 @@ export default function (urls) {
     return Promise.all(thenables)
   })
 }
+
+export default fetchInject

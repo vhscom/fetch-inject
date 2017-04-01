@@ -1,7 +1,7 @@
 <h1 align="center">Fetch Inject</h1>
 
 <p align="center">
-  <strong>A library used to dynamically inline assets into the DOM using Fetch Injection.</strong>
+  <strong>A library used to dynamically inline content into the DOM using Fetch Injection.</strong>
 </p>
 
 <p align="center">
@@ -21,7 +21,7 @@
 
 ## Background
 
-Fetch Injection is a website performance optimization technique for loading resources into the DOM asynchronously using the [Fetch API](http://devdocs.io/dom/fetch_api). Use it to inject CSS or JavaScript into your page (even across the network), on-demand.
+Fetch Injection is performance optimization technique for loading resources into the DOM asynchronously using the [Fetch API](http://devdocs.io/dom/fetch_api). Use it to inject content into your page (even across the network), on-demand.
 
 Understand why this library exists by reading the [intro article](https://hackcabin.com/post/managing-async-dependencies-javascript/) on **Hack Cabin**.
 
@@ -34,10 +34,14 @@ Get it on NPM with `npm i fetch-inject` or Bower with `bower install fetch-injec
 
 Also available via CDN [using jsDelivr](http://www.jsdelivr.com/projects/fetch-inject).
 
-## Usage
+## Syntax
 
-1. Call `fetchInject` with an array of URLs.
-1. Optionally, handle the returned `Promise`.
+    Promise<Response> fetchInject(urls, promise)
+
+<dl>
+<dt>urls<dd><i>Required.</i> An <code>Array</code> of resources to fetch. Elements must be one of type <a target="devdocs" href="http://devdocs.io/dom/usvstring"><code>USVString</code></a> or <a target="devdocs" href="http://devdocs.io/dom/request"><code>Request</code></a>.
+<dt>promise<dd><i>Optional.</i> A <a target="devdocs" href="http://devdocs.io/javascript/global_objects/promise"><code>Promise</code></a> to await before injecting currently fetched resources.
+</dl>
 
 ## Use Cases
 
@@ -139,20 +143,18 @@ fetchInject([
 ### Ordering Dependent Scripts
 
 **Problem:**
-You have several scripts that depend on one another and you want to load them all asynchronously, without causing a race condition.
+You have several scripts that depend on one another and you want to load them all asynchronously, in parallel, without causing a race condition.
 
 **Solution:**
-Call multiple times, forming a promise chain:
+Pass `fetchInject` to itself as a second argument, forming a recursion:
 
 ```js
 fetchInject([
+  'https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js'
+], fetchInject([
   'https://cdn.jsdelivr.net/jquery/3.1.1/jquery.slim.min.js',
-  'https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js',
-]).then(() => {
-  fetchInject([
-    'https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js'
-  ])
-})
+  'https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js'
+])
 ```
 
 ### Loading and Handling Composite Libraries
@@ -180,32 +182,32 @@ fetchInject([
 ### Managing Asynchronous Dependencies
 
 **Problem:**
-You want to load some dependencies which require some dependencies, which require a dependency.
+You want to load some dependencies which require some dependencies, which require a dependency. You want it all in parallel, and you want it now.
 
 **Solution:**
-You could scatter some `link`s into your document head, blocking initial page render and bloat your application bundle. Or...
+You could scatter some `link`s into your document head, blocking initial page render. You could bloat your application bundle with scripts the user might not actually need half the time. Or you could...
 
 ```js
-const tether = ['/js/tether.min.js']
+const tether = ['https://cdn.jsdelivr.net/tether/1.4.0/tether.min.js']
 const drop = [
-  '/js/drop.min.js',
-  '/css/drop-theme-arrows-bounce.min.css'
+  'https://cdn.jsdelivr.net/drop/1.4.2/js/drop.min.js'
 ]
 const tooltip = [
-  '/js/tooltip.min.js',
-  '/css/tooltip-theme-arrows.css'
+  'https://cdn.jsdelivr.net/tooltip/1.2.0/tooltip.min.js',
+  'https://cdn.jsdelivr.net/tooltip/1.2.0/tooltip-theme-arrows.css'
 ]
-fetchInject(tether)
-  .then(() => fetchInject(drop))
-  .then(() => fetchInject(tooltip))
-  .then(() => {
-    new Tooltip({
-      target: document.querySelector('h1'),
-      content: "You moused over the first <b>H1</b>!",
-      classes: 'tooltip-theme-arrows',
-      position: 'bottom center'
-    })
+fetchInject(tooltip,
+  fetchInject(drop,
+    fetchInject(tether)
+  )
+).then(() => {
+  new Tooltip({
+    target: document.querySelector('h1'),
+    content: "You moused over the first <b>H1</b>!",
+    classes: 'tooltip-theme-arrows',
+    position: 'bottom center'
   })
+})
 ```
 
 ## Supported Browsers
