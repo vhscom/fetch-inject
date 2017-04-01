@@ -1,6 +1,5 @@
 import {
-  script as injectScript,
-  style as injectStyle
+  head as injectHead
 } from './injectors'
 
 export default function (urls) {
@@ -21,12 +20,8 @@ export default function (urls) {
   return Promise.all(deferreds).then(() => {
     resources.forEach(resource => {
       thenables.push({ then: resolve => {
-        if (resource.type === 'application/javascript') {
-          injectScript(window, document, 'script', resource.text, resolve())
-        } else if (resource.type === 'text/css') {
-          injectStyle(window, document, 'style', resource.text)
-          resolve()
-        }
+        const tag = resource.type === 'text/css' ? 'style' : 'script'
+        injectHead(window, document, tag, resource, resolve())
       }})
     })
     return Promise.all(thenables)
