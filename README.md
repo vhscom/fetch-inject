@@ -21,7 +21,7 @@
 
 ## Background
 
-Fetch Injection is performance optimization technique for loading resources into the DOM asynchronously using the [Fetch API](http://devdocs.io/dom/fetch_api). Use it to inject content into your page (even across the network), on-demand.
+Fetch Injection is performance optimization technique for loading resources into the DOM asynchronously using the [Fetch API](http://devdocs.io/dom/fetch_api). Use it to fetch async resources in parallel (even across the network), and inject them into a document programmatically in a desired sequence.
 
 Understand why this library exists by reading the [intro article](https://hackcabin.com/post/managing-async-dependencies-javascript/) on **Hack Cabin**.
 
@@ -30,35 +30,52 @@ https://codepen.io/vhs/pen/MpVeOE?editors=0012
 
 ## Installing
 
-Get it on NPM with `npm i fetch-inject` or Bower with `bower install fetch-inject`.
+Fetch Inject is available on NPM, Bower and CDN.
 
-Also available via CDN [using jsDelivr](http://www.jsdelivr.com/projects/fetch-inject).
+- Get it on NPM with `npm i fetch-inject`,<br>
+- Bower with `bower install fetch-inject`; or,<br>
+- CDN [using jsDelivr](http://www.jsdelivr.com/projects/fetch-inject).
 
 ## Syntax
 
-    Promise<Response> fetchInject(urls, promise)
+    Promise<Array<Object>> fetchInject(inputs, promise)
+
+### Parameters
 
 <dl>
-<dt>urls<dd><i>Required.</i> An <code>Array</code> of resources to fetch. Elements must be one of type <a target="devdocs" href="http://devdocs.io/dom/usvstring"><code>USVString</code></a> or <a target="devdocs" href="http://devdocs.io/dom/request"><code>Request</code></a>.
-<dt>promise<dd><i>Optional.</i> A <a target="devdocs" href="http://devdocs.io/javascript/global_objects/promise"><code>Promise</code></a> to await before injecting currently fetched resources.
+<dt>inputs<dd><i>Required.</i> This defines the resources you wish to fetch. It must be an <code>Array</code> containing elements of type <a target="devdocs" href="http://devdocs.io/dom/usvstring"><code>USVString</code></a> or <a target="devdocs" href="http://devdocs.io/dom/request"><code>Request</code></a>.
+<dt>promise<dd><i>Optional.</i> A <a target="devdocs" href="http://devdocs.io/javascript/global_objects/promise"><code>Promise</code></a> to await before injecting fetched resources.
 </dl>
+
+### Return value
+
+A <a target="devdocs" href="http://devdocs.io/javascript/global_objects/promise">Promise</a> that resolves to an `Array` of `Object`s. Each `Object` contains a list of resolved properties of the Response Body used in the module, e.g.
+
+```js
+[{
+  blob: { size: 44735, type: "application/javascript" },
+  text: "/*!↵ * Bootstrap v4.0.0-alpha.5 ... */"
+}, {
+  blob: { size: 31000, type: "text/css" },
+  text: "/*!↵ * Font Awesome 4.7.0 ..."
+}]
+```
 
 ## Use Cases
 
-### Loading Utility Scripts
+### Preventing Script Blocking
 
 **Problem:**
-You want to prototype some code using the browser as a REPL.
+Remote assets can lead to [jank](http://jankfree.org/) or, worse yet, [SPOF](https://www.stevesouders.com/blog/2010/06/01/frontend-spof/) if not handled correctly.
 
 **Solution:**
-Skip the emulators and use the real deal:
+Asynchronously load remote scripts [without blocking](https://www.stevesouders.com/blog/2009/04/27/loading-scripts-without-blocking/):
 
-```js
+```html
 fetchInject([
-  'https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js'
-]).then(() => {
-  console.log(`Successfully loaded Lodash ${_.VERSION}`)
-})
+  '/bower_components/jquery/dist/jquery.js',
+  '/bower_components/what-input/dist/what-input.js'
+])
 ```
 
 ### Loading CSS Asynchronously
@@ -73,21 +90,6 @@ Inline your critical path CSS and load [non-critical styles](https://gist.github
 fetchInject([
   '/css/non-critical.css',
   'https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css'
-])
-```
-
-### Preventing Script Blocking
-
-**Problem:**
-Remote assets can lead to [jank](http://jankfree.org/) or, worse yet, [SPOF](https://www.stevesouders.com/blog/2010/06/01/frontend-spof/) if not handled correctly.
-
-**Solution:**
-Asynchronously load remote scripts [without blocking](https://www.stevesouders.com/blog/2009/04/27/loading-scripts-without-blocking/):
-
-```html
-fetchInject([
-  '/bower_components/jquery/dist/jquery.js',
-  '/bower_components/what-input/dist/what-input.js'
 ])
 ```
 
@@ -123,21 +125,6 @@ fetchInject([
 ]).then(() => {
   console.log(`Finish in less than ${moment().endOf('year').fromNow(true)}`)
 })
-```
-
-### Combining Resource Types
-
-**Problem:**
-You need to asynchronously download multiple related assets of different types.
-
-**Solution:**
-Specify multiple URLs of different types when calling:
-
-```js
-fetchInject([
-  'https://cdn.jsdelivr.net/drop/1.4.2/js/drop.min.js',
-  'https://cdn.jsdelivr.net/drop/1.4.2/css/drop-theme-arrows-bounce.min.css'
-])
 ```
 
 ### Ordering Dependent Scripts
