@@ -21,7 +21,7 @@
 
 ## Background
 
-Fetch Injection is performance optimization technique for loading resources into the DOM asynchronously using the [Fetch API](http://devdocs.io/dom/fetch_api). Use it to fetch async resources in parallel (even across the network), and inject them into a document programmatically in a desired sequence.
+Fetch Injection is performance optimization technique for loading resources into the DOM asynchronously using the [Fetch API](http://devdocs.io/dom/fetch_api). Use Fetch Inject to dynamically import resources in parallel (even across the network), and inject them into a document in a desired sequence.
 
 Understand why this library exists by reading the [intro article](https://hackcabin.com/post/managing-async-dependencies-javascript/) on **Hack Cabin**.
 
@@ -47,7 +47,7 @@ Test out the library using the latest version available on CDN using this Pen: h
 
 ## Installing
 
-Fetch Inject is available on NPM, Bower and CDN.
+Fetch Inject is available on NPM, Bower and CDN in IIFE, UMD and ES6 module variants.
 
 - Get it on NPM with `npm i fetch-inject`
 - Bower with `bower install fetch-inject`
@@ -83,37 +83,43 @@ A <a target="devdocs" href="http://devdocs.io/javascript/global_objects/promise"
 ### Preventing Script Blocking
 
 **Problem:**
-Remote assets can lead to [jank](http://jankfree.org/) or, worse yet, [SPOF](https://www.stevesouders.com/blog/2010/06/01/frontend-spof/) if not handled correctly.
+External scripts can lead to [jank](http://jankfree.org/) or [SPOF](https://www.stevesouders.com/blog/2010/06/01/frontend-spof/) if not handled correctly.
 
 **Solution:**
-Asynchronously load remote scripts [without blocking](https://www.stevesouders.com/blog/2009/04/27/loading-scripts-without-blocking/):
+Load external scripts [without blocking](https://www.stevesouders.com/blog/2009/04/27/loading-scripts-without-blocking/):
 
 ```html
 fetchInject([
-  '/bower_components/jquery/dist/jquery.js',
-  '/bower_components/what-input/dist/what-input.js'
+  'https://cdn.jsdelivr.net/popper.js/1.0.0-beta.3/popper.min.js'
 ])
 ```
 
-### Loading CSS Asynchronously
+This is a simple case to get you started. Don't worry, it gets better.
+
+### Loading Non-critical CSS
 
 **Problem:**
-[PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) dings you for loading blocking CSS and unnecessary styles on initial render.
+[PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) and [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) ding you for loading unnecessary styles on initial render.
 
 **Solution:**
-Inline your critical path CSS and load [non-critical styles](https://gist.github.com/scottjehl/87176715419617ae6994) asynchronously:
+Inline your critical CSS and load [non-critical styles](https://gist.github.com/scottjehl/87176715419617ae6994) asynchronously:
 
-```js
+```html
+<style>/*! bulma.io v0.4.0 ... */</style>
+<script>
 fetchInject([
   '/css/non-critical.css',
   'https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css'
 ])
+</script>
 ```
 
-### Loading Scripts Lazily
+Unlike [`loadCSS`](https://github.com/filamentgroup/loadCSS/), Fetch Inject is smaller, doesn't use callbacks and ships a minifed UMD build for interop with CommonJS.
+
+### Lazyloading Scripts
 
 **Problem:**
-You want to load a script in response to a event without optimistically preloading the asset.
+You want to load a script in response to a user interaction without affecting your page load times.
 
 **Solution:**
 Create an event listener, respond to the event and then destroy the listener.
@@ -127,6 +133,8 @@ el.onclick = (evt) => {
   el.onclick = null  
 }
 ```
+
+Here we are loading the smooth scroll polyfill when a user opens a [details](http://devdocs.io/html/element/details) element, useful for displaying a collapsed and keyboard-friendly table of contents.
 
 ### Responding to Asynchronous Scripts
 
@@ -144,13 +152,13 @@ fetchInject([
 })
 ```
 
-### Ordering Dependent Scripts
+### Ordering Script Dependencies
 
 **Problem:**
-You have several scripts that depend on one another and you want to load them all asynchronously, in parallel, without causing a race condition.
+You have several scripts that depend on one another and you want to load them all asynchronously, in parallel, without causing race conditions.
 
 **Solution:**
-Pass `fetchInject` to itself as a second argument, forming a recursion:
+Pass `fetchInject` to itself as a second argument, forming a promise recursion:
 
 ```js
 fetchInject([
@@ -161,13 +169,56 @@ fetchInject([
 ]))
 ```
 
+### Managing Asynchronous Dependencies
+
+**Problem:**
+You want to load some dependencies which require some dependencies, which require some dependencies. You want it all in parallel, and you want it now.
+
+**Solution:**
+You could scatter some `link`s into your document head, blocking initial page render, bloat your application bundle with scripts the user might not actually need. Or you could...
+
+```js
+const tether = ['https://cdn.jsdelivr.net/tether/1.4.0/tether.min.js']
+const drop = [
+  'https://cdn.jsdelivr.net/drop/1.4.2/js/drop.min.js'
+]
+const tooltip = [
+  'https://cdn.jsdelivr.net/tooltip/1.2.0/tooltip.min.js',
+  'https://cdn.jsdelivr.net/tooltip/1.2.0/tooltip-theme-arrows.css'
+]
+fetchInject(tooltip, fetchInject(drop, fetchInject(tether)))
+  .then(() => {
+    new Tooltip({
+      target: document.querySelector('h1'),
+      content: "You moused over the first <b>H1</b>!",
+      classes: 'tooltip-theme-arrows',
+      position: 'bottom center'
+    })
+  })
+```
+
+What about jQuery dropdown menus? Sure why not...
+
+```js
+fetchInject([
+    '/assets/js/main.js'
+  ], fetchInject([
+    '/assets/js/vendor/superfish.min.js'
+  ], fetchInject([
+    '/assets/js/vendor/jquery.transit.min.js',
+    '/assets/js/vendor/jquery.hoverIntent.js'
+  ], fetchInject([
+    '/assets/js/vendor/jquery.min.js'
+  ]))))
+```
+
 ### Loading and Handling Composite Libraries
 
 **Problem:**
-You want to use library composed of several resources and initialize it as soon as possible.
+You want to deep link to gallery images using [PhotoSwipe](http://photoswipe.com/) without slowing down your page.
 
 **Solution:**
-This is precisely the kind of activity `fetchInject` works best at:
+Download everything in parallel and instantiate when finished:
 
 ```js
 const container = document.querySelector('.pswp')
@@ -183,36 +234,7 @@ fetchInject([
 })
 ```
 
-### Managing Asynchronous Dependencies
-
-**Problem:**
-You want to load some dependencies which require some dependencies, which require a dependency. You want it all in parallel, and you want it now.
-
-**Solution:**
-You could scatter some `link`s into your document head, blocking initial page render. You could bloat your application bundle with scripts the user might not actually need half the time. Or you could...
-
-```js
-const tether = ['https://cdn.jsdelivr.net/tether/1.4.0/tether.min.js']
-const drop = [
-  'https://cdn.jsdelivr.net/drop/1.4.2/js/drop.min.js'
-]
-const tooltip = [
-  'https://cdn.jsdelivr.net/tooltip/1.2.0/tooltip.min.js',
-  'https://cdn.jsdelivr.net/tooltip/1.2.0/tooltip-theme-arrows.css'
-]
-fetchInject(tooltip,
-  fetchInject(drop,
-    fetchInject(tether)
-  )
-).then(() => {
-  new Tooltip({
-    target: document.querySelector('h1'),
-    content: "You moused over the first <b>H1</b>!",
-    classes: 'tooltip-theme-arrows',
-    position: 'bottom center'
-  })
-})
-```
+This example turns TOML into JSON, parses the object, downloads all of the PhotoSwipe goodies and then activates the PhotoSwipe gallery immediately when the interface is ready to be displayed.
 
 ## Supported Browsers
 
@@ -223,11 +245,44 @@ All browsers with support for [Fetch](http://caniuse.com/#feat=fetch) and [Promi
   <cite>Jon Davis</cite>,  Web Technologies Evangelist
 </blockquote>
 
+## Progressive Enhancement
+
+You don't need to polyfill fetch for older browsers when they already know how to load external scripts. Give them a satisfactory fallback experience instead.
+
+In your document `head` get the async loading started right away if the browser supports it:
+
+```js
+(function () {
+  if (!(window.fetch && window.Promise)) return;
+  fetchInject([
+    '/js/bootstrap.min.js'
+  ], fetchInject([
+    '/js/jquery.slim.min.js',
+    '/js/tether.min.js'
+  ]))
+})()
+```
+
+Then, before the close of the document `body`, provide the traditional experience to avoid blocking the parser until content is visible:
+
+```js
+(function () {
+  if (!!(window.fetch && window.Promise)) return;
+  document.write('<script src="/js/bootstrap.min.js"><\/script>');
+  document.write('<script src="/js/jquery.slim.min.jss"><\/script>');
+  document.write('<script src="/js/tether.min.js"><\/script>');
+})()
+```
+
+This is entirely optional, but a good practice unless you're going full hipster.
+
 ## Development
 
-1. Clone the repo with `git clone https://github.com/vhs/fetch-inject`.
-1. Install dev dependencies with `npm i`.
+1. Clone the repo.
+1. Install dev dependencies.
 1. Execute `npm run` for a listing of available commands.
+
+If you need AMD or CJS modules, update the NPM scripts in the package manifest and `npm run build`.
 
 ## Contributing
 
@@ -243,4 +298,4 @@ Please use [Issues](https://github.com/vhs/fetch-inject/issues) for bugs and enh
 
 ## License
 
-ISC
+[ISC](https://github.com/vhs/fetch-inject/blob/master/LICENSE)
