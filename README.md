@@ -239,6 +239,7 @@ Please use [Issues](https://github.com/vhs/fetch-inject/issues) for bugs and enh
 - [promise-polyfill](https://github.com/taylorhakes/promise-polyfill) - Polyfill for Promises
 - [es-module-loader](https://github.com/ModuleLoader/es-module-loader) - Polyfill for the ES Module Loader
 - [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch) - A library for using `fetch` in Node
+- [Dynamic Imports](https://github.com/tc39/proposal-dynamic-import) - `import()` proposal for JavaScript
 
 ## License
 
