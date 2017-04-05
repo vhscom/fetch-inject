@@ -1,7 +1,7 @@
 <h1 align="center">Fetch Inject</h1>
 
 <p align="center">
-  <strong>A library used to dynamically inline content into the DOM using Fetch Injection.</strong>
+  <strong>A fetching async loader and DOM injection sequencer for high-performance websites.</strong>
 </p>
 
 <p align="center">
@@ -21,39 +21,39 @@
 
 ## Background
 
-Fetch Injection is performance optimization technique for loading resources into the DOM asynchronously using the [Fetch API](http://devdocs.io/dom/fetch_api). Use Fetch Inject to dynamically import resources in parallel (even across the network), and inject them into a document in a desired sequence.
-
-Understand why this library exists by reading the [intro article](https://hackcabin.com/post/managing-async-dependencies-javascript/) on **Hack Cabin**.
+This library implements Fetch Injection, a performance optimization technique for [managing async script dependencies](https://hackcabin.com/post/managing-async-dependencies-javascript/). Use Fetch Inject to dynamically import scripts in parallel (even across the network), and inject them into a document in a desired sequence. It also supports inlining of CSS, and can be extended to support other MIME types as well.
 
 ## Waterfalls
 
-A picture's worth a thousand words. These examples are non-blocking and all performed programmatically using Fetch Inject.
+Here are some example waterfalls using Fetch Inject.
 
-Loading Bootstrap 4 asynchronously in parallel:
+Loading Bootstrap 4:
 
 ![Bootstrap 4](https://cloud.githubusercontent.com/assets/440298/24649786/c474c626-195a-11e7-8af8-b0ba0bcc0a71.png "Loading Bootstrap 4 asynchronously in parallel")
 
-Loading jQuery, Transit, Hover Intent and Superfish asynchronously in parallel:
+Loading jQuery, Transit, Hover Intent and Superfish:
 
 ![Superfish](https://cloud.githubusercontent.com/assets/440298/24650610/4a7125d8-195d-11e7-9849-a9e071949c53.png "Loading jQuery, Transit, Hover Intent and Superfish asynchronously in parallel")
 
-Loading PhotoSwipe asynchronously with full-size image deep linking support:
+Loading and initializing PhotoSwipe:
 
 ![PhotoSwipe](https://cloud.githubusercontent.com/assets/440298/24689725/13984c50-19fb-11e7-9bbe-384e98d558f9.png "Loading and initializing PhotoSwipe")
 
 ## Playground
 
-Test out the library using the latest version available on CDN using this Pen: https://codepen.io/vhs/pen/MpVeOE?editors=0012
+Test out the library using the latest version available on CDN using this Pen: https://codepen.io/vhs/pen/MpVeOE?editors=0012. Reference the [Use Cases](#use-cases) to get a feel for what it can do.
 
 ## Installing
 
-Fetch Inject is available on NPM, Bower and CDN in IIFE, UMD and ES6 module variants.
+Fetch Inject is available on NPM, Bower and CDN. It ships in the following flavors: IIFE, UMD and ES6.
 
 - Get it on NPM with `npm i fetch-inject`
 - Bower with `bower install fetch-inject`
 - CDN [using jsDelivr](http://www.jsdelivr.com/projects/fetch-inject)
 
-See [Development](#development) for AMD and CJS modules.
+Or simply `curl -L -o fetch-inject.umd.js https://go.vhs.codeberg.page/fetch-inject` from the command line to download the latest minified UMD bundle.
+
+See the [Development](#development) section for asset pipelines requiring vanilla AMD and CJS modules.
 
 ## Syntax
 
