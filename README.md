@@ -51,7 +51,9 @@ Fetch Inject is available on NPM, Bower and CDN. It ships in the following flavo
 - Bower with `bower install fetch-inject`
 - CDN [using jsDelivr](http://www.jsdelivr.com/projects/fetch-inject)
 
-Or simply `curl -L -o fetch-inject.umd.js https://go.vhs.codeberg.page/fetch-inject` from the command line to download the latest minified UMD bundle.
+To download the lastest minified UMD bundle from the command line:
+
+    curl -L -o fetch-inject.umd.min.js https://go.vhs.codeberg.page/fetch-inject
 
 See the [Development](#development) section for asset pipelines requiring vanilla AMD and CJS modules.
 
