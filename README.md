@@ -53,6 +53,8 @@ Fetch Inject is available on NPM, Bower and CDN in IIFE, UMD and ES6 module vari
 - Bower with `bower install fetch-inject`
 - CDN [using jsDelivr](http://www.jsdelivr.com/projects/fetch-inject)
 
+See [Development](#development) for AMD and CJS modules.
+
 ## Syntax
 
     Promise<Array<Object>> fetchInject(inputs, promise)
@@ -280,7 +282,7 @@ This is entirely optional, but a good practice unless you're going full hipster.
 1. Install dev dependencies.
 1. Execute `npm run` for a listing of available commands.
 
-If you need AMD or CJS modules, update the NPM scripts in the package manifest and `npm run build`.
+If you need vanilla AMD or CJS modules, update the NPM scripts in the package manifest and `npm run build`.
 
 ## Contributing
 
