@@ -25,16 +25,33 @@ Fetch Injection is performance optimization technique for loading resources into
 
 Understand why this library exists by reading the [intro article](https://hackcabin.com/post/managing-async-dependencies-javascript/) on **Hack Cabin**.
 
-Don't have time to read? Here's a playground:<br>
-https://codepen.io/vhs/pen/MpVeOE?editors=0012
+## Waterfalls
+
+A picture's worth a thousand words. These examples are non-blocking and all performed programmatically using Fetch Inject.
+
+Loading Bootstrap 4 asynchronously in parallel:
+
+![Bootstrap 4](https://cloud.githubusercontent.com/assets/440298/24649786/c474c626-195a-11e7-8af8-b0ba0bcc0a71.png "Loading Bootstrap 4 asynchronously in parallel")
+
+Loading jQuery, Transit, Hover Intent and Superfish asynchronously in parallel:
+
+![Superfish](https://cloud.githubusercontent.com/assets/440298/24650610/4a7125d8-195d-11e7-9849-a9e071949c53.png "Loading jQuery, Transit, Hover Intent and Superfish asynchronously in parallel")
+
+Loading PhotoSwipe asynchronously with full-size image deep linking support:
+
+![PhotoSwipe](https://cloud.githubusercontent.com/assets/440298/24689725/13984c50-19fb-11e7-9bbe-384e98d558f9.png "Loading and initializing PhotoSwipe")
+
+## Playground
+
+Test out the library using the latest version available on CDN using this Pen: https://codepen.io/vhs/pen/MpVeOE?editors=0012
 
 ## Installing
 
 Fetch Inject is available on NPM, Bower and CDN.
 
-- Get it on NPM with `npm i fetch-inject`,<br>
-- Bower with `bower install fetch-inject`; or,<br>
-- CDN [using jsDelivr](http://www.jsdelivr.com/projects/fetch-inject).
+- Get it on NPM with `npm i fetch-inject`
+- Bower with `bower install fetch-inject`
+- CDN [using jsDelivr](http://www.jsdelivr.com/projects/fetch-inject)
 
 ## Syntax
 
@@ -57,7 +74,7 @@ A <a target="devdocs" href="http://devdocs.io/javascript/global_objects/promise"
   text: "/*!↵ * Bootstrap v4.0.0-alpha.5 ... */"
 }, {
   blob: { size: 31000, type: "text/css" },
-  text: "/*!↵ * Font Awesome 4.7.0 ..."
+  text: "/*!↵ * Font Awesome 4.7.0 ... */"
 }]
 ```
 
