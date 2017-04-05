@@ -9,6 +9,7 @@ const config = {
   entry: 'src/fetch-inject.js',
   format: `${format}`,
   moduleName: 'fetchInject',
+  sourceMap: false,
   plugins: [
     license({
       banner: `Fetch Inject v<%= pkg.version %>\nCopyright (c) <%= moment().format('YYYY') %> VHS\n@licence ISC`
@@ -21,7 +22,6 @@ if (minifier === 'on') {
   config.dest = (format === 'iife')
     ? 'dist/fetch-inject.min.js'
     : `dist/fetch-inject.${format}.min.js`
-  config.sourceMap = true
 } else {
   config.dest = (format === 'iife')
     ? 'dist/fetch-inject.js'
