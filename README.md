@@ -179,9 +179,7 @@ You could scatter some `link`s into your document head, blocking initial page re
 
 ```js
 const tether = ['https://cdn.jsdelivr.net/tether/1.4.0/tether.min.js']
-const drop = [
-  'https://cdn.jsdelivr.net/drop/1.4.2/js/drop.min.js'
-]
+const drop = ['https://cdn.jsdelivr.net/drop/1.4.2/js/drop.min.js']
 const tooltip = [
   'https://cdn.jsdelivr.net/tooltip/1.2.0/tooltip.min.js',
   'https://cdn.jsdelivr.net/tooltip/1.2.0/tooltip-theme-arrows.css'
@@ -201,15 +199,15 @@ What about jQuery dropdown menus? Sure why not...
 
 ```js
 fetchInject([
-    '/assets/js/main.js'
-  ], fetchInject([
-    '/assets/js/vendor/superfish.min.js'
-  ], fetchInject([
-    '/assets/js/vendor/jquery.transit.min.js',
-    '/assets/js/vendor/jquery.hoverIntent.js'
-  ], fetchInject([
-    '/assets/js/vendor/jquery.min.js'
-  ]))))
+  '/assets/js/main.js'
+], fetchInject([
+  '/assets/js/vendor/superfish.min.js'
+], fetchInject([
+  '/assets/js/vendor/jquery.transit.min.js',
+  '/assets/js/vendor/jquery.hoverIntent.js'
+], fetchInject([
+  '/assets/js/vendor/jquery.min.js'
+]))))
 ```
 
 ### Loading and Handling Composite Libraries
