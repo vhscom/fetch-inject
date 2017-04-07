@@ -8,8 +8,8 @@
   <a href="https://travis-ci.org/vhs/fetch-inject">
     <img src="https://travis-ci.org/vhs/fetch-inject.svg?branch=master" alt="Build Status">
   </a>
-  <a href="https://cdn.jsdelivr.net/fetch-inject/latest/fetch-inject.umd.min.js">
-    <img src="http://img.badgesize.io/https://cdn.jsdelivr.net/fetch-inject/latest/fetch-inject.umd.min.js?compression=gzip" alt="Compressed UMD Release Size">
+  <a href="https://cdn.jsdelivr.net/fetch-inject/latest/fetch-inject.min.js">
+    <img src="http://img.badgesize.io/https://cdn.jsdelivr.net/fetch-inject/latest/fetch-inject.min.js?compression=gzip" alt="Compressed IIFE Release Size">
   </a>
   <a href="https://www.npmjs.com/package/fetch-inject">
     <img src="https://img.shields.io/npm/dm/fetch-inject.svg" alt="NPM downloads per month">
