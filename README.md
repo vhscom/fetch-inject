@@ -21,7 +21,11 @@
 
 ## Background
 
-This library implements Fetch Injection, a performance optimization technique for [managing async script dependencies](https://hackcabin.com/post/managing-async-dependencies-javascript/). Use Fetch Inject to dynamically import scripts in parallel (even across the network), and inject them into a document in a desired sequence. It also supports inlining of CSS, and can be extended to support other MIME types as well.
+This library implements Fetch Injection, a performance optimization technique for [managing async script dependencies](https://hackcabin.com/post/managing-async-dependencies-javascript/).
+
+Use Fetch Inject to dynamically fetch page resources such as JS and CSS in parallel (even across the network), and load them into your page in a desired sequence.
+
+Fetch Inject leverages the power of [Fetch API](http://devdocs.io/dom/fetch_api) and will work seamlessly with [Progressive Web Apps](https://julian.is/article/progressive-web-apps/), enabling _extreme_ page performance using the power of [Service Workers](http://devdocs.io/dom-service-workers/).
 
 ## Waterfalls
 
