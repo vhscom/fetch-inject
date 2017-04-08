@@ -25,7 +25,7 @@ This library implements Fetch Injection, a performance optimization technique fo
 
 Use Fetch Inject to dynamically fetch page resources such as JS and CSS in parallel (even across the network), and load them into your page in a desired sequence.
 
-Fetch Inject leverages the power of [Fetch API](http://devdocs.io/dom/fetch_api) and will work seamlessly with [Progressive Web Apps](https://julian.is/article/progressive-web-apps/), enabling _extreme_ page performance using the power of [Service Workers](http://devdocs.io/dom-service-workers/).
+Fetch Inject leverages the power of [Fetch API](http://devdocs.io/dom/fetch_api) and will work within your [Progressive Web Apps](https://julian.is/article/progressive-web-apps/), enabling unparalleled performance and offline support leveraging the power [Service Workers](http://devdocs.io/dom-service-workers/).
 
 ## Waterfalls
 

@@ -8,10 +8,12 @@
   "keywords": [
     "dom",
     "fetch",
+    "import",
     "inject",
     "promise",
     "script",
-    "css"
+    "css",
+    "pwa"
   ],
   "repository": "vhs/fetch-inject",
   "scripts": {
