@@ -261,7 +261,7 @@ In your document `head` get the async loading started right away if the browser 
 
 ```js
 (function () {
-  if (!(window.fetch && window.Promise)) return;
+  if (!window.fetch) return;
   fetchInject([
     '/js/bootstrap.min.js'
   ], fetchInject([
@@ -275,7 +275,7 @@ Then, before the close of the document `body`, provide the traditional experienc
 
 ```js
 (function () {
-  if (!!(window.fetch && window.Promise)) return;
+  if (window.fetch) return;
   document.write('<script src="/js/bootstrap.min.js"><\/script>');
   document.write('<script src="/js/jquery.slim.min.jss"><\/script>');
   document.write('<script src="/js/tether.min.js"><\/script>');
