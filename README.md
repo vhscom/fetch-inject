@@ -45,7 +45,7 @@ Loading and initializing PhotoSwipe:
 
 ## Playground
 
-Try <a target="playground" rel="noreferrer noopener" href="https://codepen.io/vhs/pen/MpVeOE?editors=0012">Fetch Inject on CodePen</a> using the latest version available on CDN.
+Try <a target="_blank" rel="noreferrer noopener" href="https://codepen.io/vhs/pen/MpVeOE?editors=0012">Fetch Inject on CodePen</a> using the latest version available on CDN.
 
 Reference [Use Cases](#use-cases) to get a feel for what it can do.
 
