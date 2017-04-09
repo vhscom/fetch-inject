@@ -45,7 +45,9 @@ Loading and initializing PhotoSwipe:
 
 ## Playground
 
-Test out the library using the latest version available on CDN using this Pen: <a target="playground" rel="noreferrer noopener" href="https://codepen.io/vhs/pen/MpVeOE?editors=0012">MpVeOE</a>. Reference the [Use Cases](#use-cases) to get a feel for what it can do.
+Try Fetch Inject on CodePen using the latest version available on CDN: <a target="playground" rel="noreferrer noopener" href="https://codepen.io/vhs/pen/MpVeOE?editors=0012">MpVeOE</a>.
+
+Reference [Use Cases](#use-cases) to get a feel for what it can do.
 
 ## Installing
 
