@@ -35,9 +35,9 @@ Loading Bootstrap 4:
 
 ![Bootstrap 4](https://cloud.githubusercontent.com/assets/440298/24649786/c474c626-195a-11e7-8af8-b0ba0bcc0a71.png "Loading Bootstrap 4 asynchronously in parallel")
 
-Loading jQuery, Transit, Hover Intent and Superfish:
+Loading jQuery, Transit, Hover Intent, Superfish, Animo and main JS:
 
-![Superfish](https://cloud.githubusercontent.com/assets/440298/24650610/4a7125d8-195d-11e7-9849-a9e071949c53.png "Loading jQuery, Transit, Hover Intent and Superfish asynchronously in parallel")
+![security7.net](https://cloud.githubusercontent.com/assets/440298/25044789/14c8d650-215b-11e7-9be4-1e24c9b41f20.png "Loading jQuery, Transit, Hover Intent, Superfish, Animo and main JS asynchronously in parallel")
 
 Loading and initializing PhotoSwipe:
 
