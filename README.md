@@ -37,7 +37,7 @@ Loading Bootstrap 4:
 
 Loading jQuery, Transit, Hover Intent, Superfish, Animo and main JS:
 
-![security7.net](https://cloud.githubusercontent.com/assets/440298/25044789/14c8d650-215b-11e7-9be4-1e24c9b41f20.png "Loading jQuery, Transit, Hover Intent, Superfish, Animo and main JS asynchronously in parallel")
+![security7.net](https://cloud.githubusercontent.com/assets/440298/25044861/aa97bd7c-215b-11e7-9885-eea39c79c5a5.png "Loading jQuery, Transit, Hover Intent, Superfish, Animo and main JS asynchronously in parallel")
 
 Loading and initializing PhotoSwipe:
 
