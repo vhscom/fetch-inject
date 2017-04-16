@@ -21,11 +21,11 @@
 
 ## Background
 
-This library implements Fetch Injection, a performance optimization technique for [managing async script dependencies](https://hackcabin.com/post/managing-async-dependencies-javascript/).
+This library implements Fetch Injection, a performance optimization technique for [managing asynchronous dependencies](https://hackcabin.com/post/managing-async-dependencies-javascript/). It also works for stylesheets too, and was designed to be extensible for _any_ resource type which can be loaded using [`fetch`](https://devdocs.io/dom-fetch/).
 
-Use Fetch Inject to dynamically fetch page resources such as JS and CSS in parallel (even across the network), and load them into your page in a desired sequence.
+Use Fetch Inject to dynamically import page resources such as JS and CSS in parallel (even across the network), and load them into your page in a desired sequence.
 
-Fetch Inject leverages the power of [Fetch API](http://devdocs.io/dom/fetch_api) and will work within your [Progressive Web Apps](https://julian.is/article/progressive-web-apps/), enabling unparalleled performance and offline support leveraging the power [Service Workers](http://devdocs.io/dom-service-workers/).
+Because it uses [Fetch API](http://devdocs.io/dom/fetch_api), Fetch Inject will work alongside [Service Workers](http://devdocs.io/dom-service-workers/) and libraries like [sw-precache](https://github.com/googlechrome/sw-precache), enabling you take the performance of your [Progressive Web Apps](https://julian.is/article/progressive-web-apps/) even one step forward with non-blocking JavaScript, while simplifying use of `fetch` for the beginning programmer.
 
 ## Waterfalls
 
