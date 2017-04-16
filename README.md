@@ -25,7 +25,7 @@ This library implements Fetch Injection, a performance optimization technique fo
 
 Use Fetch Inject to dynamically import page resources such as JS and CSS in parallel (even across the network), and load them into your page in a desired sequence.
 
-Because it uses [Fetch API](http://devdocs.io/dom/fetch_api), Fetch Inject will work alongside [Service Workers](http://devdocs.io/dom-service-workers/) and libraries like [sw-precache](https://github.com/googlechrome/sw-precache), enabling you take the performance of your [Progressive Web Apps](https://julian.is/article/progressive-web-apps/) even one step forward with non-blocking JavaScript, while simplifying use of `fetch` for the beginning programmer.
+Because it uses [Fetch API](http://devdocs.io/dom/fetch_api), Fetch Inject will work alongside [Service Workers](http://devdocs.io/dom-service-workers/) and libraries like [sw-precache](https://github.com/googlechrome/sw-precache), enabling you take the performance of your [Progressive Web Apps](https://julian.is/article/progressive-web-apps/) even one step further, while providing a minimal API suitable for novice and advanced programmers alike.
 
 ## Waterfalls
 
