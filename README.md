@@ -25,7 +25,7 @@ This library implements Fetch Injection, a performance optimization technique fo
 
 Use Fetch Inject to dynamically import page resources such as JS and CSS in parallel (even across the network), and load them into your page in a desired sequence.
 
-Because it uses [Fetch API](http://devdocs.io/dom/fetch_api), Fetch Inject will work alongside [Service Workers](http://devdocs.io/dom-service-workers/) and libraries like [sw-precache](https://github.com/googlechrome/sw-precache), enabling you take the performance of your [Progressive Web Apps](https://julian.is/article/progressive-web-apps/) even one step further, while providing a minimal API and abstraction layer suitable for both novice and advanced individuals alike.
+Because it uses [Fetch API](http://devdocs.io/dom/fetch_api), Fetch Inject will work alongside [Service Workers](http://devdocs.io/dom-service-workers/), enabling you take the performance of your [Progressive Web Apps](https://julian.is/article/progressive-web-apps/) to an entirely new level.
 
 ## Waterfalls
 
@@ -42,6 +42,12 @@ Loading jQuery, Transit, Hover Intent, Superfish, Animo and main JS:
 Loading and initializing PhotoSwipe:
 
 ![PhotoSwipe](https://cloud.githubusercontent.com/assets/440298/24689725/13984c50-19fb-11e7-9bbe-384e98d558f9.png "Loading and initializing PhotoSwipe")
+
+## WordPress Plugin
+
+Fetch Inject has been built into a WordPress plugin, enabling the power of Fetch Injection in your WordPress themes. Initial testing shows Fetch Injection will cause WordPress pages to load 200-300% faster than any traditional method.
+
+For beta access to the plugin please visit [Hyperdrive repo](https://github.com/wp-id/hyperdrive) and drop the plugin code into your WordPress plugins directory.
 
 ## Playground
 
