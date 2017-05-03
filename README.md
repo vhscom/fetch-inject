@@ -302,7 +302,11 @@ If you need vanilla AMD or CJS modules, update the NPM scripts in the package ma
 
 ## Contributing
 
-Please use [Issues](https://github.com/vhs/fetch-inject/issues) for bugs and enhancement requests only. Use `npm run commit` to create [Commitizen-friendly](http://commitizen.github.io/cz-cli/) commit messages. If you need support, you know [where to go](http://stackoverflow.com/questions/tagged/fetch-api). Thanks!
+Please use [Issues](https://github.com/vhs/fetch-inject/issues) for bugs and enhancement requests only. Bug reports not accompanied by a reduced test case, sufficient backing research and information to help progress the library may be closed without explanation.
+
+When submitting pull requests, use `npm run commit` to create [Commitizen-friendly](http://commitizen.github.io/cz-cli/) commit messages. Pulls should be squashed into a single commit prior to review and should PR against a backing issue.
+
+If you need support, you know [where to go](http://stackoverflow.com/questions/tagged/fetch-api).
 
 ## See Also
 
