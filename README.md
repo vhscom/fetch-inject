@@ -47,7 +47,7 @@ Loading and initializing PhotoSwipe:
 
 Fetch Inject has been built into a WordPress plugin, enabling the power of Fetch Injection for WordPress. Initial testing shows Fetch Injection will cause WordPress pages to load **200-300% faster** than traditional methods.
 
-![Hyperdrive WordPress Plugin logo](https://github.com/wp-id/hyperdrive/blob/master/logo.png)
+[![Hyperdrive WordPress Plugin logo](https://github.com/wp-id/hyperdrive/blob/master/logo.png)](https://github.com/wp-id/hyperdrive)
 
 For beta access to the plugin please visit [Hyperdrive repo](https://github.com/wp-id/hyperdrive) and drop the plugin code into your WordPress plugins directory. See the [Hacker Noon article](https://hackernoon.com/putting-wordpress-into-hyperdrive-4705450dffc2) for more details.
 
