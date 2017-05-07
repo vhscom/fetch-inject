@@ -254,12 +254,7 @@ This example turns TOML into JSON, parses the object, downloads all of the Photo
 
 ## Supported Browsers
 
-All browsers with support for [Fetch](http://caniuse.com/#feat=fetch) and [Promises](http://caniuse.com/#search=promises).
-
-<blockquote>
-  Fetch will become available in Safari in the Safari 10.1 release that ships with macOS Sierra 10.12.4 and Safari on iOS 10.3.
-  <cite>Jon Davis</cite>,  Web Technologies Evangelist
-</blockquote>
+All browsers with support for [Fetch](http://caniuse.com/#feat=fetch) and [Promises](http://caniuse.com/#search=promises). Because Fetch is a newer Web standard, we will help identify, open and track issues against browser implementations as they arise while specs are being finalized.
 
 ## Progressive Enhancement
 
