@@ -12,7 +12,7 @@ const config = {
   sourceMap: false,
   plugins: [
     license({
-      banner: `Fetch Inject v<%= pkg.version %>\nCopyright (c) <%= moment().format('YYYY') %> VHS\n@licence ISC`
+      banner: `Fetch Inject v<%= pkg.version %>\nCopyright (c) <%= moment().format('YYYY') %> VHS\n@license ISC`
     })
   ]
 }
