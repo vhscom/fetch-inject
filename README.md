@@ -19,7 +19,7 @@
   </a>
 </p>
 
-<p center><strong><a href="https://news.ycombinator.com/item?id=14380191">Discuss it on Hacker News</a></strong></p>
+<p align="center"><strong><a href="https://news.ycombinator.com/item?id=14380191">Discuss it on Hacker News</a></strong></p>
 
 ## Background
 
