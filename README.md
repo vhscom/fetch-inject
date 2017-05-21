@@ -19,6 +19,8 @@
   </a>
 </p>
 
+<p center><strong><a href="https://news.ycombinator.com/item?id=14380191">Discuss it on Hacker News</a></strong></p>
+
 ## Background
 
 This library implements Fetch Injection, a performance optimization technique for [managing asynchronous dependencies](https://hackcabin.com/post/managing-async-dependencies-javascript/). It also works for stylesheets too, and was designed to be extensible for _any_ resource type which can be loaded using [`fetch`](https://devdocs.io/dom-fetch/).
@@ -26,8 +28,6 @@ This library implements Fetch Injection, a performance optimization technique fo
 Use Fetch Inject to dynamically import page resources such as JS and CSS in parallel (even across the network), and load them into your page in a desired sequence.
 
 Because it uses [Fetch API](http://devdocs.io/dom/fetch_api), Fetch Inject will work alongside [Service Workers](http://devdocs.io/dom-service-workers/), enabling you take the performance of your [Progressive Web Apps](https://julian.is/article/progressive-web-apps/) to an entirely new level.
-
-**Join the [discussion on Hacker News](https://news.ycombinator.com/item?id=14380191)**.
 
 ## Waterfalls
 
