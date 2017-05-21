@@ -27,6 +27,8 @@ Use Fetch Inject to dynamically import page resources such as JS and CSS in para
 
 Because it uses [Fetch API](http://devdocs.io/dom/fetch_api), Fetch Inject will work alongside [Service Workers](http://devdocs.io/dom-service-workers/), enabling you take the performance of your [Progressive Web Apps](https://julian.is/article/progressive-web-apps/) to an entirely new level.
 
+**Join the [discussion on Hacker News](https://news.ycombinator.com/item?id=14380191)**.
+
 ## Waterfalls
 
 Here are some example waterfalls using Fetch Inject.
