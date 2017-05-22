@@ -5,14 +5,14 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/fetch-inject">
+  <a href="https://cost-of-modules.herokuapp.com/?p=fetch-inject@latest">
     <img src="https://img.shields.io/badge/dependencies-0-8892BF.svg?style=flat-square" alt="Zero dependencies">
-  </a>
-  <a href="https://travis-ci.org/vhs/fetch-inject">
-    <img src="https://img.shields.io/travis/vhs/fetch-inject.svg?style=flat-square" alt="Build Status">
   </a>
   <a href="https://cdn.jsdelivr.net/fetch-inject/latest/fetch-inject.min.js">
     <img src="http://img.badgesize.io/https://cdn.jsdelivr.net/fetch-inject/latest/fetch-inject.min.js?compression=gzip&style=flat-square" alt="Compressed size of IIFE bundle">
+  </a>
+  <a href="https://travis-ci.org/vhs/fetch-inject">
+    <img src="https://img.shields.io/travis/vhs/fetch-inject.svg?style=flat-square" alt="Build Status">
   </a>
   <a href="https://www.npmjs.com/package/fetch-inject">
     <img src="https://img.shields.io/npm/dm/fetch-inject.svg?style=flat-square" alt="NPM downloads per month">
