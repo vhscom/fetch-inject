@@ -12,10 +12,10 @@
     <img src="http://img.badgesize.io/https://cdn.jsdelivr.net/fetch-inject/latest/fetch-inject.min.js?compression=gzip&style=flat-square" alt="Compressed size of IIFE bundle">
   </a>
   <a href="https://www.npmjs.com/package/fetch-inject">
-    <img src="https://img.shields.io/npm/dm/fetch-inject.svg&style=flat-square" alt="NPM downloads per month">
+    <img src="https://img.shields.io/npm/dm/fetch-inject.svg?style=flat-square" alt="NPM downloads per month">
   </a>
   <a href="https://www.npmjs.com/package/fetch-inject">
-    <img src="https://img.shields.io/npm/v/fetch-inject.svg&style=flat-square" alt="Latest NPM version">
+    <img src="https://img.shields.io/npm/v/fetch-inject.svg?style=flat-square" alt="Latest NPM version">
   </a>
   <a href="https://www.npmjs.com/package/fetch-inject">
     <img src="https://img.shields.io/badge/dependencies-0-8892BF.svg?style=flat-square" alt="Zero dependencies">
