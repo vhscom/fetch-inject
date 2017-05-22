@@ -5,6 +5,9 @@
 </p>
 
 <p align="center">
+  <a href="https://www.npmjs.com/package/fetch-inject">
+    <img src="https://img.shields.io/badge/dependencies-0-8892BF.svg?style=flat-square" alt="Zero dependencies">
+  </a>
   <a href="https://travis-ci.org/vhs/fetch-inject">
     <img src="https://img.shields.io/travis/vhs/fetch-inject.svg?style=flat-square" alt="Build Status">
   </a>
@@ -16,9 +19,6 @@
   </a>
   <a href="https://www.npmjs.com/package/fetch-inject">
     <img src="https://img.shields.io/npm/v/fetch-inject.svg?style=flat-square" alt="Latest NPM version">
-  </a>
-  <a href="https://www.npmjs.com/package/fetch-inject">
-    <img src="https://img.shields.io/badge/dependencies-0-8892BF.svg?style=flat-square" alt="Zero dependencies">
   </a>
 </p>
 
