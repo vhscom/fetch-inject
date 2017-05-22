@@ -34,7 +34,7 @@ Because it uses [Fetch API](http://devdocs.io/dom/fetch_api), Fetch Inject will 
 
 ## Waterfalls
 
-Here are some example waterfalls using Fetch Inject.
+Here are some example waterfalls using Fetch Inject, as well as links to more info and a live demo.
 
 Loading Bootstrap 4:
 
@@ -47,6 +47,8 @@ Loading jQuery, Transit, Hover Intent, Superfish, Animo and main JS:
 Loading and initializing PhotoSwipe:
 
 ![PhotoSwipe](https://cloud.githubusercontent.com/assets/440298/24689725/13984c50-19fb-11e7-9bbe-384e98d558f9.png "Loading and initializing PhotoSwipe")
+
+For a more complex example see article titled [Putting WordPress into Hyperdrive](https://hackernoon.com/putting-wordpress-into-hyperdrive-4705450dffc2) on Hacker Noon. A **live demo** is available on [wordcamp.vhs.codeberg.page](http://wordcamp.vhs.codeberg.page/).
 
 ## WordPress Plugin
 
