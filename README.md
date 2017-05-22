@@ -68,8 +68,8 @@ Reference the [Use Cases](#use-cases) to get a feel for what it can do.
 
 Fetch Inject is available on NPM, Bower and CDN. It ships in the following flavors: IIFE, UMD and ES6.
 
-- Get it on NPM with `npm i fetch-inject --production`
-- Bower with `bower install fetch-inject`
+- Get it on NPM with `npm i -p fetch-inject`
+- Bower with `bower i -p fetch-inject`
 - CDN [using jsDelivr](http://www.jsdelivr.com/projects/fetch-inject)
 
 To download the lastest minified UMD bundle from the command line:
