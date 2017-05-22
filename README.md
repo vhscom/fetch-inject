@@ -60,15 +60,15 @@ Access the plugin beta [Hyperdrive repo](https://github.com/wp-id/hyperdrive) on
 
 ## Playground
 
-Try <a target="_blank" rel="noreferrer noopener" href="https://codepen.io/vhs/pen/MpVeOE?editors=0012">Fetch Inject on CodePen</a> using the latest version available on CDN.
+Try [Fetch Inject on CodePen](https://codepen.io/vhs/pen/MpVeOE?editors=0012) using the latest version available on CDN.
 
-Reference [Use Cases](#use-cases) to get a feel for what it can do.
+Reference the [Use Cases](#use-cases) to get a feel for what it can do.
 
 ## Installing
 
 Fetch Inject is available on NPM, Bower and CDN. It ships in the following flavors: IIFE, UMD and ES6.
 
-- Get it on NPM with `npm i fetch-inject`
+- Get it on NPM with `npm i fetch-inject --production`
 - Bower with `bower install fetch-inject`
 - CDN [using jsDelivr](http://www.jsdelivr.com/projects/fetch-inject)
 
