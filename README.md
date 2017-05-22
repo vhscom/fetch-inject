@@ -26,7 +26,7 @@
 
 ## Background
 
-This library implements Fetch Injection, a performance optimization technique for [managing asynchronous dependencies](https://hackcabin.com/post/managing-async-dependencies-javascript/). It also works for stylesheets too, and was designed to be extensible for _any_ resource type which can be loaded using [`fetch`](https://devdocs.io/dom-fetch/).
+This library implements a performance optimization technique known as _Fetch Injection_ for [managing async dependencies with JavaScript](https://hackcabin.com/post/managing-async-dependencies-javascript/). It also works for stylesheets too, and was designed to be extensible for _any_ resource type which can be loaded using [`fetch`](https://devdocs.io/dom-fetch/).
 
 Use Fetch Inject to dynamically import page resources such as JS and CSS in parallel (even across the network), and load them into your page in a desired sequence.
 
@@ -52,11 +52,11 @@ For a more complex example see article titled [Putting WordPress into Hyperdrive
 
 ## WordPress Plugin
 
-Fetch Inject has been built into a WordPress plugin, enabling the power of Fetch Injection for WordPress. Initial testing shows Fetch Injection will cause WordPress pages to load **200-300% faster** than traditional methods.
+Fetch Inject has been built into a WordPress plugin, enabling Fetch Injection to work within WordPress. [Initial testing](https://hackernoon.com/putting-wordpress-into-hyperdrive-4705450dffc2) shows Fetch Injection enables WordPress to load pages **300% faster** than conventional methods.
 
 [![Hyperdrive WordPress Plugin logo](https://github.com/wp-id/hyperdrive/blob/master/logo.png)](https://github.com/wp-id/hyperdrive)
 
-For beta access to the plugin please visit [Hyperdrive repo](https://github.com/wp-id/hyperdrive) and drop the plugin code into your WordPress plugins directory. See the [Hacker Noon article](https://hackernoon.com/putting-wordpress-into-hyperdrive-4705450dffc2) for more details.
+Access the plugin beta [Hyperdrive repo](https://github.com/wp-id/hyperdrive) on GitHub and see the related [Hacker Noon article](https://hackernoon.com/putting-wordpress-into-hyperdrive-4705450dffc2) for more details.
 
 ## Playground
 
