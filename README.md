@@ -320,4 +320,4 @@ If you need support, you know [where to go](http://stackoverflow.com/questions/t
 
 ## License
 
-[ISC](https://github.com/vhs/fetch-inject/blob/master/LICENSE)
+[![ISC](https://img.shields.io/github/license/vhs/fetch-inject.svg?style=flat-square)](https://choosealicense.com/licenses/isc/ "ISC License")
