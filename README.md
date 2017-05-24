@@ -26,7 +26,7 @@
 
 ## Background
 
-This library implements a performance optimization technique known as _Fetch Injection_ for [managing async dependencies with JavaScript](https://hackcabin.com/post/managing-async-dependencies-javascript/). It also works for stylesheets too, and was designed to be extensible for _any_ resource type which can be loaded using [`fetch`](https://devdocs.io/dom-fetch/).
+This library implements a performance optimization technique [known as](https://hackcabin.com/post/managing-async-dependencies-javascript/) _Fetch Injection_ for managing async dependencies with JavaScript. It also works for stylesheets too, and was designed to be extensible for _any_ resource type which can be loaded using [`fetch`](https://devdocs.io/dom-fetch/).
 
 Use Fetch Inject to dynamically import page resources such as JS and CSS in parallel (even across the network), and load them into your page in a desired sequence.
 
