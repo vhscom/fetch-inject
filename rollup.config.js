@@ -1,6 +1,6 @@
 import uglify from 'rollup-plugin-uglify'
 import license from 'rollup-plugin-license'
-import { minify } from 'uglify-js-harmony'
+import { minify } from 'uglify-es'
 
 const minifier = process.env.MINIFIER
 const format = process.env.FORMAT

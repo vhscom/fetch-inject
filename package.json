@@ -33,15 +33,15 @@
   "devDependencies": {
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.0.0",
-    "ghooks": "^2.0.0",
+    "husky": "^0.13.4",
     "npm-run-all": "^4.0.2",
     "rimraf": "^2.6.1",
     "rollup": "^0.41.6",
-    "rollup-plugin-license": "^0.3.0",
-    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-plugin-license": "^0.4.0",
+    "rollup-plugin-uglify": "^2.0.1",
     "semantic-release": "^6.3.2",
     "standard": "^9.0.2",
-    "uglify-js-harmony": "^2.7.5"
+    "uglify-es": "^3.0.12"
   },
   "standard": {
     "ignore": [
