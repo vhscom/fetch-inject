@@ -22,8 +22,6 @@
   </a>
 </p>
 
-<p align="center"><strong><a href="https://news.ycombinator.com/item?id=14380191">Discuss it on Hacker News</a></strong></p>
-
 ## Background
 
 This library implements a performance optimization technique [known as](https://hackcabin.com/post/managing-async-dependencies-javascript/) _Fetch Injection_ for managing async dependencies with JavaScript. It also works for stylesheets too, and was designed to be extensible for _any_ resource type which can be loaded using [`fetch`](https://devdocs.io/dom-fetch/).
