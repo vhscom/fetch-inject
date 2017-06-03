@@ -36,13 +36,13 @@ Here are some example waterfalls using Fetch Inject.
 
 **Fetch Inject - Unprimed Cache**
 
-Loading the WordPress Twenty Seventeen theme over 4G with an unprimed cache and image lazyloading.
+Loading the WordPress Twenty Seventeen theme over 4G with an unprimed browser cache, image lazyloading and a Redis object cache.
 
 [![Fetch Inject Unprimed Cache](https://github.com/vhs/fetch-inject/blob/master/docs/fetch-inject-unprimed-cache.png?raw=true)](https://wordcamp.vhs.codeberg.page/)
 
 **Fetch Inject - Service Worker Cache**
 
-Loading the WordPress Twenty Seventeen theme over 4G with a Service Worker cache and image lazyloading.
+Loading the WordPress Twenty Seventeen theme over 4G with a Service Worker cache, image lazyloading and a Redis Object Cache.
 
 [![Fetch Inject Service Worker Cache](https://github.com/vhs/fetch-inject/blob/master/docs/fetch-inject-serviceworker-caching.png?raw=true)](https://wordcamp.vhs.codeberg.page/)
 
