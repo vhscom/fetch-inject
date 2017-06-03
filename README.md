@@ -32,21 +32,17 @@ Because it uses [Fetch API](http://devdocs.io/dom/fetch_api), Fetch Inject will 
 
 ## Waterfalls
 
-Here are some example waterfalls using Fetch Inject, as well as links to more info and a live demo.
+Here are some example waterfalls using Fetch Inject.
 
-Loading Bootstrap 4:
+**WordPress Twenty Seventeen + Fetch Inject - Unprimed Cache**
 
-![Bootstrap 4](https://cloud.githubusercontent.com/assets/440298/24649786/c474c626-195a-11e7-8af8-b0ba0bcc0a71.png "Loading Bootstrap 4 asynchronously in parallel")
+[![Fetch Inject Unprimed Cache](https://raw.githubusercontent.com/vhs/fetch-inject/blob/master/docs/fetch-inject-unprimed-cache.png)](https://wordcamp.vhs.codeberg.page/)
 
-Loading jQuery, Transit, Hover Intent, Superfish, Animo and main JS:
+**WordPress Twenty Seventeen + Fetch Inject - Service Worker Cache**
 
-![security7.net](https://cloud.githubusercontent.com/assets/440298/25044861/aa97bd7c-215b-11e7-9885-eea39c79c5a5.png "Loading jQuery, Transit, Hover Intent, Superfish, Animo and main JS asynchronously in parallel")
+[![Fetch Inject Unprimed Cache](https://raw.githubusercontent.com/vhs/fetch-inject/blob/master/docs/fetch-inject-serviceworker-caching.png)](https://wordcamp.vhs.codeberg.page/)
 
-Loading and initializing PhotoSwipe:
-
-![PhotoSwipe](https://cloud.githubusercontent.com/assets/440298/24689725/13984c50-19fb-11e7-9bbe-384e98d558f9.png "Loading and initializing PhotoSwipe")
-
-For a more sophisticated example use see [Putting WordPress into Hyperdrive](https://hackernoon.com/putting-wordpress-into-hyperdrive-4705450dffc2) on Hacker Noon and poke at the related demo on [//wordcamp.vhs.codeberg.page](//wordcamp.vhs.codeberg.page/).
+Click an image for a live demo to reproduce the above results, try out the [Hyperdrive Plugin for WordPress](#wordPress-plugin) (currently in beta) or [download the library now](#download).
 
 ## Syntax
 
