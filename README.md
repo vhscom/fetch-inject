@@ -36,7 +36,7 @@ Here are some example waterfalls using Fetch Inject.
 
 **WordPress Twenty Seventeen + Fetch Inject - Unprimed Cache**
 
-[![Fetch Inject Unprimed Cache](https://github.com/vhs/fetch-inject/blob/master/docs/fetch-inject-serviceworker-caching.png?raw=true)](https://wordcamp.vhs.codeberg.page/)
+[![Fetch Inject Unprimed Cache](https://github.com/vhs/fetch-inject/blob/master/docs/fetch-inject-unprimed-cache.png?raw=true)](https://wordcamp.vhs.codeberg.page/)
 
 **WordPress Twenty Seventeen + Fetch Inject - Service Worker Cache**
 
