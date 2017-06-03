@@ -8,8 +8,8 @@
   <a href="https://cost-of-modules.herokuapp.com/?p=fetch-inject@latest">
     <img src="https://img.shields.io/badge/dependencies-0-8892BF.svg?style=flat-square" alt="Zero dependencies">
   </a>
-  <a href="https://cdn.jsdelivr.net/fetch-inject/latest/fetch-inject.min.js">
-    <img src="http://img.badgesize.io/https://cdn.jsdelivr.net/fetch-inject/latest/fetch-inject.min.js?compression=gzip&style=flat-square" alt="Compressed size of IIFE bundle">
+  <a href="https://cdn.jsdelivr.net/npm/fetch-inject">
+    <img src="http://img.badgesize.io/https://cdn.jsdelivr.net/npm/fetch-inject?compression=gzip&style=flat-square" alt="Compressed size of UMD bundle">
   </a>
   <a href="https://travis-ci.org/vhs/fetch-inject">
     <img src="https://img.shields.io/travis/vhs/fetch-inject.svg?style=flat-square" alt="Build Status">
@@ -46,35 +46,7 @@ Loading and initializing PhotoSwipe:
 
 ![PhotoSwipe](https://cloud.githubusercontent.com/assets/440298/24689725/13984c50-19fb-11e7-9bbe-384e98d558f9.png "Loading and initializing PhotoSwipe")
 
-For a more complex example see article titled [Putting WordPress into Hyperdrive](https://hackernoon.com/putting-wordpress-into-hyperdrive-4705450dffc2) on Hacker Noon. A **live demo** is available on [wordcamp.vhs.codeberg.page](http://wordcamp.vhs.codeberg.page/).
-
-## WordPress Plugin
-
-Fetch Inject has been built into a WordPress plugin, enabling Fetch Injection to work within WordPress. [Initial testing](https://hackernoon.com/putting-wordpress-into-hyperdrive-4705450dffc2) shows Fetch Injection enables WordPress to load pages **300% faster** than conventional methods.
-
-[![Hyperdrive WordPress Plugin logo](https://github.com/wp-id/hyperdrive/blob/master/logo.png)](https://github.com/wp-id/hyperdrive)
-
-Access the plugin beta [Hyperdrive repo](https://github.com/wp-id/hyperdrive) on GitHub and see the related [Hacker Noon article](https://hackernoon.com/putting-wordpress-into-hyperdrive-4705450dffc2) for more details.
-
-## Playground
-
-Try [Fetch Inject on CodePen](https://codepen.io/vhs/pen/MpVeOE?editors=0012) using the latest version available on CDN.
-
-Reference the [Use Cases](#use-cases) to get a feel for what it can do.
-
-## Installing
-
-Fetch Inject is available on NPM, Bower and CDN. It ships in the following flavors: IIFE, UMD and ES6.
-
-- Get it on NPM with `npm i -p fetch-inject`
-- Bower with `bower i -p fetch-inject`
-- CDN [using jsDelivr](http://www.jsdelivr.com/projects/fetch-inject)
-
-To download the lastest minified UMD bundle from the command line:
-
-    curl -L -o fetch-inject.umd.min.js https://go.vhs.codeberg.page/fetch-inject-umd-min
-
-See the [Development](#development) section for asset pipelines requiring vanilla AMD and CJS modules.
+For a more sophisticated example use see [Putting WordPress into Hyperdrive](https://hackernoon.com/putting-wordpress-into-hyperdrive-4705450dffc2) on Hacker Noon and poke at the related demo on [//wordcamp.vhs.codeberg.page](//wordcamp.vhs.codeberg.page/).
 
 ## Syntax
 
@@ -100,6 +72,26 @@ A <a target="devdocs" href="http://devdocs.io/javascript/global_objects/promise"
   text: "/*!↵ * Font Awesome 4.7.0 ... */"
 }]
 ```
+
+## Playground
+
+Try [Fetch Inject on CodePen](https://codepen.io/vhs/pen/MpVeOE?editors=0012) using the latest version available on CDN.
+
+Reference the [Use Cases](#use-cases) to get a feel for what it can do.
+
+## Download
+
+Fetch Inject is available on NPM, Bower and CDN. It ships in the following flavors: IIFE, UMD and ES6.
+
+- Get it on NPM with `npm i -p fetch-inject`
+- Bower with `bower i -p fetch-inject`
+- CDN [with jsDelivr](https://cdn.jsdelivr.net/npm/fetch-inject@1.7.0/dist/)
+
+To grab the latest UMD bundle from CDN:
+
+    curl -o fetch-inject.umd.min.js https://cdn.jsdelivr.net/npm/fetch-inject
+
+See the [Development](#development) section for asset pipelines requiring vanilla AMD or CJS modules.
 
 ## Use Cases
 
@@ -315,6 +307,14 @@ If you need support, you know [where to go](http://stackoverflow.com/questions/t
 - [es-module-loader](https://github.com/ModuleLoader/es-module-loader) - Polyfill for the ES Module Loader
 - [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch) - A library for using `fetch` in Node
 - [Dynamic Imports](https://github.com/tc39/proposal-dynamic-import) - `import()` proposal for JavaScript
+
+## WordPress Plugin
+
+Fetch Inject has been built into a WordPress plugin, enabling Fetch Injection to work within WordPress. [Initial testing](https://hackernoon.com/putting-wordpress-into-hyperdrive-4705450dffc2) shows Fetch Injection enables WordPress to load pages **300% faster** than conventional methods.
+
+[![Hyperdrive WordPress Plugin logo](https://github.com/wp-id/hyperdrive/blob/master/logo.png)](https://github.com/wp-id/hyperdrive)
+
+Access the plugin beta [Hyperdrive repo](https://github.com/wp-id/hyperdrive) on GitHub and see the related [Hacker Noon article](https://hackernoon.com/putting-wordpress-into-hyperdrive-4705450dffc2) for more details.
 
 ## License
 
