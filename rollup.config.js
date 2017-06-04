@@ -24,8 +24,6 @@ activeConfigs.forEach(activeConfig => {
   Object.assign(activeConfig, defaultConfig)
 })
 
-// console.log(activeConfigs[0].plugins)
-
 const minifiedConfigs = activeConfigs.reduce(
   (minifiedConfigs, activeConfig) => minifiedConfigs.concat(
     Object.assign({}, activeConfig, {
@@ -35,9 +33,5 @@ const minifiedConfigs = activeConfigs.reduce(
   ),
   []
 )
-
-minifiedConfigs[0].plugins
-
-console.log(minifiedConfigs[0].plugins)
 
 export default activeConfigs.concat(minifiedConfigs)
