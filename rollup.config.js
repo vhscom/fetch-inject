@@ -2,30 +2,36 @@ import uglify from 'rollup-plugin-uglify'
 import license from 'rollup-plugin-license'
 import { minify } from 'uglify-es'
 
-const minifier = process.env.MINIFIER
-const format = process.env.FORMAT
-
-const config = {
+const defaultConfig = {
   entry: 'src/fetch-inject.js',
-  format: `${format}`,
-  moduleName: 'fetchInject',
-  sourceMap: false,
-  plugins: [
-    license({
-      banner: `/*! Fetch Inject v<%= pkg.version %> | (c) <%= moment().format('YYYY') %> VHS | @license ISC */`
+  plugins: [license({ banner: `/*! Fetch Inject v<%= pkg.version %> | (c) <%= moment().format('YYYY') %> VHS | @license ISC */` })]
+}
+
+const activeConfigs = [
+  Object.assign({
+    format: 'iife',
+    moduleName: 'fetchInject',
+    dest: 'dist/fetch-inject.js'
+  }, defaultConfig),
+  Object.assign({
+    format: 'es',
+    dest: 'dist/fetch-inject.es.js'
+  }, defaultConfig),
+  Object.assign({
+    format: 'umd',
+    moduleName: 'fetchInject',
+    dest: 'dist/fetch-inject.umd.js'
+  }, defaultConfig)
+]
+
+const minifiedConfigs = activeConfigs.reduce(
+  (minifiedConfigs, activeConfig) => minifiedConfigs.concat(
+    Object.assign({}, activeConfig, {
+      plugins: activeConfig.plugins.concat([uglify({}, minify)]),
+      dest: activeConfig.dest.replace('js', 'min.js')
     })
-  ]
-}
+  ),
+  []
+)
 
-if (minifier === 'on') {
-  config.plugins.unshift(uglify({}, minify))
-  config.dest = (format === 'iife')
-    ? 'dist/fetch-inject.min.js'
-    : `dist/fetch-inject.${format}.min.js`
-} else {
-  config.dest = (format === 'iife')
-    ? 'dist/fetch-inject.js'
-    : `dist/fetch-inject.${format}.js`
-}
-
-export default config
+export default activeConfigs.concat(minifiedConfigs)
