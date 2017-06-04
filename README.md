@@ -290,7 +290,7 @@ This is entirely optional, but a good practice unless you're going full hipster.
 1. Install dev dependencies.
 1. Execute `npm run` for a listing of available commands.
 
-If you need vanilla AMD or CJS modules, update the NPM scripts in the package manifest and `npm run build`.
+If you need vanilla AMD or CJS modules, update `activeConfigs` in `rollup.config.js`.
 
 ## Contributing
 
