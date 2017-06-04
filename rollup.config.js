@@ -7,31 +7,37 @@ const defaultConfig = {
   plugins: [license({ banner: `/*! Fetch Inject v<%= pkg.version %> | (c) <%= moment().format('YYYY') %> VHS | @license ISC */` })]
 }
 
-const activeConfigs = [
-  Object.assign({
-    format: 'iife',
-    moduleName: 'fetchInject',
-    dest: 'dist/fetch-inject.js'
-  }, defaultConfig),
-  Object.assign({
-    format: 'es',
-    dest: 'dist/fetch-inject.es.js'
-  }, defaultConfig),
-  Object.assign({
-    format: 'umd',
-    moduleName: 'fetchInject',
-    dest: 'dist/fetch-inject.umd.js'
-  }, defaultConfig)
-]
+const activeConfigs = [{
+  format: 'iife',
+  moduleName: 'fetchInject',
+  dest: 'dist/fetch-inject.js'
+}, {
+  format: 'es',
+  dest: 'dist/fetch-inject.es.js'
+}, {
+  format: 'umd',
+  moduleName: 'fetchInject',
+  dest: 'dist/fetch-inject.umd.js'
+}]
+
+activeConfigs.forEach(activeConfig => {
+  Object.assign(activeConfig, defaultConfig)
+})
+
+// console.log(activeConfigs[0].plugins)
 
 const minifiedConfigs = activeConfigs.reduce(
   (minifiedConfigs, activeConfig) => minifiedConfigs.concat(
     Object.assign({}, activeConfig, {
-      plugins: activeConfig.plugins.concat([uglify({}, minify)]),
+      plugins: [uglify({}, minify), ...activeConfig.plugins],
       dest: activeConfig.dest.replace('js', 'min.js')
     })
   ),
   []
 )
+
+minifiedConfigs[0].plugins
+
+console.log(minifiedConfigs[0].plugins)
 
 export default activeConfigs.concat(minifiedConfigs)
