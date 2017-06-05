@@ -1,4 +1,6 @@
 /**
+ * ISC License
+ *
  * Copyright (c) 2017, VHS <josh@vhs.codeberg.page>
  *
  * Permission to use, copy, modify, and/or distribute this software for any

@@ -4,7 +4,7 @@ import { minify } from 'uglify-es'
 
 const defaultConfig = {
   entry: 'src/fetch-inject.js',
-  plugins: [license({ banner: `/*! Fetch Inject v<%= pkg.version %> | (c) <%= moment().format('YYYY') %> VHS | @license ISC */` })]
+  plugins: []
 }
 
 const activeConfigs = [{
@@ -27,7 +27,11 @@ activeConfigs.forEach(activeConfig => {
 const minifiedConfigs = activeConfigs.reduce(
   (minifiedConfigs, activeConfig) => minifiedConfigs.concat(
     Object.assign({}, activeConfig, {
-      plugins: [uglify({}, minify), ...activeConfig.plugins],
+      plugins: [
+        uglify({}, minify),
+        license({ banner: `/*! Fetch Inject v<%= pkg.version %> | (c) <%= moment().format('YYYY') %> VHS | @license ISC */` }),
+        ...activeConfig.plugins
+      ],
       dest: activeConfig.dest.replace('js', 'min.js')
     })
   ),

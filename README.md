@@ -40,18 +40,18 @@ Click the image for a live demo of the application used to produce the above wat
 
 ## Syntax
 
-    Promise<Array<Object>> fetchInject(inputs, promise)
+    Promise<Array<Object>> fetchInject(inputs[, promise])
 
 ### Parameters
 
 <dl>
-<dt>inputs<dd><i>Required.</i> This defines the resources you wish to fetch. It must be an <code>Array</code> containing elements of type <a target="devdocs" href="http://devdocs.io/dom/usvstring"><code>USVString</code></a> or <a target="devdocs" href="http://devdocs.io/dom/request"><code>Request</code></a>.
-<dt>promise<dd><i>Optional.</i> A <a target="devdocs" href="http://devdocs.io/javascript/global_objects/promise"><code>Promise</code></a> to await before injecting fetched resources.
+<dt>inputs<dd>This defines the resources you wish to fetch. It must be an <code>Array</code> containing elements of type <a target="devdocs" href="http://devdocs.io/dom/usvstring"><code>USVString</code></a> or <a target="devdocs" href="http://devdocs.io/dom/request"><code>Request</code></a>.
+<dt>promise<dd><b>Optional.</b> A <a target="devdocs" href="http://devdocs.io/javascript/global_objects/promise"><code>Promise</code></a> to await before injecting fetched resources.
 </dl>
 
 ### Return value
 
-A <a target="devdocs" href="http://devdocs.io/javascript/global_objects/promise">Promise</a> that resolves to an `Array` of `Object`s. Each `Object` contains a list of resolved properties of the Response Body used in the module, e.g.
+A [`Promise`](http://devdocs.io/javascript/global_objects/promise) that resolves to an `Array` of `Object`s. Each `Object` contains a list of resolved properties of the [`Response`](http://devdocs.io/dom/response) [`Body`](http://devdocs.io/dom/body) used by the module, e.g.
 
 ```js
 [{
@@ -69,7 +69,7 @@ Try [Fetch Inject on CodePen](https://codepen.io/vhs/pen/MpVeOE?editors=0012) us
 
 Reference the [Use Cases](#use-cases) to get a feel for what it can do.
 
-## Download
+## Installing
 
 Fetch Inject is available on NPM, Bower and CDN. It ships in the following flavors: IIFE, UMD and ES6.
 
