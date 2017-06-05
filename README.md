@@ -9,7 +9,7 @@
     <img src="https://img.shields.io/badge/dependencies-0-8892BF.svg?style=flat-square" alt="Zero dependencies">
   </a>
   <a href="https://cdn.jsdelivr.net/npm/fetch-inject">
-    <img src="http://img.badgesize.io/https://cdn.jsdelivr.net/npm/fetch-inject?compression=gzip&style=flat-square" alt="Compressed size of UMD bundle">
+    <img src="https://img.badgesize.io/https://cdn.jsdelivr.net/npm/fetch-inject@latest/dist/fetch-inject.min.js?compression=gzip&style=flat-square" alt="Size of IIFE bundle with gzip compression">
   </a>
   <a href="https://travis-ci.org/vhs/fetch-inject">
     <img src="https://img.shields.io/travis/vhs/fetch-inject.svg?style=flat-square" alt="Build Status">
