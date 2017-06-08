@@ -33,7 +33,7 @@
     "rollup-plugin-license": "^0.4.0",
     "rollup-plugin-uglify": "^2.0.1",
     "semantic-release": "^6.3.2",
-    "standard": "^9.0.2",
+    "standard": "^10.0.2",
     "uglify-es": "^3.0.12"
   },
   "standard": {
