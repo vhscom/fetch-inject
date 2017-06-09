@@ -9,14 +9,15 @@ import {
  * @license ISC
  * @param {(USVString[]|Request[])} inputs Resources you wish to fetch.
  * @param {Promise} [promise] A promise to await before attempting injection.
- * @throws {Promise<SyntaxError>} Rejects with error on invalid arguments.
+ * @throws {Promise<TypeError>} Rejects with error on invalid arguments.
+ * @throws {Promise<Error>} Whatever `fetch` decides to throw.
  * @throws {SyntaxError} Via DOM upon attempting to parse unexpected tokens.
  * @returns {Promise<Object>[]} A promise which resolves to an `Array` of
  *     Objects containing `Response` `Body` properties used by the module.
  */
 const fetchInject = function (inputs, promise) {
-  if (!(inputs && Array.isArray(inputs))) return Promise.reject(new SyntaxError('`inputs` must be an array'))
-  if (promise && !(promise instanceof Promise)) return Promise.reject(new SyntaxError('`promise` must be a promise'))
+  if (!(inputs && Array.isArray(inputs))) return Promise.reject(new TypeError('`inputs` must be an array'))
+  if (promise && !(promise instanceof Promise)) return Promise.reject(new TypeError('`promise` must be a promise'))
 
   const resources = []
   const deferreds = promise ? [].concat(promise) : []
