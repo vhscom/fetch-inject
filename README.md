@@ -40,7 +40,7 @@ Click the image for a live demo of the application used to produce the above wat
 
 ## Syntax
 
-    Promise<Array<Object>> fetchInject(inputs[, promise])
+    Promise<Object>[] fetchInject(inputs[, promise])
 
 ### Parameters
 
