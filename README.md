@@ -63,12 +63,6 @@ A [`Promise`](http://devdocs.io/javascript/global_objects/promise) that resolves
 }]
 ```
 
-## Playground
-
-Try [Fetch Inject on CodePen](https://codepen.io/vhs/pen/MpVeOE?editors=0012) using the latest version available on CDN.
-
-Reference the [Use Cases](#use-cases) to get a feel for what it can do.
-
 ## Installing
 
 Fetch Inject is available on NPM and CDN. It ships in the following flavors: IIFE, UMD and ES6.
@@ -84,6 +78,8 @@ Or download the latest minified UMD bundle from  [jsDelivr](https://www.jsdelivr
 See the [Development](#development) section for asset pipelines requiring vanilla AMD or CJS modules.
 
 ## Use Cases
+
+Try the [Fetch Inject Playground on CodePen](https://codepen.io/vhs/pen/MpVeOE?editors=0012) while referencing the following use cases to enhance your understanding of what this library can do for you.
 
 ### Preventing Script Blocking
 
