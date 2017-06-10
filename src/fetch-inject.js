@@ -12,7 +12,7 @@ import {
  * @throws {Promise<TypeError>} Rejects with error on invalid arguments.
  * @throws {Promise<Error>} Whatever `fetch` decides to throw.
  * @throws {SyntaxError} Via DOM upon attempting to parse unexpected tokens.
- * @returns {Promise<Object>[]} A promise which resolves to an `Array` of
+ * @returns {Promise<Object[]>} A promise which resolves to an `Array` of
  *     Objects containing `Response` `Body` properties used by the module.
  */
 const fetchInject = function (inputs, promise) {
