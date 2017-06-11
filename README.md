@@ -71,9 +71,13 @@ Get it using the [Yarn](https://yarnpkg.com/) package manager:
 
     yarn add fetch-inject
 
-Or download the latest minified UMD bundle from  [jsDelivr](https://www.jsdelivr.com/):
+Download the latest minified UMD bundle from  [jsDelivr](https://www.jsdelivr.com/):
 
     curl -o fetch-inject.umd.min.js https://cdn.jsdelivr.net/npm/fetch-inject
+
+Or load dynamically at runtime with:
+
+    fetch('https://cdn.jsdelivr.net/npm/fetch-inject')
 
 See the [Development](#development) section for asset pipelines requiring vanilla AMD or CJS modules.
 
@@ -95,7 +99,7 @@ fetchInject([
 ])
 ```
 
-This is a simple case to get you started. Don't worry, it gets better.
+This could also be done using [`fetch`](http://devdocs.io/dom/windoworworkerglobalscope/fetch), so let's look at some more involved use cases.
 
 ### Loading Non-critical CSS
 
