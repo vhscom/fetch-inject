@@ -77,13 +77,15 @@ Add all three bundles to a [Yarn](https://yarnpkg.com/) package:
 
     yarn add fetch-inject --production
 
-Install the latest 1.7 patch release using [NPM](https://www.npmjs.com/):
+Install the latest `1.7` patch release using [NPM](https://www.npmjs.com/):
 
     npm i -p fetch-inject@~1.7
 
-Download the `v1.8.1` ES6 module using [`fetch`](http://devdocs.io/dom/windoworworkerglobalscope/fetch):
+Download the `1.8.1` ES6 module using [`fetch`](http://devdocs.io/dom/windoworworkerglobalscope/fetch):
 
-    fetch('https://cdn.jsdelivr.net/npm/fetch-inject@1.8.1/dist/fetch-inject.es.min.js')
+```js
+fetch('https://cdn.jsdelivr.net/npm/fetch-inject@1.8.1/dist/fetch-inject.es.min.js')
+```
 
 For asset pipelines requiring vanilla AMD or CJS modules see the [Development](#development) section.
 
