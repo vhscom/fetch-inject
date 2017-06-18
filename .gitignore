@@ -1,4 +1,6 @@
 .DS_Store
-.yarn-lock
 node_modules
+package-lock.json
+npm-shrinkwrap.json
+.yarn-lock
 dist
