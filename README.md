@@ -316,4 +316,6 @@ Access the plugin beta [Hyperdrive repo](https://github.com/wp-id/hyperdrive) on
 
 ## License
 
-[![ISC](https://img.shields.io/github/license/vhs/fetch-inject.svg?style=flat-square)](https://github.com/vhs/fetch-inject/blob/master/LICENSE "ISC License")
+ISC License
+
+Copyright (c) 2017, VHS <josh@vhs.codeberg.page> (https://vhs.codeberg.page)
