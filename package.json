@@ -43,7 +43,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run lint"
+      "pre-push": "npm run lint"
     },
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
