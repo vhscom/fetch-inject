@@ -69,15 +69,23 @@ A [`Promise`](http://devdocs.io/javascript/global_objects/promise) that resolves
 
 Fetch Inject is available on NPM and CDN. It ships in the following flavors: IIFE, UMD and ES6.
 
-Get it using the [Yarn](https://yarnpkg.com/) package manager:
-
-    yarn add fetch-inject
-
-Or download the latest minified UMD bundle from  [jsDelivr](https://www.jsdelivr.com/):
+Save latest minfied UMD bundle to a file with [cURL](https://curl.haxx.se/):
 
     curl -o fetch-inject.umd.min.js https://cdn.jsdelivr.net/npm/fetch-inject
 
-See the [Development](#development) section for asset pipelines requiring vanilla AMD or CJS modules.
+Add all three bundles to a [Yarn](https://yarnpkg.com/) package:
+
+    yarn add fetch-inject --production
+
+Install the latest 1.7 patch release using [NPM](https://www.npmjs.com/):
+
+    npm i -p fetch-inject@~1.7
+
+Download the `v1.8.1` ES6 module using [`fetch`](http://devdocs.io/dom/windoworworkerglobalscope/fetch):
+
+    fetch('https://cdn.jsdelivr.net/npm/fetch-inject@1.8.1/dist/fetch-inject.es.min.js')
+
+For asset pipelines requiring vanilla AMD or CJS modules see the [Development](#development) section.
 
 ## Use Cases
 
@@ -133,7 +141,7 @@ el.onclick = (evt) => {
   fetchInject([
     'https://cdn.jsdelivr.net/smooth-scroll/10.2.1/smooth-scroll.min.js'
   ])
-  el.onclick = null  
+  el.onclick = null
 }
 ```
 
