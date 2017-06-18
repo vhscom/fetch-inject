@@ -22,7 +22,7 @@
     "commit": "git-cz",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard",
-    "semantic-release": "semantic-release pre && npm run build && npm publish && semantic-release post"
+    "release": "semantic-release pre && npm run build && npm publish && semantic-release post"
   },
   "devDependencies": {
     "commitizen": "^2.9.6",

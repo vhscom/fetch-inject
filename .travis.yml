@@ -14,7 +14,7 @@ script:
   - npm run build
 after_success:
   - npm run clean
-  - npm run semantic-release
+  - npm run release
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
