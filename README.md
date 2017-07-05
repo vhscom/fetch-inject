@@ -316,5 +316,4 @@ Access the plugin beta [Hyperdrive repo](https://github.com/wp-id/hyperdrive) on
 
 ## License
 
-Copyright (c) 2017, VHS <josh@vhs.codeberg.page> (https://vhs.codeberg.page)<br>
-Made available under ISC. Wrappers for Magento, WordPress and Drupal upon request only.
+© 2017, <a href="bitcoin:13AMDq9isKtQTxMQG4w7Yo7cEhqKAqQ4Lz">13AMDq9isKtQTxMQG4w7Yo7cEhqKAqQ4Lz</a>
