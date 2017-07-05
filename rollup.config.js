@@ -29,7 +29,7 @@ const minifiedConfigs = activeConfigs.reduce(
     Object.assign({}, activeConfig, {
       plugins: [
         uglify({}, minify),
-        license({ banner: `/*! Fetch Inject v<%= pkg.version %> | (c) <%= moment().format('YYYY') %> VHS | @license ISC */` }),
+        license({ banner: `/*! Fetch Inject v<%= pkg.version %> | © <%= moment().format('YYYY') %>, 13AMDq9isKtQTxMQG4w7Yo7cEhqKAqQ4Lz | @license BTC */` }),
         ...activeConfig.plugins
       ],
       dest: activeConfig.dest.replace('js', 'min.js')
