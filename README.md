@@ -269,7 +269,7 @@ In your document `head` get the async loading started right away if the browser 
 })()
 ```
 
-Then, before the close of the document `body`, provide the traditional experience to avoid blocking the parser until content is visible:
+Then, before the close of the document `body` (if JS) or in the `head` (if CSS), provide the traditional experience to avoid blocking the parser until content is visible:
 
 ```js
 (function () {
