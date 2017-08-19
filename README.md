@@ -36,7 +36,7 @@ Because it uses [Fetch API](http://devdocs.io/dom/fetch_api), Fetch Inject will 
 
 Here's an example waterfall using Fetch Inject to loading the WordPress Twenty Seventeen theme over 4G with an unprimed browser cache.
 
-[![Fetch Inject Unprimed Cache](https://github.com/vhs/fetch-inject/blob/master/docs/fetch-inject-unprimed-cache.png?raw=true)](https://wordcamp.vhs.codeberg.page/)
+![Fetch Inject Unprimed Cache](https://github.com/vhs/fetch-inject/blob/master/docs/fetch-inject-unprimed-cache.png?raw=true)
 
 Click the image for a live demo of the application used to produce the above waterfall.
 
