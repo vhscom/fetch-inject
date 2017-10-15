@@ -316,6 +316,6 @@ Access the plugin beta [Hyperdrive repo](https://github.com/wp-id/hyperdrive) on
 
 ## License
 
-© 2017, <a href="bitcoin:13AMDq9isKtQTxMQG4w7Yo7cEhqKAqQ4Lz">13AMDq9isKtQTxMQG4w7Yo7cEhqKAqQ4Lz</a>
+© 2017, <a href="bitcoin:13AMDq9isKtQTxMQG4w7Yo7cEhqKAqQ4Lz?label=Comfusion&message=Donation%20for%Fetch%20Inject">13AMDq9isKtQTxMQG4w7Yo7cEhqKAqQ4Lz</a>
 
-[![Fetch Inject](https://static.hackcabin.com/images/qr/btc-license.png)](bitcoin:13AMDq9isKtQTxMQG4w7Yo7cEhqKAqQ4Lz?label=Comfusion&message=Donation%20for%Fetch%20Inject)
+[![Fetch Inject](https://static.hackcabin.com/images/qr/btc-license.png)](https://hackernoon.com/introducing-the-btc-license-28650887eb11)
