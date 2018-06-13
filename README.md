@@ -9,10 +9,10 @@
     <img src="https://img.shields.io/badge/dependencies-0-8892BF.svg?style=flat-square" alt="Zero dependencies">
   </a>
   <a href="https://cdn.jsdelivr.net/npm/fetch-inject">
-    <img src="http://img.badgesize.io/https://cdn.jsdelivr.net/npm/fetch-inject@latest/dist/fetch-inject.min.js?compression=gzip&style=flat-square" alt="Size of IIFE bundle with gzip compression">
+    <img src="http://img.badgesize.io/https://cdn.jsdelivr.net/npm/fetch-inject@latest/dist/fetch-inject.min.js?compression=brotli&style=flat-square" alt="Size of IIFE bundle with brotli compression">
   </a>
-  <a href="https://travis-ci.org/vhs/fetch-inject">
-    <img src="https://img.shields.io/travis/vhs/fetch-inject.svg?style=flat-square" alt="Build Status">
+  <a href="https://www.jsdelivr.com/package/npm/fetch-inject">
+    <img src="https://data.jsdelivr.com/v1/package/npm/fetch-inject/badge" alt="Hits per month from jsDelivr CDN">
   </a>
   <a href="https://www.npmjs.com/package/fetch-inject">
     <img src="https://img.shields.io/npm/dm/fetch-inject.svg?style=flat-square" alt="NPM downloads per month">

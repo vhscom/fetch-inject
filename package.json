@@ -1,53 +1,38 @@
 {
   "name": "fetch-inject",
-  "version": "0.0.0-development",
+  "version": "1.9.1",
   "description": "Dynamically inline assets into the DOM using Fetch Injection.",
-  "author": "VHS <josh@vhs.codeberg.page> (https://vhs.codeberg.page)",
+  "author": "VHS <vhsdev@tutanota.com> (https://vhs.codeberg.page)",
   "module": "dist/fetch-inject.es.js",
   "main": "dist/fetch-inject.umd.js",
   "keywords": [
-    "dom",
     "fetch",
-    "import",
     "inject",
+    "import",
     "promise",
-    "script",
-    "css",
-    "pwa"
+    "script"
   ],
   "repository": "vhs/fetch-inject",
   "scripts": {
     "build": "rollup -c",
     "clean": "rimraf dist",
-    "commit": "git-cz",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard",
-    "release": "semantic-release pre && npm run build && npm publish && semantic-release post"
+    "release": "standard-version"
+  },
+  "standard-version": {
+    "scripts": {
+      "prerelease": "npm run lint"
+    }
   },
   "devDependencies": {
-    "commitizen": "^2.9.6",
-    "cz-conventional-changelog": "^2.0.0",
-    "ghooks": "^2.0.0",
-    "rimraf": "^2.6.1",
-    "rollup": "^0.42.0",
-    "rollup-plugin-license": "^0.4.0",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.60.4",
+    "rollup-plugin-license": "^0.6.0",
     "rollup-plugin-uglify": "^2.0.1",
-    "semantic-release": "^6.3.2",
-    "standard": "^10.0.2",
-    "uglify-es": "^3.0.12"
-  },
-  "standard": {
-    "ignore": [
-      "/dist"
-    ]
-  },
-  "config": {
-    "ghooks": {
-      "pre-push": "npm run lint"
-    },
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+    "standard": "^11.0.1",
+    "standard-version": "^4.4.0",
+    "uglify-es": "^3.3.9"
   },
   "license": "BTC"
 }

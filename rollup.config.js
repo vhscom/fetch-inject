@@ -3,21 +3,27 @@ import license from 'rollup-plugin-license'
 import { minify } from 'uglify-es'
 
 const defaultConfig = {
-  entry: 'src/fetch-inject.js',
+  input: 'src/fetch-inject.js',
   plugins: []
 }
 
 const activeConfigs = [{
-  format: 'iife',
-  moduleName: 'fetchInject',
-  dest: 'dist/fetch-inject.js'
+  output: {
+    format: 'iife',
+    name: 'fetchInject',
+    file: 'dist/fetch-inject.js'
+  }
 }, {
-  format: 'es',
-  dest: 'dist/fetch-inject.es.js'
+  output: {
+    format: 'es',
+    file: 'dist/fetch-inject.es.js'
+  }
 }, {
-  format: 'umd',
-  moduleName: 'fetchInject',
-  dest: 'dist/fetch-inject.umd.js'
+  output: {
+    format: 'umd',
+    name: 'fetchInject',
+    file: 'dist/fetch-inject.umd.js'
+  }
 }]
 
 activeConfigs.forEach(activeConfig => {
@@ -32,7 +38,10 @@ const minifiedConfigs = activeConfigs.reduce(
         license({ banner: `/*! Fetch Inject v<%= pkg.version %> | © <%= moment().format('YYYY') %>, 13AMDq9isKtQTxMQG4w7Yo7cEhqKAqQ4Lz | @license BTC */` }),
         ...activeConfig.plugins
       ],
-      dest: activeConfig.dest.replace('js', 'min.js')
+      output: {
+        ...activeConfig.output,
+        file: activeConfig.output.file.replace('js', 'min.js')
+      }
     })
   ),
   []
