@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.10.0"></a>
+## 1.10.0 (2018-06-13)
+
+* feat($npm): upgrade build pipeline ([ec71624](https://github.com/vhs/fetch-inject/commit/ec71624)), closes [#42](https://github.com/vhs/fetch-inject/issues/42) [#43](https://github.com/vhs/fetch-inject/issues/43)
+* docs($readme): add donation qr code to readme ([71a4d6a](https://github.com/vhs/fetch-inject/commit/71a4d6a))
+* docs($readme): link to info about btc license ([2c57799](https://github.com/vhs/fetch-inject/commit/2c57799))
+* docs(README): add info for CSS fallbacks ([7587f97](https://github.com/vhs/fetch-inject/commit/7587f97))
+* docs(README): remove vultr prototype ([a55b800](https://github.com/vhs/fetch-inject/commit/a55b800))
+* docs(README): update progressive enhancement ([79ffc30](https://github.com/vhs/fetch-inject/commit/79ffc30))
+
+
+
 <a name="1.9.1"></a>
 ## [1.9.1](https://github.com/vhs/fetch-inject/compare/v1.9.0...v1.9.1) (2017-07-05)
 

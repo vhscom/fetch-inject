@@ -1,6 +1,6 @@
 {
   "name": "fetch-inject",
-  "version": "1.9.1",
+  "version": "1.10.0",
   "description": "Dynamically inline assets into the DOM using Fetch Injection.",
   "author": "VHS <vhsdev@tutanota.com> (https://vhs.codeberg.page)",
   "module": "dist/fetch-inject.es.js",
