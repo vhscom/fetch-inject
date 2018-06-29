@@ -32,6 +32,10 @@ Use Fetch Inject to dynamically import page resources such as JS and CSS in para
 
 Because it uses [Fetch API](http://devdocs.io/dom/fetch_api), Fetch Inject will work alongside [Service Workers](http://devdocs.io/dom-service-workers/), enabling you take the performance of your [Progressive Web Apps](https://julian.is/article/progressive-web-apps/) to an entirely new level.
 
+## Playground
+
+Try [Fetch Inject on CodePen](https://codepen.io/vhs/pen/MpVeOE?editors=0012) while referencing the [Use Cases](#use-cases) to enhance your understanding of what this library can do for you.
+
 ## Waterfalls
 
 Here's an example waterfall using Fetch Inject to loading the WordPress Twenty Seventeen theme over 4G with an unprimed browser cache.
@@ -89,7 +93,7 @@ For asset pipelines requiring vanilla AMD or CJS modules see the [Development](#
 
 ## Use Cases
 
-Try the [Fetch Inject Playground on CodePen](https://codepen.io/vhs/pen/MpVeOE?editors=0012) while referencing the following use cases to enhance your understanding of what this library can do for you.
+Try the [Fetch Inject Playground](#playground) while referencing the following use cases to enhance your understanding of what this library can do for you.
 
 ### Preventing Script Blocking
 
