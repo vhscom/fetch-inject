@@ -16,8 +16,11 @@ import {
  *     Objects containing `Response` `Body` properties used by the module.
  */
 const fetchInject = function (inputs, promise) {
-  if (!(inputs && Array.isArray(inputs))) return Promise.reject(new TypeError('`inputs` must be an array'))
-  if (promise && !(promise instanceof Promise)) return Promise.reject(new TypeError('`promise` must be a promise'))
+  if (!arguments.length) throw new TypeError("Failed to execute 'fetchInject': 1 argument required but only 0 present.")
+  ;[...arguments].forEach((arg, idx) => {
+    if (idx === 0 && arg.constructor !== Array) throw new TypeError("Failed to execute 'fetchInject': argument 1 must be of type 'Array'.")
+    if (idx === 1 && arg.constructor !== Promise) throw new TypeError("Failed to execute 'fetchInject': argument 2 must be of type 'Promise'.")
+  })
 
   const resources = []
   const deferreds = promise ? [].concat(promise) : []
