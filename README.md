@@ -34,7 +34,7 @@ Because it uses [Fetch API](http://devdocs.io/dom/fetch_api), Fetch Inject will 
 
 ## Playground
 
-Try [Fetch Inject on CodePen](https://codepen.io/vhs/pen/MpVeOE?editors=0012). Reference the [Use Cases](#use-cases) to enhance your understanding of what this library can do for you.
+Try <a href="https://codepen.io/vhs/pen/MpVeOE?editors=0012" target="_blank">Fetch Inject on CodePen</a>. Reference the [Use Cases](#use-cases) to enhance your understanding of what this library can do for you.
 
 ## Waterfalls
 
