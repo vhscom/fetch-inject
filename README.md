@@ -40,12 +40,8 @@ Try <a href="https://codepen.io/vhs/pen/MpVeOE?editors=0012" target="_blank">Fet
 
 Here're example waterfalls using Fetch Inject to loading the WordPress Twenty Seventeen theme over 4G with an unprimed browser cache and subsequent load using Service Worker caching. Notice most of the latency with service workers occurs simply waiting for the HTML to load.
 
-<p align="center">
-  <img src="https://github.com/vhs/fetch-inject/blob/master/docs/fetch-inject-unprimed-cache.png?raw=true" title="Fetch Inject Unprimed Cache" width="350" alt="Screenshot of network waterfall showing parallel resource loading using Fetch Inject">
-  <img src="https://github.com/vhs/fetch-inject/blob/master/docs/fetch-inject-serviceworker-caching.png?raw=true" width="350" title="Fetch Inject Service Worker Caching" alt="Screenshot of network waterfall showing parallel resource loading using Fetch Inject with Service Workers">
-</p>
-
-![Fetch Inject Unprimed Cache]()
+<img src="https://github.com/vhs/fetch-inject/blob/master/docs/fetch-inject-unprimed-cache.png?raw=true" title="Fetch Inject Unprimed Cache" width="450" alt="Screenshot of network waterfall showing parallel resource loading using Fetch Inject">
+<img src="https://github.com/vhs/fetch-inject/blob/master/docs/fetch-inject-serviceworker-caching.png?raw=true" width="450" title="Fetch Inject Service Worker Caching" alt="Screenshot of network waterfall showing parallel resource loading using Fetch Inject with Service Workers">
 
 ## Syntax
 
