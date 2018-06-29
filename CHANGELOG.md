@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.10.1"></a>
+## <small>1.10.1 (2018-06-29)</small>
+
+* ci($release): build project prerelease ([64663d4](https://github.com/vhs/fetch-inject/commit/64663d4)), closes [#46](https://github.com/vhs/fetch-inject/issues/46)
+* docs($readme): add playground section ([8bdc39b](https://github.com/vhs/fetch-inject/commit/8bdc39b))
+* docs($readme): add reference to `load-stylesheets` lib ([deb84bb](https://github.com/vhs/fetch-inject/commit/deb84bb))
+* docs($readme): open playground in new window ([9a4eeba](https://github.com/vhs/fetch-inject/commit/9a4eeba))
+* docs($readme): remove old demo ([9e5a938](https://github.com/vhs/fetch-inject/commit/9e5a938))
+* docs($readme): update playground section ([515d01d](https://github.com/vhs/fetch-inject/commit/515d01d))
+* build($npm): add package lock ([2b8560d](https://github.com/vhs/fetch-inject/commit/2b8560d)), closes [#44](https://github.com/vhs/fetch-inject/issues/44)
+
+
+
 <a name="1.10.0"></a>
 ## 1.10.0 (2018-06-13)
 
