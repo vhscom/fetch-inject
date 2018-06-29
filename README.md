@@ -34,7 +34,7 @@ Because it uses [Fetch API](http://devdocs.io/dom/fetch_api), Fetch Inject will 
 
 ## Playground
 
-Try [Fetch Inject on CodePen](https://codepen.io/vhs/pen/MpVeOE?editors=0012) while referencing the [Use Cases](#use-cases) to enhance your understanding of what this library can do for you.
+Try [Fetch Inject on CodePen](https://codepen.io/vhs/pen/MpVeOE?editors=0012). Reference the [Use Cases](#use-cases) to enhance your understanding of what this library can do for you.
 
 ## Waterfalls
 
@@ -307,7 +307,7 @@ If you need support, you know [where to go](http://stackoverflow.com/questions/t
 - [es-module-loader](https://github.com/ModuleLoader/es-module-loader) - Polyfill for the ES Module Loader
 - [isomorphic-fetch](https://github.com/matthew-andrews/isomorphic-fetch) - A library for using `fetch` in Node
 - [Dynamic Imports](https://github.com/tc39/proposal-dynamic-import) - `import()` proposal for JavaScript
-- [load-stylesheets](https://github.com/brettz9/load-stylesheets) - Promise-based stylesheet-loading via `<link>` tags 
+- [load-stylesheets](https://github.com/brettz9/load-stylesheets) - Promise-based stylesheet-loading via `<link>` tags
 
 ## WordPress Plugin
 
