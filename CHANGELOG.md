@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.0"></a>
+## 2.0.0 (2018-07-10)
+
+* chore(license): update to less encumbered license ([5b1fd9d](https://github.com/vhs/fetch-inject/commit/5b1fd9d))
+* docs($readme): align screenshots ([3483c11](https://github.com/vhs/fetch-inject/commit/3483c11))
+* docs($readme): blame github for rewriting readme markup ([df77e16](https://github.com/vhs/fetch-inject/commit/df77e16))
+* docs($readme): increase screenshot size, uncenter ([5123a23](https://github.com/vhs/fetch-inject/commit/5123a23))
+* docs($readme): unleash the service worker image again ([da17d5a](https://github.com/vhs/fetch-inject/commit/da17d5a))
+* build($npm): remove defunct travis dotfile ([a8ee367](https://github.com/vhs/fetch-inject/commit/a8ee367))
+
+
+
 <a name="1.11.0"></a>
 ## 1.11.0 (2018-06-29)
 
