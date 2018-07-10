@@ -304,7 +304,7 @@ For support use Stack Overflow and tag your question with [`fetch-api`](http://s
 
 Fetch Inject has been built into a WordPress plugin, enabling Fetch Injection to work within WordPress. [Initial testing](https://hackernoon.com/putting-wordpress-into-hyperdrive-4705450dffc2) shows Fetch Injection enables WordPress to load pages **300% faster** than conventional methods.
 
-[![Hyperdrive WordPress Plugin](https://codeberg.org/vhs/vhs/fetch-inject/raw/branch/master/docs/hyperdrive-logo.png)](https://codeberg.org/vhs/comfusion/hyperdrive)
+![Hyperdrive WordPress Plugin](https://codeberg.org/vhs/vhs/fetch-inject/raw/branch/master/docs/hyperdrive-logo.png)
 
 Access the plugin beta from the [Hyperdrive repo](https://codeberg.org/vhs/comfusion/hyperdrive) and see the related [Hacker Noon post](https://hackernoon.com/putting-wordpress-into-hyperdrive-4705450dffc2) for more details.
 
