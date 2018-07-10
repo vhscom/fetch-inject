@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.1"></a>
+## <small>2.0.1 (2018-07-10)</small>
+
+* fix(npm): build after manifest bump ([135afd6](https://codeberg.org/vhs/vhs/fetch-inject/commits/135afd6))
+* docs(readme): purge project-related github links ([cc6d724](https://codeberg.org/vhs/vhs/fetch-inject/commits/cc6d724))
+* docs(readme): remove image link ([962b28a](https://codeberg.org/vhs/vhs/fetch-inject/commits/962b28a))
+* docs(readme): shuffle badge order ([065087f](https://codeberg.org/vhs/vhs/fetch-inject/commits/065087f))
+* docs(readme): update badges ([11502a1](https://codeberg.org/vhs/vhs/fetch-inject/commits/11502a1))
+* build(npm): update repository property ([e159dc2](https://codeberg.org/vhs/vhs/fetch-inject/commits/e159dc2))
+
+
+
 <a name="2.0.0"></a>
 ## 2.0.0 (2018-07-10)
 
