@@ -2,11 +2,11 @@
 
 > Dynamically inline assets into the DOM using [Fetch Injection](https://hackcabin.com/post/managing-async-dependencies-javascript/).
 
+[![Latest NPM version](https://img.shields.io/npm/v/fetch-inject.svg?style=flat-square)](https://www.npmjs.com/package/fetch-inject)
 ![Zero dependencies](https://img.shields.io/badge/dependencies-0-8892BF.svg?style=flat-square&longCache=true)
 ![Compressed size](http://img.badgesize.io/https://cdn.jsdelivr.net/npm/fetch-inject@latest/dist/fetch-inject.min.js?compression=brotli&style=flat-square)
-[![Hits per month via jsDelivr CDN](https://data.jsdelivr.com/v1/package/npm/fetch-inject/badge)](https://www.jsdelivr.com/package/npm/fetch-inject)
 [![NPM downloads per month](https://img.shields.io/npm/dm/fetch-inject.svg?style=flat-square)](https://www.npmjs.com/package/fetch-inject)
-[![Latest NPM version](https://img.shields.io/npm/v/fetch-inject.svg?style=flat-square)](https://www.npmjs.com/package/fetch-inject)
+[![Hits per month via jsDelivr CDN](https://data.jsdelivr.com/v1/package/npm/fetch-inject/badge)](https://www.jsdelivr.com/package/npm/fetch-inject)
 
 Read the [**Hacker News discussion**](https://news.ycombinator.com/item?id=14380191).
 
