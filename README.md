@@ -27,8 +27,8 @@ Try [CodePen Playground](https://codepen.io/vhs/pen/MpVeOE?editors=0012). Refere
 The following network waterfall diagrams were produced using Fetch Inject to load the WordPress Twenty Seventeen theme for a performance talk [given at](https://vhs.codeberg.pagetalks/screaming-fast-wordpress-redis-vultr/) WordCamp Ubud 2017. Stats captured over a 4G network using a mobile hotspot. One shows the speed of the page load with an unprimed browser cache and the other using Service Worker caching. Notice with Service Workers most of the perceived latency with occurs simply waiting for the HTML response to load.
 
 <p>
-  <img src="https://github.com/vhs/fetch-inject/blob/master/docs/fetch-inject-unprimed-cache.png?raw=true" title="Fetch Inject Unprimed Cache" width="48%" alt="Screenshot of network waterfall showing parallel resource loading using Fetch Inject">
-  <img src="https://github.com/vhs/fetch-inject/blob/master/docs/fetch-inject-serviceworker-caching.png?raw=true" width="48%" title="Fetch Inject Service Worker Caching" alt="Screenshot of network waterfall showing parallel resource loading using Fetch Inject with Service Workers">
+  <img src="https://codeberg.org/vhs/vhs/fetch-inject/raw/branch/master/docs/fetch-inject-unprimed-cache.png" title="Fetch Inject Unprimed Cache" width="48%" alt="Screenshot of network waterfall showing parallel resource loading using Fetch Inject">
+  <img src="https://codeberg.org/vhs/vhs/fetch-inject/raw/branch/master/docs/fetch-inject-serviceworker-caching.png" width="48%" title="Fetch Inject Service Worker Caching" alt="Screenshot of network waterfall showing parallel resource loading using Fetch Inject with Service Workers">
 </p>
 
 ## Syntax
@@ -283,13 +283,13 @@ If you need vanilla AMD or CJS modules, update `activeConfigs` in `rollup.config
 
 ## Contributing
 
-Please use [Issues](https://github.com/vhs/fetch-inject/issues) for bugs and enhancement requests only. Bug reports not accompanied by a reduced test case, sufficient backing research and information to help progress the library may be closed without explanation.
+Please [create a new issue](https://codeberg.org/vhs/vhs/fetch-inject/issues/new) for bugs and enhancement requests and accompany any bug with a reduced test case.
 
-When submitting pull requests, use `npm run commit` to create [Commitizen-friendly](http://commitizen.github.io/cz-cli/) commit messages. Pulls should be squashed into a single commit prior to review and should PR against a backing issue.
+When sending pull requests please use `npm run commit` to create a [Conventional Commit](https://conventionalcommits.org) message. Pulls should be squashed into a single commit prior to review and, ideally, should PR against a backing issue.
 
-If you need support, you know [where to go](http://stackoverflow.com/questions/tagged/fetch-api).
+For support use Stack Overflow and tag your question with [`fetch-api`](http://stackoverflow.com/questions/tagged/fetch-api).
 
-## See Also
+## Related Projects
 
 - [fetch](https://github.com/github/fetch) - Polyfill for `window.fetch`
 - [promise-polyfill](https://github.com/taylorhakes/promise-polyfill) - Polyfill for Promises
@@ -302,9 +302,9 @@ If you need support, you know [where to go](http://stackoverflow.com/questions/t
 
 Fetch Inject has been built into a WordPress plugin, enabling Fetch Injection to work within WordPress. [Initial testing](https://hackernoon.com/putting-wordpress-into-hyperdrive-4705450dffc2) shows Fetch Injection enables WordPress to load pages **300% faster** than conventional methods.
 
-[![Hyperdrive WordPress Plugin logo](https://github.com/wp-id/hyperdrive/blob/master/logo.png?raw=true)](https://github.com/wp-id/hyperdrive)
+[![Hyperdrive WordPress Plugin](https://codeberg.org/vhs/vhs/fetch-inject/raw/branch/master/docs/hyperdrive-logo.png)](https://codeberg.org/vhs/comfusion/hyperdrive)
 
-Access the plugin beta [Hyperdrive repo](https://github.com/wp-id/hyperdrive) on GitHub and see the related [Hacker Noon article](https://hackernoon.com/putting-wordpress-into-hyperdrive-4705450dffc2) for more details.
+Access the plugin beta from the [Hyperdrive repo](https://codeberg.org/vhs/comfusion/hyperdrive) and see the related [Hacker Noon post](https://hackernoon.com/putting-wordpress-into-hyperdrive-4705450dffc2) for more details.
 
 ## License
 
