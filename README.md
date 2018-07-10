@@ -1,44 +1,30 @@
-<h1 align="center">Fetch Inject</h1>
+# Fetch Inject
 
-<p align="center">
-  <strong>A fetching async loader and DOM injection sequencer for high-performance websites.</strong>
-</p>
+> Dynamically inline assets into the DOM using [Fetch Injection](https://hackcabin.com/post/managing-async-dependencies-javascript/).
 
-<p align="center">
-  <a href="https://cost-of-modules.herokuapp.com/?p=fetch-inject@latest">
-    <img src="https://img.shields.io/badge/dependencies-0-8892BF.svg?style=flat-square" alt="Zero dependencies">
-  </a>
-  <a href="https://cdn.jsdelivr.net/npm/fetch-inject">
-    <img src="http://img.badgesize.io/https://cdn.jsdelivr.net/npm/fetch-inject@latest/dist/fetch-inject.min.js?compression=brotli&style=flat-square" alt="Size of IIFE bundle with brotli compression">
-  </a>
-  <a href="https://www.jsdelivr.com/package/npm/fetch-inject">
-    <img src="https://data.jsdelivr.com/v1/package/npm/fetch-inject/badge" alt="Hits per month from jsDelivr CDN">
-  </a>
-  <a href="https://www.npmjs.com/package/fetch-inject">
-    <img src="https://img.shields.io/npm/dm/fetch-inject.svg?style=flat-square" alt="NPM downloads per month">
-  </a>
-  <a href="https://www.npmjs.com/package/fetch-inject">
-    <img src="https://img.shields.io/npm/v/fetch-inject.svg?style=flat-square" alt="Latest NPM version">
-  </a>
-</p>
+![Zero dependencies](https://img.shields.io/badge/dependencies-0-8892BF.svg?style=flat-square&longCache=true)
+![Compressed size](http://img.badgesize.io/https://cdn.jsdelivr.net/npm/fetch-inject@latest/dist/fetch-inject.min.js?compression=brotli&style=flat-square)
+[![Hits per month via jsDelivr CDN](https://data.jsdelivr.com/v1/package/npm/fetch-inject/badge)](https://www.jsdelivr.com/package/npm/fetch-inject)
+[![NPM downloads per month](https://img.shields.io/npm/dm/fetch-inject.svg?style=flat-square)](https://www.npmjs.com/package/fetch-inject)
+[![Latest NPM version](https://img.shields.io/npm/v/fetch-inject.svg?style=flat-square)](https://www.npmjs.com/package/fetch-inject)
 
-<p align="center"><strong><a href="https://news.ycombinator.com/item?id=14380191">Discuss it on Hacker News</a></strong></p>
+Read the [**Hacker News discussion**](https://news.ycombinator.com/item?id=14380191).
 
-## Background
+## Overview
 
-This library implements a performance optimization technique [known as](https://hackcabin.com/post/managing-async-dependencies-javascript/) _Fetch Injection_ for managing async dependencies with JavaScript. It also works for stylesheets too, and was designed to be extensible for _any_ resource type which can be loaded using [`fetch`](https://devdocs.io/dom-fetch/).
+Fetch Inject implements a Web performance optimization technique known as [Fetch Injection](https://hackcabin.com/post/managing-async-dependencies-javascript/) for managing asynchronous JavaScript dependencies. It works for stylesheets too, and was designed to be extensible for any resource type that can be loaded using [`fetch`](https://devdocs.io/dom-fetch/).
 
-Use Fetch Inject to dynamically import page resources such as JS and CSS in parallel (even across the network), and load them into your page in a desired sequence.
+Use Fetch Inject to dynamically import external JavaScript and CSS resources in parallel (even across the network), and load them into your page in a desired sequence, at a desired time and under desirable runtime conditions.
 
-Because it uses [Fetch API](http://devdocs.io/dom/fetch_api), Fetch Inject will work alongside [Service Workers](http://devdocs.io/dom-service-workers/), enabling you take the performance of your [Progressive Web Apps](https://julian.is/article/progressive-web-apps/) to an entirely new level.
+Because it uses [Fetch API](http://devdocs.io/dom/fetch_api) Fetch Inject works alongside [Service Workers](http://devdocs.io/dom-service-workers/) enabling offline-first applications and improving performance in bandwidth-restricted environments.
 
 ## Playground
 
-Try <a href="https://codepen.io/vhs/pen/MpVeOE?editors=0012" target="_blank">Fetch Inject on CodePen</a>. Reference the [Use Cases](#use-cases) to enhance your understanding of what this library can do for you.
+Try [CodePen Playground](https://codepen.io/vhs/pen/MpVeOE?editors=0012). Reference the [Use Cases](#use-cases) to enhance your understanding of what Fetch Injection can do for you.
 
-## Waterfalls
+## Performance
 
-Here're example waterfalls using Fetch Inject to loading the WordPress Twenty Seventeen theme over 4G with an unprimed browser cache and subsequent load using Service Worker caching. Notice most of the latency with service workers occurs simply waiting for the HTML to load.
+The following network waterfall diagrams were produced using Fetch Inject to load the WordPress Twenty Seventeen theme for a performance talk [given at](https://vhs.codeberg.pagetalks/screaming-fast-wordpress-redis-vultr/) WordCamp Ubud 2017. Stats captured over a 4G network using a mobile hotspot. One shows the speed of the page load with an unprimed browser cache and the other using Service Worker caching. Notice with Service Workers most of the perceived latency with occurs simply waiting for the HTML response to load.
 
 <p>
   <img src="https://github.com/vhs/fetch-inject/blob/master/docs/fetch-inject-unprimed-cache.png?raw=true" title="Fetch Inject Unprimed Cache" width="48%" alt="Screenshot of network waterfall showing parallel resource loading using Fetch Inject">
@@ -74,7 +60,7 @@ A [`Promise`](http://devdocs.io/javascript/global_objects/promise) that resolves
 
 Fetch Inject is available on NPM and CDN. It ships in the following flavors: IIFE, UMD and ES6.
 
-Save latest minfied UMD bundle to a file with [cURL](https://curl.haxx.se/):
+Save latest minified UMD bundle to a file with [cURL](https://curl.haxx.se/):
 
     curl -o fetch-inject.umd.min.js https://cdn.jsdelivr.net/npm/fetch-inject
 
@@ -86,7 +72,7 @@ Install the latest `1.7` patch release using [NPM](https://www.npmjs.com/):
 
     npm i -p fetch-inject@~1.7
 
-Download the `1.8.1` ES6 module using [`fetch`](http://devdocs.io/dom/windoworworkerglobalscope/fetch):
+Download the `1.8.1` ES6 module bundle using [`fetch`](http://devdocs.io/dom/windoworworkerglobalscope/fetch):
 
 ```js
 fetch('https://cdn.jsdelivr.net/npm/fetch-inject@1.8.1/dist/fetch-inject.es.min.js')
@@ -322,6 +308,8 @@ Access the plugin beta [Hyperdrive repo](https://github.com/wp-id/hyperdrive) on
 
 ## License
 
-© 2017, <a href="bitcoin:13AMDq9isKtQTxMQG4w7Yo7cEhqKAqQ4Lz?label=Comfusion&message=Donation%20for%Fetch%20Inject">13AMDq9isKtQTxMQG4w7Yo7cEhqKAqQ4Lz</a>
+Copyright (C) 2017–2018 VHS <vhsdev@tutanota.com>
 
-[![Fetch Inject](https://static.hackcabin.com/images/qr/btc-license.png)](https://hackernoon.com/introducing-the-btc-license-28650887eb11)
+This work is free. You can redistribute it and/or modify it under the
+terms of the Do What The Fuck You Want To Public License, Version 2,
+as published by Sam Hocevar. See the COPYING file for more details.

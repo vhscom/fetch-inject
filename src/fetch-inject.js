@@ -6,7 +6,7 @@ import {
  * Fetch Inject module.
  *
  * @module fetchInject
- * @license BTC
+ * @license WTFPL
  * @param {(USVString[]|Request[])} inputs Resources you wish to fetch.
  * @param {Promise} [promise] A promise to await before attempting injection.
  * @throws {Promise<TypeError>} Rejects with error on invalid arguments.

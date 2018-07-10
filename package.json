@@ -2,7 +2,7 @@
   "name": "fetch-inject",
   "version": "1.11.0",
   "description": "Dynamically inline assets into the DOM using Fetch Injection.",
-  "author": "VHS <vhsdev@tutanota.com> (https://vhs.codeberg.page)",
+  "author": "VHS <vhsdev@tutanota.com>",
   "module": "dist/fetch-inject.es.js",
   "main": "dist/fetch-inject.umd.js",
   "keywords": [
@@ -34,5 +34,5 @@
     "standard-version": "^4.4.0",
     "uglify-es": "^3.3.9"
   },
-  "license": "BTC"
+  "license": "WTFPL"
 }

@@ -1,3 +1,7 @@
+.*
+*.md
+*.yml
+*.json
 .DS_Store
 node_modules
 rollup.config.js
