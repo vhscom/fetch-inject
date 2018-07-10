@@ -12,7 +12,10 @@
     "promise",
     "script"
   ],
-  "repository": "vhs/fetch-inject",
+  "repository": {
+    "type": "git",
+    "url": "git@codeberg.org/vhs:vhs/fetch-inject.git"
+  },
   "scripts": {
     "build": "rollup -c",
     "clean": "rimraf dist",
