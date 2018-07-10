@@ -25,7 +25,8 @@
   },
   "standard-version": {
     "scripts": {
-      "prerelease": "npm run lint && npm run build"
+      "prerelease": "npm run lint",
+      "postbump": "npm run build"
     }
   },
   "devDependencies": {
