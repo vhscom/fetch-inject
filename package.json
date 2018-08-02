@@ -31,12 +31,12 @@
   },
   "devDependencies": {
     "rimraf": "^2.6.2",
-    "rollup": "^0.60.4",
+    "rollup": "^0.63.5",
     "rollup-plugin-license": "^0.6.0",
     "rollup-plugin-uglify": "^2.0.1",
     "standard": "^11.0.1",
     "standard-version": "^4.4.0",
     "uglify-es": "^3.3.9"
   },
-  "license": "WTFPL"
+  "license": "Zlib"
 }

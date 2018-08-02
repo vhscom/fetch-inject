@@ -7,8 +7,7 @@
 ![Compressed size](http://img.badgesize.io/https://cdn.jsdelivr.net/npm/fetch-inject@latest?compression=brotli&style=flat-square)
 [![NPM downloads per month](https://img.shields.io/npm/dm/fetch-inject.svg?style=flat-square)](https://www.npmjs.com/package/fetch-inject)
 [![Hits per month via jsDelivr CDN](https://data.jsdelivr.com/v1/package/npm/fetch-inject/badge)](https://www.jsdelivr.com/package/npm/fetch-inject)
-[![Commit methodology](https://img.shields.io/badge/commits-conventional-yellow.svg?style=flat-square&longCache=true)](https://conventionalcommits.org)
-[![WTFPL licensed](https://img.shields.io/npm/l/fetch-inject.svg?style=flat-square&longCache=true)](https://codeberg.org/vhs/vhs/fetch-inject/src/branch/master/COPYING)
+[![License](https://img.shields.io/npm/l/fetch-inject.svg?style=flat-square&longCache=true)](http://www.zlib.net/zlib_license.html)
 
 Read the [**Hacker News discussion**](https://news.ycombinator.com/item?id=14380191).
 
@@ -310,8 +309,6 @@ Access the plugin beta from the [Hyperdrive repo](https://codeberg.org/vhs/comfu
 
 ## License
 
-Copyright (C) 2017–2018 VHS <vhsdev@tutanota.com>
+zlib License
 
-This work is free. You can redistribute it and/or modify it under the
-terms of the Do What The Fuck You Want To Public License, Version 2,
-as published by Sam Hocevar. See the COPYING file for more details.
+Copyright (C) 2017–2018 VHS <vhsdev@tutanota.com>
