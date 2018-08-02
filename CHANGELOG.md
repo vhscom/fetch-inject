@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.2"></a>
+## [2.0.2](https://codeberg.org/vhs/vhs/fetch-inject/compare/v2.0.1...v2.0.2) (2018-08-02)
+
+
+### Bug Fixes
+
+* **package:** restore rejected promises pattern ([f74f837](https://codeberg.org/vhs/vhs/fetch-inject/commits/f74f837))
+
+
+
 <a name="2.0.1"></a>
 ## <small>2.0.1 (2018-07-10)</small>
 
