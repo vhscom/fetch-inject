@@ -21,7 +21,7 @@
     "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard",
-    "release": "standard-version"
+    "release": "standard-version -s"
   },
   "standard-version": {
     "scripts": {
