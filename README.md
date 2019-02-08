@@ -299,6 +299,7 @@ For support use Stack Overflow and tag your question with [`fetch-api`](http://s
 - [Dynamic Imports](https://github.com/tc39/proposal-dynamic-import) - `import()` proposal for JavaScript
 - [load-stylesheets](https://github.com/brettz9/load-stylesheets) - Promise-based stylesheet-loading via `<link>` tags
 - [PreloadJS](https://github.com/CreateJS/PreloadJS) - Full-featured JS preloader using XHR2
+- [Gluebert](https://gluebert.com) - A helper for lazy loading DOM elements, StyleSheets and JavaScript files using `import()`
 
 ## WordPress Plugin
 
