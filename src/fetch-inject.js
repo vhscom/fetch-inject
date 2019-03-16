@@ -41,7 +41,7 @@ const fetchInject = function (inputs, promise) {
         resource.blob.type.includes('text/css')
           ? injectHead(window, document, 'style', resource, resolve)
           : injectHead(window, document, 'script', resource, resolve)
-      }})
+      } })
     })
     return Promise.all(thenables)
   })
