@@ -1,6 +1,5 @@
-import uglify from 'rollup-plugin-uglify'
+import { terser } from 'rollup-plugin-terser'
 import license from 'rollup-plugin-license'
-import { minify } from 'uglify-es'
 
 const defaultConfig = {
   input: 'src/fetch-inject.js',
@@ -34,7 +33,7 @@ const minifiedConfigs = activeConfigs.reduce(
   (minifiedConfigs, activeConfig) => minifiedConfigs.concat(
     Object.assign({}, activeConfig, {
       plugins: [
-        uglify({}, minify),
+        terser(),
         license({ banner: `/*! Fetch Inject v<%= pkg.version %> | Copyright (C) VHS <vhsdev@tutanota.com> (https://vhs.codeberg.page) | @license Zlib */` }),
         ...activeConfig.plugins
       ],
