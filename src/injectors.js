@@ -1,5 +1,5 @@
 /**
- * Copyright (C) 2017—2018 VHS <vhsdev@tutanota.com>
+ * Copyright (C) VHS <vhsdev@tutanota.com> (https://vhs.codeberg.page)
  *
  * This software is provided 'as-is', without any express or implied
  * warranty.  In no event will the authors be held liable for any damages

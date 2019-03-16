@@ -2,7 +2,7 @@
   "name": "fetch-inject",
   "version": "2.0.2",
   "description": "Dynamically inline assets into the DOM using Fetch Injection.",
-  "author": "VHS <vhsdev@tutanota.com>",
+  "author": "VHS <vhsdev@tutanota.com> (https://vhs.codeberg.page)",
   "module": "dist/fetch-inject.es.js",
   "main": "dist/fetch-inject.umd.js",
   "keywords": [
@@ -12,14 +12,15 @@
     "promise",
     "script"
   ],
+  "homepage": "https://vhs.codeberg.pagecode/fetch-inject/",
   "repository": {
     "type": "git",
-    "url": "git@codeberg.org/vhs:vhs/fetch-inject.git"
+    "url": "https://codeberg.org/vhs/vhs/fetch-inject.git"
   },
   "scripts": {
     "build": "rollup -c",
     "clean": "rimraf dist",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "while true; do head -n 100 /dev/urandom; sleep 0.1; done | hexdump -C | grep 'ca fe'",
     "lint": "standard",
     "release": "standard-version -s"
   },

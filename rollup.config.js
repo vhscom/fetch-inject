@@ -35,7 +35,7 @@ const minifiedConfigs = activeConfigs.reduce(
     Object.assign({}, activeConfig, {
       plugins: [
         uglify({}, minify),
-        license({ banner: `/*! Fetch Inject v<%= pkg.version %> | Copyright (C) 2017–2018 VHS <vhsdev@tutanota.com> | @license Zlib */` }),
+        license({ banner: `/*! Fetch Inject v<%= pkg.version %> | Copyright (C) VHS <vhsdev@tutanota.com> (https://vhs.codeberg.page) | @license Zlib */` }),
         ...activeConfig.plugins
       ],
       output: {
