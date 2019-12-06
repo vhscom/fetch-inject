@@ -33,8 +33,8 @@ const minifiedConfigs = activeConfigs.reduce(
   (minifiedConfigs, activeConfig) => minifiedConfigs.concat(
     Object.assign({}, activeConfig, {
       plugins: [
-        terser(),
-        license({ banner: `/*! Fetch Inject v<%= pkg.version %> | Copyright (C) VHS <vhsdev@tutanota.com> (https://vhs.codeberg.page) | @license Zlib */` }),
+        terser({ output: { comments: false } }),
+        license({ banner: '/*! Fetch Inject v<%= pkg.version %> | Copyright (C) VHS <vhsdev@tutanota.com> (https://vhs.codeberg.page) | @license Zlib */' }),
         ...activeConfig.plugins
       ],
       output: {
