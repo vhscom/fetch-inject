@@ -37,11 +37,13 @@ const fetchInject = function (inputs, promise) {
 
   return Promise.all(deferreds).then(() => {
     resources.forEach(resource => {
-      thenables.push({ then: resolve => {
-        resource.blob.type.includes('text/css')
-          ? injectHead(window, document, 'style', resource, resolve)
-          : injectHead(window, document, 'script', resource, resolve)
-      } })
+      thenables.push({
+        then: resolve => {
+          resource.blob.type.includes('text/css')
+            ? injectHead(window, document, 'style', resource, resolve)
+            : injectHead(window, document, 'script', resource, resolve)
+        }
+      })
     })
     return Promise.all(thenables)
   })
