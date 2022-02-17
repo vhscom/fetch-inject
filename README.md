@@ -1,6 +1,6 @@
 # Fetch Inject
 
-> Dynamically inline assets into the DOM using [Fetch Injection](https://hackcabin.com/post/managing-async-dependencies-javascript/).
+> Dynamically inline assets into the DOM using [Fetch Injection](https://vhs.codeberg.page/post/managing-async-dependencies-javascript/).
 
 [![Latest NPM version](https://img.shields.io/npm/v/fetch-inject.svg?style=flat-square)](https://www.npmjs.com/package/fetch-inject)
 ![Zero dependencies](https://img.shields.io/badge/dependencies-0-8892BF.svg?style=flat-square&longCache=true)
@@ -13,7 +13,7 @@ Read the [**Hacker News discussion**](https://news.ycombinator.com/item?id=14380
 
 ## Overview
 
-Fetch Inject implements a Web performance optimization technique known as [Fetch Injection](https://hackcabin.com/post/managing-async-dependencies-javascript/) for managing asynchronous JavaScript dependencies. It works for stylesheets too, and was designed to be extensible for any resource type that can be loaded using [`fetch`](https://devdocs.io/dom-fetch/).
+Fetch Inject implements a Web performance optimization technique known as [Fetch Injection](https://vhs.codeberg.page/post/managing-async-dependencies-javascript/) for managing asynchronous JavaScript dependencies. It works for stylesheets too, and was designed to be extensible for any resource type that can be loaded using [`fetch`](https://devdocs.io/dom-fetch/).
 
 Use Fetch Inject to dynamically import external JavaScript and CSS resources in parallel (even across the network), and load them into your page in a desired sequence, at a desired time and under desirable runtime conditions.
 
@@ -28,8 +28,8 @@ Try [CodePen Playground](https://codepen.io/vhs/pen/MpVeOE?editors=0012). Refere
 The following network waterfall diagrams were produced using Fetch Inject to load the WordPress Twenty Seventeen theme for a performance talk [given at](https://vhs.codeberg.pagetalks/screaming-fast-wordpress-redis-vultr/) WordCamp Ubud 2017. Stats captured over a 4G network using a mobile hotspot. One shows the speed of the page load with an unprimed browser cache and the other using Service Worker caching. Notice with Service Workers most of the perceived latency with occurs simply waiting for the HTML response to load.
 
 <p>
-  <img src="https://codeberg.org/vhs/vhs/fetch-inject/raw/branch/master/docs/fetch-inject-unprimed-cache.png" title="Fetch Inject Unprimed Cache" width="48%" alt="Screenshot of network waterfall showing parallel resource loading using Fetch Inject">
-  <img src="https://codeberg.org/vhs/vhs/fetch-inject/raw/branch/master/docs/fetch-inject-serviceworker-caching.png" width="48%" title="Fetch Inject Service Worker Caching" alt="Screenshot of network waterfall showing parallel resource loading using Fetch Inject with Service Workers">
+  <img src="https://codeberg.org/vhs/fetch-inject/raw/branch/trunk/docs/fetch-inject-unprimed-cache.png" title="Fetch Inject Unprimed Cache" width="48%" alt="Screenshot of network waterfall showing parallel resource loading using Fetch Inject">
+  <img src="https://codeberg.org/vhs/fetch-inject/raw/branch/trunk/docs/fetch-inject-serviceworker-caching.png" width="48%" title="Fetch Inject Service Worker Caching" alt="Screenshot of network waterfall showing parallel resource loading using Fetch Inject with Service Workers">
 </p>
 
 ## Syntax
@@ -284,7 +284,7 @@ If you need vanilla AMD or CJS modules, update `activeConfigs` in `rollup.config
 
 ## Contributing
 
-Please [create a new issue](https://codeberg.org/vhs/vhs/fetch-inject/issues/new) for bugs and enhancement requests and accompany any bug with a reduced test case.
+Please [create a new issue](https://codeberg.org/vhs/fetch-inject/issues/new) for bugs and enhancement requests and accompany any bug with a reduced test case.
 
 When sending pull requests please use `npm run commit` to create a [Conventional Commit](https://conventionalcommits.org) message. Pulls should be squashed into a single commit prior to review and, ideally, should PR against a backing issue.
 
@@ -305,9 +305,9 @@ For support use Stack Overflow and tag your question with [`fetch-api`](http://s
 
 Fetch Inject has been built into a WordPress plugin, enabling Fetch Injection to work within WordPress. [Initial testing](https://hackernoon.com/putting-wordpress-into-hyperdrive-4705450dffc2) shows Fetch Injection enables WordPress to load pages **300% faster** than conventional methods.
 
-![Hyperdrive WordPress Plugin](https://codeberg.org/vhs/vhs/fetch-inject/raw/branch/master/docs/hyperdrive-logo.png)
+![Hyperdrive WordPress Plugin](https://codeberg.org/vhs/fetch-inject/raw/branch/trunk/docs/hyperdrive-logo.png)
 
-Access the plugin beta from the [Hyperdrive repo](https://codeberg.org/vhs/comfusion/hyperdrive) and see the related [Hacker Noon post](https://hackernoon.com/putting-wordpress-into-hyperdrive-4705450dffc2) for more details.
+Access the plugin beta from the [Hyperdrive repo](https://codeberg.org/vhs/hyperdrive) and see the related [Hacker Noon post](https://hackernoon.com/putting-wordpress-into-hyperdrive-4705450dffc2) for more details.
 
 ## License
 
