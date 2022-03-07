@@ -20,7 +20,7 @@ Because it uses the [Fetch API](http://devdocs.io/dom/fetch_api) Fetch Inject wo
 
 ## Playground 🛝
 
-Try [CodePen Playground](https://codepen.io/vhsdev/pen/QWOoJqG?editors=0012) while referencing the [Use Cases](#use-cases) provided below.
+Try [CodePen Playground](https://codepen.io/vhsdev/pen/QWOoJqG?editors=0012) while referencing the [Use Cases](#use-cases-) provided below.
 
 ## Performance ⚡️
 
@@ -68,7 +68,7 @@ A [`Promise`](http://devdocs.io/javascript/global_objects/promise) that resolves
 
 ## Use Cases 🎯
 
-[Use the Playground](#playground) to try any of these on your own.
+[Use the Playground](#playground-) to try any of these on your own.
 
 ### Preventing Script Blocking
 
@@ -245,7 +245,7 @@ fetchInject([
 
 ## Supported Browsers 🔮
 
-All browsers with support for [Fetch](http://caniuse.com/#feat=fetch) and [Promises](http://caniuse.com/#search=promises). Because Fetch is a newer Web standard, we will help identify, open and track issues against browser implementations as they arise while specs are being finalized.
+All browsers with support for [Fetch](http://caniuse.com/#feat=fetch) and [Promises](http://caniuse.com/#search=promises).
 
 ## Progressive Enhancement 🛟
 
