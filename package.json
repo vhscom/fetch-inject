@@ -1,68 +1,46 @@
 {
-  "name": "fetch-inject",
-  "version": "2.0.4",
-  "description": "Dynamically inline assets into the DOM using Fetch Injection.",
-  "author": "VHS <vhsdev@tutanota.com> (https://vhs.codeberg.page)",
-  "module": "dist/fetch-inject.es.js",
-  "main": "dist/fetch-inject.umd.js",
-  "keywords": [
-    "fetch",
-    "inject",
-    "import",
-    "promise",
-    "script"
-  ],
-  "homepage": "https://vhs.codeberg.pagecode/fetch-inject/",
-  "repository": {
-    "type": "git",
-    "url": "https://codeberg.org/vhs/vhs/fetch-inject.git"
-  },
-  "scripts": {
-    "build": "rollup -c",
-    "clean": "rimraf dist",
-    "test": "while true; do head -n 100 /dev/urandom; sleep 0.1; done | hexdump -C | grep 'ca fe'",
-    "lint": "standard",
-    "release": "release-it"
-  },
-  "release-it": {
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": "@favoloso/emoji",
-        "infile": "CHANGELOG.md"
-      }
-    },
-    "hooks": {
-      "before:init": "npm run lint",
-      "after:bump": "npm run build",
-      "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
-    },
-    "git": {
-      "requireCommits": true,
-      "tagName": "v${version}",
-      "commitMessage": "chore: release v${version}",
-      "commitArgs": "-S",
-      "tagArgs": "-s",
-      "push": true
-    },
-    "npm": {
-      "publish": true
-    }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "emoji-commit-lint"
-    }
-  },
-  "devDependencies": {
-    "@favoloso/conventional-changelog-emoji": "^0.10.0",
-    "@release-it/conventional-changelog": "^1.1.0",
-    "husky": "^3.1.0",
-    "release-it": "^12.4.3",
-    "rimraf": "^3.0.0",
-    "rollup": "^1.6.0",
-    "rollup-plugin-license": "^0.13.0",
-    "rollup-plugin-terser": "^5.1.2",
-    "standard": "^14.3.1"
-  },
-  "license": "Zlib"
+	"name": "fetch-inject",
+	"version": "2.0.4",
+	"description": "Dynamically inline assets into the DOM using Fetch Injection.",
+	"author": "VHS <vhsdev@tutanota.com> (https://vhs.codeberg.page)",
+	"keywords": [
+		"fetch",
+		"import",
+		"async",
+		"promise",
+		"script"
+	],
+	"homepage": "https://vhs.codeberg.page/code/fetch-inject/",
+	"repository": {
+		"type": "git",
+		"url": "https://codeberg.org/vhs/fetch-inject.git"
+	},
+	"scripts": {
+		"dev": "miniserve --index test-harness.html",
+		"build": "terser fetch-inject.js --compress --mangle --output fetch-inject.min.js",
+		"package": "pnpm lint && pnpm build && pnpm test",
+		"test": "PW_EXPERIMENTAL_TS_ESM=1 playwright test",
+		"lint": "prettier --ignore-path .gitignore --check **/*.{js,ts,html}",
+		"format": "prettier --ignore-path .gitignore --write **/*.{js,ts,html}",
+		"changeset": "changeset"
+	},
+	"devDependencies": {
+		"@changesets/cli": "^2.21.1",
+		"@playwright/test": "^1.19.2",
+		"miniserve": "^0.2.1",
+		"prettier": "^2.5.1",
+		"terser": "^5.12.0"
+	},
+	"files": [
+		"COPYING",
+		"docs",
+		"fetch-inject.min.js",
+		"fetch-inject.js",
+		"module.d.ts",
+		"README.md"
+	],
+	"type": "module",
+	"browser": "fetch-inject.min.js",
+	"typings": "module.d.ts",
+	"license": "Zlib"
 }

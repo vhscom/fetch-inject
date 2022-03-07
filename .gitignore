@@ -1,3 +1,4 @@
-.DS_Store
-node_modules
-dist
+fetch-inject.min.js
+node_modules/
+test-results/
+playwright-report/
