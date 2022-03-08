@@ -238,9 +238,8 @@ const pageReady = new Promise((resolve, reject) => {
 });
 
 fetchInject([
-  "https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"],
-  pageReady
-).then(() => (document.body.style.visibility = "visible"));
+  'https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css'
+], pageReady).then(() => (document.body.style.visibility = 'visible'));
 ```
 
 ## Supported Browsers 🔮
