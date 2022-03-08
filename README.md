@@ -324,6 +324,7 @@ This is entirely optional, but a good practice unless you're going full hipster.
 - [load-stylesheets](https://github.com/brettz9/load-stylesheets) - Promise-based stylesheet-loading via `<link>` tags
 - [PreloadJS](https://github.com/CreateJS/PreloadJS) - Full-featured JS preloader using XHR2
 - [Gluebert](https://gluebert.com) - Helper for lazy-loading DOM elements using `import()`
+- [node-fetch](https://github.com/node-fetch/node-fetch) - A light-weight module that brings the Fetch API to Node.js
 
 ## WordPress Plugin 🚀
 
