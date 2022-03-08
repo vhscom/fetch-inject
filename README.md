@@ -43,14 +43,14 @@ For asset pipelines requiring UMD, AMD or CJS check out version 2 and below.
 
 ## Usage 🌀
 
-    Promise<Object[]> fetchInject( inputs[, promise[, fetch]] )
+    Promise<Object[]> fetchInject( inputs[, promise[, options]] )
 
 ### Parameters
 
 <dl>
 <dt>inputs<dd>Resources to fetch. Must be an <code>Array</code> of type <a target="devdocs" href="http://devdocs.io/dom/usvstring"><code>USVString</code></a> or <a target="devdocs" href="http://devdocs.io/dom/request"><code>Request</code></a> objects.
 <dt>promise<dd>Optional. <a target="devdocs" href="http://devdocs.io/javascript/global_objects/promise"><code>Promise</code></a> to await before injecting fetched resources.
-<dt>fetch<dd>Optional. Fetch implementation to use for requests.
+<dt>options<dd>Optional. Enables customization of Fetch implementation used.
 </dl>
 
 ### Return value
@@ -262,12 +262,12 @@ export const handle: Handle = sequence(
     );
   },
   /* snip */
-}
+)
 ```
 
 The above will inject FlexSearch into every page on the site.
 
-## Custom Fetch
+### Custom Fetch
 
 Fetch Inject 3.0.0 quietly introduced a new feature allowing control the Fetch implementation used. SvelteKit provides its own server-side Fetch implementation, which you can now override when fetching resources with Fetch Inject:
 
