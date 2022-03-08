@@ -104,7 +104,7 @@ fetchInject([
 </script>
 ```
 
-Unlike [`loadCSS`](https://github.com/filamentgroup/loadCSS/), Fetch Inject is smaller, doesn't use callbacks and ships a minifed UMD build for interop with CommonJS.
+See also [Suspense](#suspense) below.
 
 ### Lazyloading Scripts
 
