@@ -41,6 +41,8 @@
 	],
 	"type": "module",
 	"browser": "fetch-inject.min.js",
+	"main": "fetch-inject.min.js",
+	"module": "fetch-inject.min.js",
 	"typings": "module.d.ts",
 	"license": "Zlib"
 }

@@ -22,7 +22,11 @@ export default async function (inputs, promise, { fetch } = globalThis) {
 		thenables.push({
 			then: (resolve) => {
 				const inject = (type) => injector(globalThis, document, type, resource, resolve);
-				resource.blob.type.includes('text/css') ? inject('style') : inject('script');
+				typeof document !== 'undefined'
+					? resource.blob.type.includes('text/css')
+						? inject('style')
+						: inject('script')
+					: resolve(resource);
 			}
 		});
 	});

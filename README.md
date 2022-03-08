@@ -43,13 +43,14 @@ For asset pipelines requiring UMD, AMD or CJS check out version 2 and below.
 
 ## Usage 🌀
 
-    Promise<Object[]> fetchInject( inputs[, promise] )
+    Promise<Object[]> fetchInject( inputs[, promise[, fetch]] )
 
 ### Parameters
 
 <dl>
 <dt>inputs<dd>Resources to fetch. Must be an <code>Array</code> of type <a target="devdocs" href="http://devdocs.io/dom/usvstring"><code>USVString</code></a> or <a target="devdocs" href="http://devdocs.io/dom/request"><code>Request</code></a> objects.
 <dt>promise<dd>Optional. <a target="devdocs" href="http://devdocs.io/javascript/global_objects/promise"><code>Promise</code></a> to await before injecting fetched resources.
+<dt>fetch<dd>Optional. Fetch implementation to use for requests.
 </dl>
 
 ### Return value
@@ -241,6 +242,42 @@ fetchInject([
   'https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css'
 ], pageReady).then(() => (document.body.style.visibility = 'visible'));
 ```
+
+## SvelteKit
+
+As of version 3.1.0 Fetch Inject supports use with SvelteKit. Use it inside your `load` functions to run Fetch requests client- and server-side. Or drop it inside your [hooks](https://kit.svelte.dev/docs/modules#sveltejs-kit-hooks) in order to inject resources into the document like so:
+
+```js
+export const handle: Handle = sequence(
+  async ({ event, resolve }) => {
+    const response = await resolve(event);
+    const [flexsearch] = await fetchInject([
+      'https://cdn.jsdelivr.net/npm/flexsearch/dist/flexsearch.light.min.js'
+    ]);
+
+    const body = await response.text();
+    return new Response(
+      body.replace('</body>', `<script>${flexsearch.text}</script></body>`),
+      response
+    );
+  },
+  /* snip */
+}
+```
+
+The above will inject FlexSearch into every page on the site.
+
+## Custom Fetch
+
+Fetch Inject 3.0.0 quietly introduced a new feature allowing control the Fetch implementation used. SvelteKit provides its own server-side Fetch implementation, which you can now override when fetching resources with Fetch Inject:
+
+```js
+fetchInject([
+  '/assets/scripts/crawlers.js',
+], Promise.resolve(), { fetch: globalThis.fetch })
+```
+
+The above replaces the SvelteKit `fetch` implementation with native `fetch`.
 
 ## Supported Browsers 🔮
 
