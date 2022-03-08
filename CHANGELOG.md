@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.1.0
+
+### Minor Changes
+
+- 4b02dcb: Add SvelteKit support
+
 ## 3.0.0
 
 ### Minor Changes
