@@ -1,5 +1,11 @@
 # Change Log
 
+## 3.2.0
+
+### Minor Changes
+
+- 23c08f5: Disallow context shifting via bind, call and apply
+
 ## 3.1.0
 
 ### Minor Changes
