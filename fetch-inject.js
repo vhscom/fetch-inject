@@ -1,7 +1,7 @@
 /*! Fetch Inject | Copyright (C) VHS <vhsdev@tutanota.com> | @license Zlib */
 const injector = (function(i,n,j,e,c,t,s){t=n.createElement(j),s=n.getElementsByTagName(j)[0];t.appendChild(n.createTextNode(e.text));t.onload=c(e);s?s.parentNode.insertBefore(t,s):n.head.appendChild(t)}); // prettier-ignore
 
-export default async function (inputs, promise, { fetch } = globalThis) {
+export default async (inputs, promise, { fetch } = globalThis) => {
 	const resources = [];
 	const deferreds = promise ? [].concat(promise) : [];
 	const thenables = [];
@@ -16,9 +16,8 @@ export default async function (inputs, promise, { fetch } = globalThis) {
 				})
 		)
 	);
-
 	await Promise.all(deferreds);
-	resources.forEach((resource) => {
+	resources.forEach((resource) =>
 		thenables.push({
 			then: (resolve) => {
 				const inject = (type) => injector(globalThis, document, type, resource, resolve);
@@ -28,8 +27,8 @@ export default async function (inputs, promise, { fetch } = globalThis) {
 						: inject('script')
 					: resolve(resource);
 			}
-		});
-	});
+		})
+	);
 
 	return await Promise.all(thenables);
-}
+};
