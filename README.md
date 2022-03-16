@@ -243,6 +243,41 @@ fetchInject([
 ], pageReady).then(() => (document.body.style.visibility = 'visible'));
 ```
 
+### A/B Testing
+
+**Problem:** You want to run A/B tests and track the winning experience.
+
+**Solution:** Dynamically import Fetch Inject, and display and report the winning experience.
+
+```html 
+<script type="module">
+  localStorage.setItem('experience', ['test-a.css', 'test-a.js']);
+  
+  const experience = localStorage.getItem('experience');
+  const analytics = 'analytics.min.js';
+
+  import('https://cdn.jsdelivr.net/npm/fetch-inject')
+    .then((module) => {
+      console.time('page-time');
+      module.default(experience.split(',').concat(analytics))
+        .then((injections) => {
+          analytics.track({
+            testGroup: experience, // "test-a.css,test-a.js"
+            waitTime: console.timeLog('page-time') // "0.231953125 ms"
+            extraData: injections // [ Blob {size: 7889, ...} ]
+          });
+          document.onclose = _ => analytics.track({
+            testGroup: experience,
+            pageTime: console.endTime('page-time') // "8.29296875 ms"
+          })
+        })
+        .catch((errors) => analytics.error(errors))
+    });
+</script>
+```
+
+Use alongside [Suspense](#suspense) for a winning combination.
+
 ## SvelteKit
 
 As of version 3.1.0 Fetch Inject supports use with SvelteKit. Use it inside your `load` functions to run Fetch requests client- and server-side. Or drop it inside your [hooks](https://kit.svelte.dev/docs/modules#sveltejs-kit-hooks) in order to inject resources into the document like so:
