@@ -79,7 +79,7 @@ External scripts can lead to [jank](http://jankfree.org/) or [SPOF](https://www.
 **Solution:**
 Load external scripts [without blocking](https://www.stevesouders.com/blog/2009/04/27/loading-scripts-without-blocking/):
 
-```html
+```js
 fetchInject([
   'https://cdn.jsdelivr.net/npm/flexsearch/dist/flexsearch.bundle.min.js'
 ])
@@ -98,10 +98,12 @@ Inline your critical CSS and load [non-critical styles](https://gist.github.com/
 ```html
 <style>/*! bulma.io v0.4.0 ... */</style>
 <script type="module">
-fetchInject([
-  '/css/non-critical.css',
-  'https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css'
-])
+  import fetchInject from 'https://www.jsdelivr.com/package/npm/fetch-inject'
+  
+  fetchInject([
+    '/css/non-critical.css',
+    'https://cdn.jsdelivr.net/fontawesome/4.7.0/css/font-awesome.min.css'
+  ])
 </script>
 ```
 
